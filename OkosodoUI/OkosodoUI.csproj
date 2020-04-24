@@ -101,5 +101,11 @@
   <ItemGroup>
     <None Include="Resources\logo.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OkosodoLibrary\OkosodoLibrary.csproj">
+      <Project>{f93132c4-264c-4557-b4ea-cec739759652}</Project>
+      <Name>OkosodoLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

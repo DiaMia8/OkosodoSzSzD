@@ -16,7 +16,12 @@ namespace OkosodoUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenuForm());
+
+            //Adatbázis kapcsolat inicializálása
+            OkosodoLibrary.GlobalConfig.InitializeConnections(true);
+
+            Application.Run(new AdminMenuForm());
+            //Application.Run(new MainMenuForm());
         }
     }
 }

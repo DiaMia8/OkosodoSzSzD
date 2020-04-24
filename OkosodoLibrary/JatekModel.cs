@@ -26,6 +26,6 @@ namespace OkosodoLibrary
         /// <summary>
         /// Abc gyakorló feladatok gyűjteménye
         /// </summary>
-        public List<AbcModell> abcFeladatok = new List<AbcModell>();
+        public List<AbcModel> abcFeladatok = new List<AbcModel>();
     }
 }

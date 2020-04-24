@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OkosodoLibrary
 {
-    public class AbcModell : IFeladatModel
+    public class AbcModel : IFeladatModel
     {
         public int SorSzam { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Nev { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

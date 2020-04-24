@@ -9,6 +9,10 @@ namespace OkosodoLibrary
     public class TanuloModel
     {
         /// <summary>
+        /// Egyedi azonosító
+        /// </summary>
+        public int Id { get; set; }
+        /// <summary>
         /// tanuló vezetékneve
         /// </summary>
         public string VezetekNev { get; set; }
@@ -34,6 +38,10 @@ namespace OkosodoLibrary
         public string SzuloEmail { get; set; }
 
         /// <summary>
+        /// Diák születési dátuma
+        /// </summary>
+        public  DateTime SzuletesiDatum { get; set; }
+        /// <summary>
         /// melyik adminhoz tartozik, adatbázis kapcsolathoz
         /// </summary>
         public int Admin_Id { get; set; }
@@ -47,5 +55,20 @@ namespace OkosodoLibrary
         /// összesen elvégzett feladatok, típusfüggetlen, statisztikához, ez lehet, hogy típusra lesz bontva !!!
         /// </summary>
         public int ElvegzettFeladatokSzama { get; set; }
+
+        public TanuloModel()
+        {
+
+        }
+
+        public TanuloModel(string vezeteknev, string keresztnev, string becenev, string szuloneve, string szuloemail, DateTime szuletett)
+        {
+            VezetekNev = vezeteknev;
+            KeresztNev = keresztnev;
+            Becenev = becenev;
+            SzuloNeve = szuloneve;
+            SzuloEmail = szuloemail;
+            SzuletesiDatum = szuletett;
+        }
     }
 }

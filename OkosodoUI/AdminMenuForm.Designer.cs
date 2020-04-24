@@ -39,15 +39,17 @@
             this.ujDiakSzuletesiDatumdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.ujDiakSzuletettLabel = new System.Windows.Forms.Label();
             this.ujFelhasznaloRegisztralasButton = new System.Windows.Forms.Button();
-            this.ujFelhasznaloJelszoUjraTextBox = new System.Windows.Forms.TextBox();
+            this.ujDiakSzuloEmailTextBox = new System.Windows.Forms.TextBox();
             this.ujDiakBecenevTextBox = new System.Windows.Forms.TextBox();
             this.ujDiakSzuloEmailLabel = new System.Windows.Forms.Label();
             this.ujDiakBecenevLabel = new System.Windows.Forms.Label();
             this.ujDiakSzuloNeveTextBox = new System.Windows.Forms.TextBox();
-            this.ujDiakNevTextBox = new System.Windows.Forms.TextBox();
+            this.ujDiakVezetekNevTextBox = new System.Windows.Forms.TextBox();
             this.ujDiakSzuloNevLabel = new System.Windows.Forms.Label();
-            this.ujDiakNevLabel = new System.Windows.Forms.Label();
+            this.ujDiakVezetekNevLabel = new System.Windows.Forms.Label();
             this.vagyLabel = new System.Windows.Forms.Label();
+            this.ujDiakKeresztNevTextBox = new System.Windows.Forms.TextBox();
+            this.ukDiakKeresztNevlabel = new System.Windows.Forms.Label();
             this.ujDiakgroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,22 +122,24 @@
             // 
             // ujDiakgroupBox
             // 
+            this.ujDiakgroupBox.Controls.Add(this.ujDiakKeresztNevTextBox);
+            this.ujDiakgroupBox.Controls.Add(this.ukDiakKeresztNevlabel);
             this.ujDiakgroupBox.Controls.Add(this.ujDiakSzuletesiDatumdateTimePicker);
             this.ujDiakgroupBox.Controls.Add(this.ujDiakSzuletettLabel);
             this.ujDiakgroupBox.Controls.Add(this.ujFelhasznaloRegisztralasButton);
-            this.ujDiakgroupBox.Controls.Add(this.ujFelhasznaloJelszoUjraTextBox);
+            this.ujDiakgroupBox.Controls.Add(this.ujDiakSzuloEmailTextBox);
             this.ujDiakgroupBox.Controls.Add(this.ujDiakBecenevTextBox);
             this.ujDiakgroupBox.Controls.Add(this.ujDiakSzuloEmailLabel);
             this.ujDiakgroupBox.Controls.Add(this.ujDiakBecenevLabel);
             this.ujDiakgroupBox.Controls.Add(this.ujDiakSzuloNeveTextBox);
-            this.ujDiakgroupBox.Controls.Add(this.ujDiakNevTextBox);
+            this.ujDiakgroupBox.Controls.Add(this.ujDiakVezetekNevTextBox);
             this.ujDiakgroupBox.Controls.Add(this.ujDiakSzuloNevLabel);
-            this.ujDiakgroupBox.Controls.Add(this.ujDiakNevLabel);
+            this.ujDiakgroupBox.Controls.Add(this.ujDiakVezetekNevLabel);
             this.ujDiakgroupBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ujDiakgroupBox.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.ujDiakgroupBox.Location = new System.Drawing.Point(517, 165);
+            this.ujDiakgroupBox.Location = new System.Drawing.Point(503, 152);
             this.ujDiakgroupBox.Name = "ujDiakgroupBox";
-            this.ujDiakgroupBox.Size = new System.Drawing.Size(565, 373);
+            this.ujDiakgroupBox.Size = new System.Drawing.Size(502, 473);
             this.ujDiakgroupBox.TabIndex = 13;
             this.ujDiakgroupBox.TabStop = false;
             this.ujDiakgroupBox.Text = "Új diák hozzáadása";
@@ -143,7 +147,7 @@
             // ujDiakSzuletesiDatumdateTimePicker
             // 
             this.ujDiakSzuletesiDatumdateTimePicker.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ujDiakSzuletesiDatumdateTimePicker.Location = new System.Drawing.Point(189, 290);
+            this.ujDiakSzuletesiDatumdateTimePicker.Location = new System.Drawing.Point(189, 340);
             this.ujDiakSzuletesiDatumdateTimePicker.Name = "ujDiakSzuletesiDatumdateTimePicker";
             this.ujDiakSzuletesiDatumdateTimePicker.Size = new System.Drawing.Size(224, 34);
             this.ujDiakSzuletesiDatumdateTimePicker.TabIndex = 16;
@@ -154,7 +158,7 @@
             this.ujDiakSzuletettLabel.AutoSize = true;
             this.ujDiakSzuletettLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ujDiakSzuletettLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.ujDiakSzuletettLabel.Location = new System.Drawing.Point(16, 290);
+            this.ujDiakSzuletettLabel.Location = new System.Drawing.Point(16, 340);
             this.ujDiakSzuletettLabel.Name = "ujDiakSzuletettLabel";
             this.ujDiakSzuletettLabel.Size = new System.Drawing.Size(130, 38);
             this.ujDiakSzuletettLabel.TabIndex = 15;
@@ -167,26 +171,27 @@
             this.ujFelhasznaloRegisztralasButton.FlatAppearance.BorderSize = 2;
             this.ujFelhasznaloRegisztralasButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.ujFelhasznaloRegisztralasButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
-            this.ujFelhasznaloRegisztralasButton.Location = new System.Drawing.Point(431, 150);
+            this.ujFelhasznaloRegisztralasButton.Location = new System.Drawing.Point(189, 390);
             this.ujFelhasznaloRegisztralasButton.Name = "ujFelhasznaloRegisztralasButton";
             this.ujFelhasznaloRegisztralasButton.Size = new System.Drawing.Size(128, 64);
             this.ujFelhasznaloRegisztralasButton.TabIndex = 11;
             this.ujFelhasznaloRegisztralasButton.Text = "OK";
             this.ujFelhasznaloRegisztralasButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.ujFelhasznaloRegisztralasButton.UseVisualStyleBackColor = true;
+            this.ujFelhasznaloRegisztralasButton.Click += new System.EventHandler(this.ujFelhasznaloRegisztralasButton_Click);
             // 
-            // ujFelhasznaloJelszoUjraTextBox
+            // ujDiakSzuloEmailTextBox
             // 
-            this.ujFelhasznaloJelszoUjraTextBox.Location = new System.Drawing.Point(189, 229);
-            this.ujFelhasznaloJelszoUjraTextBox.Name = "ujFelhasznaloJelszoUjraTextBox";
-            this.ujFelhasznaloJelszoUjraTextBox.Size = new System.Drawing.Size(224, 47);
-            this.ujFelhasznaloJelszoUjraTextBox.TabIndex = 14;
+            this.ujDiakSzuloEmailTextBox.Location = new System.Drawing.Point(189, 279);
+            this.ujDiakSzuloEmailTextBox.Name = "ujDiakSzuloEmailTextBox";
+            this.ujDiakSzuloEmailTextBox.Size = new System.Drawing.Size(270, 47);
+            this.ujDiakSzuloEmailTextBox.TabIndex = 14;
             // 
             // ujDiakBecenevTextBox
             // 
-            this.ujDiakBecenevTextBox.Location = new System.Drawing.Point(189, 109);
+            this.ujDiakBecenevTextBox.Location = new System.Drawing.Point(189, 159);
             this.ujDiakBecenevTextBox.Name = "ujDiakBecenevTextBox";
-            this.ujDiakBecenevTextBox.Size = new System.Drawing.Size(224, 47);
+            this.ujDiakBecenevTextBox.Size = new System.Drawing.Size(270, 47);
             this.ujDiakBecenevTextBox.TabIndex = 12;
             // 
             // ujDiakSzuloEmailLabel
@@ -194,7 +199,7 @@
             this.ujDiakSzuloEmailLabel.AutoSize = true;
             this.ujDiakSzuloEmailLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ujDiakSzuloEmailLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.ujDiakSzuloEmailLabel.Location = new System.Drawing.Point(16, 235);
+            this.ujDiakSzuloEmailLabel.Location = new System.Drawing.Point(16, 285);
             this.ujDiakSzuloEmailLabel.Name = "ujDiakSzuloEmailLabel";
             this.ujDiakSzuloEmailLabel.Size = new System.Drawing.Size(164, 38);
             this.ujDiakSzuloEmailLabel.TabIndex = 13;
@@ -205,7 +210,7 @@
             this.ujDiakBecenevLabel.AutoSize = true;
             this.ujDiakBecenevLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.ujDiakBecenevLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.ujDiakBecenevLabel.Location = new System.Drawing.Point(16, 115);
+            this.ujDiakBecenevLabel.Location = new System.Drawing.Point(16, 165);
             this.ujDiakBecenevLabel.Name = "ujDiakBecenevLabel";
             this.ujDiakBecenevLabel.Size = new System.Drawing.Size(120, 37);
             this.ujDiakBecenevLabel.TabIndex = 11;
@@ -213,39 +218,39 @@
             // 
             // ujDiakSzuloNeveTextBox
             // 
-            this.ujDiakSzuloNeveTextBox.Location = new System.Drawing.Point(189, 170);
+            this.ujDiakSzuloNeveTextBox.Location = new System.Drawing.Point(189, 220);
             this.ujDiakSzuloNeveTextBox.Name = "ujDiakSzuloNeveTextBox";
-            this.ujDiakSzuloNeveTextBox.Size = new System.Drawing.Size(224, 47);
+            this.ujDiakSzuloNeveTextBox.Size = new System.Drawing.Size(270, 47);
             this.ujDiakSzuloNeveTextBox.TabIndex = 10;
             // 
-            // ujDiakNevTextBox
+            // ujDiakVezetekNevTextBox
             // 
-            this.ujDiakNevTextBox.Location = new System.Drawing.Point(189, 51);
-            this.ujDiakNevTextBox.Name = "ujDiakNevTextBox";
-            this.ujDiakNevTextBox.Size = new System.Drawing.Size(224, 47);
-            this.ujDiakNevTextBox.TabIndex = 8;
+            this.ujDiakVezetekNevTextBox.Location = new System.Drawing.Point(189, 51);
+            this.ujDiakVezetekNevTextBox.Name = "ujDiakVezetekNevTextBox";
+            this.ujDiakVezetekNevTextBox.Size = new System.Drawing.Size(270, 47);
+            this.ujDiakVezetekNevTextBox.TabIndex = 8;
             // 
             // ujDiakSzuloNevLabel
             // 
             this.ujDiakSzuloNevLabel.AutoSize = true;
             this.ujDiakSzuloNevLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ujDiakSzuloNevLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.ujDiakSzuloNevLabel.Location = new System.Drawing.Point(16, 176);
+            this.ujDiakSzuloNevLabel.Location = new System.Drawing.Point(16, 226);
             this.ujDiakSzuloNevLabel.Name = "ujDiakSzuloNevLabel";
             this.ujDiakSzuloNevLabel.Size = new System.Drawing.Size(156, 38);
             this.ujDiakSzuloNevLabel.TabIndex = 9;
             this.ujDiakSzuloNevLabel.Text = "Szülő neve:";
             // 
-            // ujDiakNevLabel
+            // ujDiakVezetekNevLabel
             // 
-            this.ujDiakNevLabel.AutoSize = true;
-            this.ujDiakNevLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.ujDiakNevLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.ujDiakNevLabel.Location = new System.Drawing.Point(16, 57);
-            this.ujDiakNevLabel.Name = "ujDiakNevLabel";
-            this.ujDiakNevLabel.Size = new System.Drawing.Size(70, 37);
-            this.ujDiakNevLabel.TabIndex = 7;
-            this.ujDiakNevLabel.Text = "Név:";
+            this.ujDiakVezetekNevLabel.AutoSize = true;
+            this.ujDiakVezetekNevLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.ujDiakVezetekNevLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ujDiakVezetekNevLabel.Location = new System.Drawing.Point(16, 57);
+            this.ujDiakVezetekNevLabel.Name = "ujDiakVezetekNevLabel";
+            this.ujDiakVezetekNevLabel.Size = new System.Drawing.Size(168, 37);
+            this.ujDiakVezetekNevLabel.TabIndex = 7;
+            this.ujDiakVezetekNevLabel.Text = "Vezeték Név:";
             // 
             // vagyLabel
             // 
@@ -258,12 +263,30 @@
             this.vagyLabel.TabIndex = 14;
             this.vagyLabel.Text = "vagy";
             // 
+            // ujDiakKeresztNevTextBox
+            // 
+            this.ujDiakKeresztNevTextBox.Location = new System.Drawing.Point(189, 106);
+            this.ujDiakKeresztNevTextBox.Name = "ujDiakKeresztNevTextBox";
+            this.ujDiakKeresztNevTextBox.Size = new System.Drawing.Size(270, 47);
+            this.ujDiakKeresztNevTextBox.TabIndex = 18;
+            // 
+            // ukDiakKeresztNevlabel
+            // 
+            this.ukDiakKeresztNevlabel.AutoSize = true;
+            this.ukDiakKeresztNevlabel.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.ukDiakKeresztNevlabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ukDiakKeresztNevlabel.Location = new System.Drawing.Point(16, 112);
+            this.ukDiakKeresztNevlabel.Name = "ukDiakKeresztNevlabel";
+            this.ukDiakKeresztNevlabel.Size = new System.Drawing.Size(162, 37);
+            this.ukDiakKeresztNevlabel.TabIndex = 17;
+            this.ukDiakKeresztNevlabel.Text = "Kereszt Név:";
+            // 
             // AdminMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1104, 632);
+            this.ClientSize = new System.Drawing.Size(1104, 663);
             this.Controls.Add(this.vagyLabel);
             this.Controls.Add(this.ujDiakgroupBox);
             this.Controls.Add(this.diakBeleptetesButton);
@@ -293,16 +316,18 @@
         private System.Windows.Forms.Button diakBeleptetesButton;
         private System.Windows.Forms.GroupBox ujDiakgroupBox;
         private System.Windows.Forms.Button ujFelhasznaloRegisztralasButton;
-        private System.Windows.Forms.TextBox ujFelhasznaloJelszoUjraTextBox;
+        private System.Windows.Forms.TextBox ujDiakSzuloEmailTextBox;
         private System.Windows.Forms.TextBox ujDiakBecenevTextBox;
         private System.Windows.Forms.Label ujDiakSzuloEmailLabel;
         private System.Windows.Forms.Label ujDiakBecenevLabel;
         private System.Windows.Forms.TextBox ujDiakSzuloNeveTextBox;
-        private System.Windows.Forms.TextBox ujDiakNevTextBox;
+        private System.Windows.Forms.TextBox ujDiakVezetekNevTextBox;
         private System.Windows.Forms.Label ujDiakSzuloNevLabel;
-        private System.Windows.Forms.Label ujDiakNevLabel;
+        private System.Windows.Forms.Label ujDiakVezetekNevLabel;
         private System.Windows.Forms.Label vagyLabel;
         private System.Windows.Forms.DateTimePicker ujDiakSzuletesiDatumdateTimePicker;
         private System.Windows.Forms.Label ujDiakSzuletettLabel;
+        private System.Windows.Forms.TextBox ujDiakKeresztNevTextBox;
+        private System.Windows.Forms.Label ukDiakKeresztNevlabel;
     }
 }
