@@ -1,5 +1,7 @@
-﻿using System;
+﻿using OkosodoLibrary.DataAccess;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +13,9 @@ namespace OkosodoLibrary
         /// <summary>
         /// /Kapcsolat létrehozása, mindenhonnan látható, viszont csak innen módosítható, csak az itt fellelhető metódusok változtathatják meg a benne lévő adatokat
         /// </summary>
-        static public List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>();
+        static public IDataConnection Connection { get; private set; }
         
-        //Jelenleg csak adatbázisna lehet menteni, de skálázható txt vagy mySql-re is
+        //Jelenleg csak adatbázisna lehet menteni, de skálázható txt vagy mySql-re is, elestleg string bemeneti paraméterekkel, enumban dolgozva, de jelenleg csak adatbázisban dolzozik
        
         public static void InitializeConnections(bool database)
         {
@@ -21,8 +23,13 @@ namespace OkosodoLibrary
             {
                 //TODO - SQL kapcsolat létrehozása
                 SqlConnector sql = new SqlConnector();
-                Connections.Add(sql);
+                Connection = sql;
             }
+        }
+
+        public static string ConnString(string name)
+        {
+           return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
     }
 }

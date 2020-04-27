@@ -1,4 +1,6 @@
 ﻿using OkosodoLibrary;
+using OkosodoLibrary.DataAccess;
+using OkosodoLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,12 +30,12 @@ namespace OkosodoUI
                     ujDiakBecenevTextBox.Text,
                     ujDiakSzuloNeveTextBox.Text,
                     ujDiakSzuloEmailTextBox.Text,
-                    ujDiakSzuletesiDatumdateTimePicker.Value);
+                    ujDiakSzuletesiDatumdateTimePicker.Value,
+                    0,
+                    1);
 
-                foreach (IDataConnection db in GlobalConfig.Connections)
-                {
-                    db.CreateTanulo(model);
-                }
+                GlobalConfig.Connection.CreateTanulo(model);
+                
                 // ha lementette az adatokat, kitörli a korábban bevitt adatokat
                 ujDiakVezetekNevTextBox.Text = "";
                 ujDiakKeresztNevTextBox.Text = "";

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OkosodoLibrary
+namespace OkosodoLibrary.Models
 {
     public class TanuloModel
     {
@@ -51,17 +51,14 @@ namespace OkosodoLibrary
         /// </summary>
         public int Pont { get; set; }
 
-        /// <summary>
-        /// összesen elvégzett feladatok, típusfüggetlen, statisztikához, ez lehet, hogy típusra lesz bontva !!!
-        /// </summary>
-        public int ElvegzettFeladatokSzama { get; set; }
+        
 
         public TanuloModel()
         {
 
         }
 
-        public TanuloModel(string vezeteknev, string keresztnev, string becenev, string szuloneve, string szuloemail, DateTime szuletett)
+        public TanuloModel(string vezeteknev, string keresztnev, string becenev, string szuloneve, string szuloemail, DateTime szuletett, int admin_Id, int pont)
         {
             VezetekNev = vezeteknev;
             KeresztNev = keresztnev;
@@ -69,6 +66,8 @@ namespace OkosodoLibrary
             SzuloNeve = szuloneve;
             SzuloEmail = szuloemail;
             SzuletesiDatum = szuletett;
+            Admin_Id = admin_Id;
+            Pont = pont;
         }
     }
 }

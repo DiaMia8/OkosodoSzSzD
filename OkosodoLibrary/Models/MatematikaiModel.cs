@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OkosodoLibrary
+namespace OkosodoLibrary.Models
 {
-    public class LogikaiModel : IFeladatModel
+    public class MatematikaiModel : IFeladatModel
     {
         public int SorSzam { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Nev { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

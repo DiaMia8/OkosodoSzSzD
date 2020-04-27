@@ -31,7 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,17 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbcModel.cs" />
-    <Compile Include="AdminModel.cs" />
+    <Compile Include="Models\AbcModel.cs" />
+    <Compile Include="Models\AdminModel.cs" />
     <Compile Include="GlobalConfig.cs" />
-    <Compile Include="IDataConnection.cs" />
-    <Compile Include="IFeladatModel.cs" />
-    <Compile Include="JatekModel.cs" />
-    <Compile Include="LogikaiModel.cs" />
-    <Compile Include="MatematikaiModel.cs" />
+    <Compile Include="DataAccess\IDataConnection.cs" />
+    <Compile Include="Models\IFeladatModel.cs" />
+    <Compile Include="Models\JatekModel.cs" />
+    <Compile Include="Models\LogikaiModel.cs" />
+    <Compile Include="Models\MatematikaiModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlConnector.cs" />
-    <Compile Include="TanuloModel.cs" />
+    <Compile Include="DataAccess\SqlConnector.cs" />
+    <Compile Include="Models\TanuloModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
