@@ -36,7 +36,6 @@
             this.introLink = new System.Windows.Forms.LinkLabel();
             this.mitJatszolLabel = new System.Windows.Forms.Label();
             this.matekButton = new System.Windows.Forms.Button();
-            this.logikaiButton = new System.Windows.Forms.Button();
             this.betuButton = new System.Windows.Forms.Button();
             this.rabdomFeladatButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -112,31 +111,19 @@
             this.matekButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.matekButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.matekButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.matekButton.Location = new System.Drawing.Point(22, 265);
+            this.matekButton.Location = new System.Drawing.Point(74, 265);
             this.matekButton.Name = "matekButton";
             this.matekButton.Size = new System.Drawing.Size(164, 131);
             this.matekButton.TabIndex = 16;
             this.matekButton.Text = "Matematika";
             this.matekButton.UseVisualStyleBackColor = true;
             // 
-            // logikaiButton
-            // 
-            this.logikaiButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.logikaiButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
-            this.logikaiButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.logikaiButton.Location = new System.Drawing.Point(237, 265);
-            this.logikaiButton.Name = "logikaiButton";
-            this.logikaiButton.Size = new System.Drawing.Size(164, 131);
-            this.logikaiButton.TabIndex = 17;
-            this.logikaiButton.Text = "Logika";
-            this.logikaiButton.UseVisualStyleBackColor = true;
-            // 
             // betuButton
             // 
             this.betuButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.betuButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.betuButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.betuButton.Location = new System.Drawing.Point(458, 265);
+            this.betuButton.Location = new System.Drawing.Point(342, 265);
             this.betuButton.Name = "betuButton";
             this.betuButton.Size = new System.Drawing.Size(164, 131);
             this.betuButton.TabIndex = 18;
@@ -148,7 +135,7 @@
             this.rabdomFeladatButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.rabdomFeladatButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.rabdomFeladatButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.rabdomFeladatButton.Location = new System.Drawing.Point(664, 265);
+            this.rabdomFeladatButton.Location = new System.Drawing.Point(602, 265);
             this.rabdomFeladatButton.Name = "rabdomFeladatButton";
             this.rabdomFeladatButton.Size = new System.Drawing.Size(164, 131);
             this.rabdomFeladatButton.TabIndex = 19;
@@ -163,7 +150,6 @@
             this.ClientSize = new System.Drawing.Size(893, 599);
             this.Controls.Add(this.rabdomFeladatButton);
             this.Controls.Add(this.betuButton);
-            this.Controls.Add(this.logikaiButton);
             this.Controls.Add(this.matekButton);
             this.Controls.Add(this.mitJatszolLabel);
             this.Controls.Add(this.introLink);
@@ -187,7 +173,6 @@
         private System.Windows.Forms.LinkLabel introLink;
         private System.Windows.Forms.Label mitJatszolLabel;
         private System.Windows.Forms.Button matekButton;
-        private System.Windows.Forms.Button logikaiButton;
         private System.Windows.Forms.Button betuButton;
         private System.Windows.Forms.Button rabdomFeladatButton;
     }

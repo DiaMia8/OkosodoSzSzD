@@ -19,11 +19,6 @@ namespace OkosodoLibrary.Models
         public List<MatematikaiModel> matematikaiFeladatok = new List<MatematikaiModel>();
 
         /// <summary>
-        /// Logikai feladatok gyüjteménye
-        /// </summary>
-        public List<LogikaiModel> logikaiFeladatok = new List<LogikaiModel>();
-
-        /// <summary>
         /// Abc gyakorló feladatok gyűjteménye
         /// </summary>
         public List<AbcModel> abcFeladatok = new List<AbcModel>();
