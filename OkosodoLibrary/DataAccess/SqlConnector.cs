@@ -11,6 +11,34 @@ namespace OkosodoLibrary.DataAccess
 {
     public class SqlConnector : IDataConnection
     {
+
+        private const string db = "Okosodo";
+        /// <summary>
+        /// Elment egy adminisztrátort
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns>Adminisztrátor ID-val</returns>
+        public AdminModel CreateAdmin(AdminModel model)
+        {
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
+                var par = new DynamicParameters();
+                par.Add("@Vezetek_nev", model.VezetekNev);
+                par.Add("@Kereszt_nev", model.KeresztNev);
+                par.Add("@Email", model.Email);
+                par.Add("@Jelszo", model.Jelszo);
+                par.Add("@Id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                connection.Execute("dbo.spAdmin_Insert", par, commandType: CommandType.StoredProcedure);
+
+                model.Id = par.Get<int>("@Id");
+
+                return model;
+            }
+           
+        }
+
         /// <summary>
         /// /Elment egy új tanulót
         /// </summary>
@@ -20,26 +48,36 @@ namespace OkosodoLibrary.DataAccess
         {
             //csak addig tartja nyitva az sql kapcsolatot, amíg tartanak a kapcsos zárójelek a using-ban, minden alkalommal újra nyitja a kapcsolatot
  
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString("Okosodo")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
             {
-                var p = new DynamicParameters();
-                p.Add("@Vezetek_nev", model.VezetekNev);
-                p.Add("@Kereszt_nev", model.KeresztNev);
-                p.Add("@Becenev", model.Becenev);
-                p.Add("@Szuletett", model.SzuletesiDatum);
-                p.Add(@"Szulo_neve", model.SzuloNeve);
-                p.Add("@Szulo_email", model.SzuloEmail);
-                p.Add("@Admin_id", model.Admin_Id);
-                p.Add("@Keszfeladat_id", 1, dbType: DbType.Int32, direction: ParameterDirection.Input);
-                p.Add("@Pont", model.Pont);
-                p.Add("@Id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+                var par = new DynamicParameters();
+                par.Add("@Vezetek_nev", model.VezetekNev);
+                par.Add("@Kereszt_nev", model.KeresztNev);
+                par.Add("@Becenev", model.Becenev);
+                par.Add("@Szuletett", model.SzuletesiDatum);
+                par.Add(@"Szulo_neve", model.SzuloNeve);
+                par.Add("@Szulo_email", model.SzuloEmail);             
+                par.Add("@Pont", model.Pont);
+                par.Add("@Id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
-                connection.Execute("dbo.spTanulo_Insert", p, commandType: CommandType.StoredProcedure);
+                connection.Execute("dbo.spTanulo_Insert", par, commandType: CommandType.StoredProcedure);
 
-                model.Id = p.Get<int>("@Id");
+                model.Id = par.Get<int>("@Id");
 
                 return model;
             }
+        }
+
+        public List<TanuloModel> GetDiak_All()
+        {
+            List<TanuloModel> output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
+                output = connection.Query<TanuloModel>("dbo.spDiakGetAll").ToList();
+            }
+
+            return output;
         }
     }
 }

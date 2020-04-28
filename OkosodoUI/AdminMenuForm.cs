@@ -15,12 +15,29 @@ namespace OkosodoUI
 {
     public partial class AdminMenuForm : Form
     {
+
+        private List<TanuloModel> tanulok = GlobalConfig.Connection.GetDiak_All();
+
         public AdminMenuForm()
         {
             InitializeComponent();
+
+            DiakListaFeltoltes();
         }
 
-        private void ujFelhasznaloRegisztralasButton_Click(object sender, EventArgs e)
+        
+
+        private void DiakListaFeltoltes()
+        {
+            //új diák létrehozása után frissíti a listBox elemeit
+            diakListBox.DataSource = null;
+
+            diakListBox.DataSource = tanulok;
+            diakListBox.DisplayMember = "Becenev";
+
+        }
+
+        private void ujDiakRegisztralasButton_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
             {
@@ -31,7 +48,6 @@ namespace OkosodoUI
                     ujDiakSzuloNeveTextBox.Text,
                     ujDiakSzuloEmailTextBox.Text,
                     ujDiakSzuletesiDatumdateTimePicker.Value,
-                    0,
                     1);
 
                 GlobalConfig.Connection.CreateTanulo(model);
@@ -44,12 +60,15 @@ namespace OkosodoUI
                 ujDiakSzuloEmailTextBox.Text = "";
                 ujDiakSzuletesiDatumdateTimePicker.Text = "";
 
-
+                tanulok.Add(model);
+                //diakListBox.Refresh();
             }
             else
             {
                 MessageBox.Show("Hiányos kitöltés!");
             }
+
+            DiakListaFeltoltes();
         }
 
         private bool ValidateForm()

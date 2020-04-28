@@ -41,24 +41,27 @@ namespace OkosodoLibrary.Models
         /// Diák születési dátuma
         /// </summary>
         public  DateTime SzuletesiDatum { get; set; }
-        /// <summary>
-        /// melyik adminhoz tartozik, adatbázis kapcsolathoz
-        /// </summary>
-        public int Admin_Id { get; set; }
-
+        
         /// <summary>
         /// összes elért pontja, statisztikához
         /// </summary>
         public int Pont { get; set; }
 
-        
+        // nem működik
+        //public string TeljesNev
+        //{
+        //    get
+        //    {
+        //        return $"{VezetekNev} {KeresztNev}";
+        //    }
+        //}
 
         public TanuloModel()
         {
 
         }
 
-        public TanuloModel(string vezeteknev, string keresztnev, string becenev, string szuloneve, string szuloemail, DateTime szuletett, int admin_Id, int pont)
+        public TanuloModel(string vezeteknev, string keresztnev, string becenev, string szuloneve, string szuloemail, DateTime szuletett, int pont)
         {
             VezetekNev = vezeteknev;
             KeresztNev = keresztnev;
@@ -66,7 +69,6 @@ namespace OkosodoLibrary.Models
             SzuloNeve = szuloneve;
             SzuloEmail = szuloemail;
             SzuletesiDatum = szuletett;
-            Admin_Id = admin_Id;
             Pont = pont;
         }
     }

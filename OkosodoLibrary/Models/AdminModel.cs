@@ -26,12 +26,25 @@ namespace OkosodoLibrary.Models
         /// <summary>
         /// jelszó, validálást és biztonsági funkciókat megcsinálni
         /// </summary>
-        private int Jelszo { get; set; }
+        public string Jelszo { get; set; }
 
         /// <summary>
         /// Adatbázis kapcsolathoz, automatikus generálst megcsinálni
         /// </summary>
         public int Id { get; set; }
+
+        public AdminModel()
+        {
+
+        }
+
+        public AdminModel(string vezetekNev, string keresztNev, string email, string jelszo)
+        {
+            VezetekNev = vezetekNev;
+            KeresztNev = keresztNev;
+            Email = email;
+            Jelszo = jelszo;
+        }
 
     }
 }
