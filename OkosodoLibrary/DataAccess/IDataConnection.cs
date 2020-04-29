@@ -14,7 +14,7 @@ namespace OkosodoLibrary.DataAccess
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        TanuloModel CreateTanulo(TanuloModel model);
+        TanuloModel CreateTanulo(TanuloModel model, int adminId);
         /// <summary>
         /// Bekér egy modelt és visszaad egy admin típusú adatot
         /// </summary>
@@ -23,5 +23,7 @@ namespace OkosodoLibrary.DataAccess
         AdminModel CreateAdmin(AdminModel model);
 
         List<TanuloModel> GetDiak_All();
+
+        AdminModel GetOne_Admin(int Id);
     }
 }

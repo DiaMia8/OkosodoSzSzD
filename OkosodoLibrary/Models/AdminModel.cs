@@ -9,6 +9,10 @@ namespace OkosodoLibrary.Models
     public class AdminModel
     {
         /// <summary>
+        /// Adminisztráló felhasználó neve
+        /// </summary>
+        public string FelhasznaloNev { get; set; }
+        /// <summary>
         /// Adminisztráló neve vezetéknév
         /// </summary>
         public string VezetekNev { get; set; }
@@ -38,8 +42,9 @@ namespace OkosodoLibrary.Models
 
         }
 
-        public AdminModel(string vezetekNev, string keresztNev, string email, string jelszo)
+        public AdminModel(string felhasznaloNev, string vezetekNev, string keresztNev, string email, string jelszo)
         {
+            FelhasznaloNev = felhasznaloNev;
             VezetekNev = vezetekNev;
             KeresztNev = keresztNev;
             Email = email;

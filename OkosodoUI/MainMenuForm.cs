@@ -24,6 +24,7 @@ namespace OkosodoUI
             if (ValidateForm())
             {
                 AdminModel model = new AdminModel(
+                    ujFelhasznaloNevTextBox.Text,
                     ujFelhasznaloVezetekNevTextBox.Text,
                     ujFelhasznaloKeresztNevTextBox.Text,
                     ujFelhasznaloEmailTextBox.Text,
@@ -34,6 +35,7 @@ namespace OkosodoUI
                 GlobalConfig.Connection.CreateAdmin(model);
                 // adatmentés után törli az adatokat
 
+                ujFelhasznaloNevTextBox.Text = "";
                 ujFelhasznaloVezetekNevTextBox.Text = "";
                 ujFelhasznaloKeresztNevTextBox.Text = "";
                 ujFelhasznaloEmailTextBox.Text = "";
@@ -51,7 +53,10 @@ namespace OkosodoUI
             //TODO - Rendes validálást megcsinálni
             bool output = true;
 
-           
+            if (ujFelhasznaloNevTextBox.Text.Length == 0)
+            {
+                return false;
+            }
             if (ujFelhasznaloVezetekNevTextBox.Text.Length == 0)
             {
                 return false;

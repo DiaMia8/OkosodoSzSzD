@@ -15,17 +15,23 @@ namespace OkosodoUI
 {
     public partial class AdminMenuForm : Form
     {
+        // TODO - elvesznek adatok
+        private AdminModel bejelentkezett = GlobalConfig.Connection.GetOne_Admin(1);
 
         private List<TanuloModel> tanulok = GlobalConfig.Connection.GetDiak_All();
 
         public AdminMenuForm()
         {
             InitializeComponent();
-
+            
             DiakListaFeltoltes();
+            Udvozlet();
         }
 
-        
+        private void Udvozlet()
+        {
+            udvozloNevLabel.Text = bejelentkezett.KeresztNev.ToString();
+        }
 
         private void DiakListaFeltoltes()
         {
@@ -34,6 +40,8 @@ namespace OkosodoUI
 
             diakListBox.DataSource = tanulok;
             diakListBox.DisplayMember = "Becenev";
+
+        
 
         }
 
@@ -50,7 +58,7 @@ namespace OkosodoUI
                     ujDiakSzuletesiDatumdateTimePicker.Value,
                     1);
 
-                GlobalConfig.Connection.CreateTanulo(model);
+                GlobalConfig.Connection.CreateTanulo(model, bejelentkezett.Id);
                 
                 // ha lementette az adatokat, kitörli a korábban bevitt adatokat
                 ujDiakVezetekNevTextBox.Text = "";
@@ -65,7 +73,7 @@ namespace OkosodoUI
             }
             else
             {
-                MessageBox.Show("Hiányos kitöltés!");
+                MessageBox.Show("Hiányos kitöltés vagy hibás kitöltés! Kérlek ellenőrizd a bevitt adatokat!");
             }
 
             DiakListaFeltoltes();
@@ -75,6 +83,7 @@ namespace OkosodoUI
         {
             // TODO - Rendes validálást megcsinálni.
             bool output = true;
+            
 
             if (ujDiakVezetekNevTextBox.Text.Length == 0)
             {
@@ -92,10 +101,13 @@ namespace OkosodoUI
             {
                 return false;
             }
+
             if (ujDiakSzuloEmailTextBox.Text.Length == 0)
             {
                 return false;
             }
+            
+
             if (ujDiakSzuletesiDatumdateTimePicker.Text.Length == 0)
             {
                 return false;

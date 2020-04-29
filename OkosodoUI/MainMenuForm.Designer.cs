@@ -46,6 +46,8 @@
             this.jelszoLabel = new System.Windows.Forms.Label();
             this.nevTextBox = new System.Windows.Forms.TextBox();
             this.felhasznalonevLabel = new System.Windows.Forms.Label();
+            this.ujFelhasznaloNevTextBox = new System.Windows.Forms.TextBox();
+            this.ujFelhasznaloNevLabel = new System.Windows.Forms.Label();
             this.ujFelghasznalogroupBox.SuspendLayout();
             this.belepesGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +65,8 @@
             // 
             // ujFelghasznalogroupBox
             // 
+            this.ujFelghasznalogroupBox.Controls.Add(this.ujFelhasznaloNevTextBox);
+            this.ujFelghasznalogroupBox.Controls.Add(this.ujFelhasznaloNevLabel);
             this.ujFelghasznalogroupBox.Controls.Add(this.ujFelhasznaloVezetekNevTextBox);
             this.ujFelghasznalogroupBox.Controls.Add(this.vezetekNevUjLabel);
             this.ujFelghasznalogroupBox.Controls.Add(this.ujFelhasznaloKeresztNevTextBox);
@@ -76,14 +80,14 @@
             this.ujFelghasznalogroupBox.ForeColor = System.Drawing.Color.DodgerBlue;
             this.ujFelghasznalogroupBox.Location = new System.Drawing.Point(66, 319);
             this.ujFelghasznalogroupBox.Name = "ujFelghasznalogroupBox";
-            this.ujFelghasznalogroupBox.Size = new System.Drawing.Size(715, 334);
+            this.ujFelghasznalogroupBox.Size = new System.Drawing.Size(715, 391);
             this.ujFelghasznalogroupBox.TabIndex = 6;
             this.ujFelghasznalogroupBox.TabStop = false;
             this.ujFelghasznalogroupBox.Text = "Regisztráció új felhasználóknak";
             // 
             // ujFelhasznaloVezetekNevTextBox
             // 
-            this.ujFelhasznaloVezetekNevTextBox.Location = new System.Drawing.Point(246, 69);
+            this.ujFelhasznaloVezetekNevTextBox.Location = new System.Drawing.Point(246, 124);
             this.ujFelhasznaloVezetekNevTextBox.Name = "ujFelhasznaloVezetekNevTextBox";
             this.ujFelhasznaloVezetekNevTextBox.Size = new System.Drawing.Size(224, 47);
             this.ujFelhasznaloVezetekNevTextBox.TabIndex = 18;
@@ -93,7 +97,7 @@
             this.vezetekNevUjLabel.AutoSize = true;
             this.vezetekNevUjLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.vezetekNevUjLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.vezetekNevUjLabel.Location = new System.Drawing.Point(16, 75);
+            this.vezetekNevUjLabel.Location = new System.Drawing.Point(16, 130);
             this.vezetekNevUjLabel.Name = "vezetekNevUjLabel";
             this.vezetekNevUjLabel.Size = new System.Drawing.Size(156, 37);
             this.vezetekNevUjLabel.TabIndex = 17;
@@ -101,7 +105,7 @@
             // 
             // ujFelhasznaloKeresztNevTextBox
             // 
-            this.ujFelhasznaloKeresztNevTextBox.Location = new System.Drawing.Point(246, 131);
+            this.ujFelhasznaloKeresztNevTextBox.Location = new System.Drawing.Point(246, 191);
             this.ujFelhasznaloKeresztNevTextBox.Name = "ujFelhasznaloKeresztNevTextBox";
             this.ujFelhasznaloKeresztNevTextBox.Size = new System.Drawing.Size(224, 47);
             this.ujFelhasznaloKeresztNevTextBox.TabIndex = 16;
@@ -111,7 +115,7 @@
             this.utonevUjLabel.AutoSize = true;
             this.utonevUjLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.utonevUjLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.utonevUjLabel.Location = new System.Drawing.Point(16, 137);
+            this.utonevUjLabel.Location = new System.Drawing.Point(16, 197);
             this.utonevUjLabel.Name = "utonevUjLabel";
             this.utonevUjLabel.Size = new System.Drawing.Size(109, 37);
             this.utonevUjLabel.TabIndex = 15;
@@ -124,7 +128,7 @@
             this.ujFelhasznaloRegisztralasButton.FlatAppearance.BorderSize = 2;
             this.ujFelhasznaloRegisztralasButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
             this.ujFelhasznaloRegisztralasButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
-            this.ujFelhasznaloRegisztralasButton.Location = new System.Drawing.Point(508, 149);
+            this.ujFelhasznaloRegisztralasButton.Location = new System.Drawing.Point(508, 182);
             this.ujFelhasznaloRegisztralasButton.Name = "ujFelhasznaloRegisztralasButton";
             this.ujFelhasznaloRegisztralasButton.Size = new System.Drawing.Size(128, 64);
             this.ujFelhasznaloRegisztralasButton.TabIndex = 11;
@@ -135,7 +139,7 @@
             // 
             // ujFelhasznaloEmailTextBox
             // 
-            this.ujFelhasznaloEmailTextBox.Location = new System.Drawing.Point(246, 186);
+            this.ujFelhasznaloEmailTextBox.Location = new System.Drawing.Point(246, 257);
             this.ujFelhasznaloEmailTextBox.Name = "ujFelhasznaloEmailTextBox";
             this.ujFelhasznaloEmailTextBox.Size = new System.Drawing.Size(224, 47);
             this.ujFelhasznaloEmailTextBox.TabIndex = 12;
@@ -145,7 +149,7 @@
             this.ujFelhasznaloEmailLabel.AutoSize = true;
             this.ujFelhasznaloEmailLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.ujFelhasznaloEmailLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.ujFelhasznaloEmailLabel.Location = new System.Drawing.Point(16, 192);
+            this.ujFelhasznaloEmailLabel.Location = new System.Drawing.Point(16, 263);
             this.ujFelhasznaloEmailLabel.Name = "ujFelhasznaloEmailLabel";
             this.ujFelhasznaloEmailLabel.Size = new System.Drawing.Size(88, 37);
             this.ujFelhasznaloEmailLabel.TabIndex = 11;
@@ -153,7 +157,7 @@
             // 
             // ujFelhasznaloJelszoTextBox
             // 
-            this.ujFelhasznaloJelszoTextBox.Location = new System.Drawing.Point(246, 239);
+            this.ujFelhasznaloJelszoTextBox.Location = new System.Drawing.Point(246, 326);
             this.ujFelhasznaloJelszoTextBox.Name = "ujFelhasznaloJelszoTextBox";
             this.ujFelhasznaloJelszoTextBox.Size = new System.Drawing.Size(224, 47);
             this.ujFelhasznaloJelszoTextBox.TabIndex = 10;
@@ -164,7 +168,7 @@
             this.ujFelhasznaloJelszoLabel.AutoSize = true;
             this.ujFelhasznaloJelszoLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ujFelhasznaloJelszoLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.ujFelhasznaloJelszoLabel.Location = new System.Drawing.Point(16, 245);
+            this.ujFelhasznaloJelszoLabel.Location = new System.Drawing.Point(16, 332);
             this.ujFelhasznaloJelszoLabel.Name = "ujFelhasznaloJelszoLabel";
             this.ujFelhasznaloJelszoLabel.Size = new System.Drawing.Size(96, 38);
             this.ujFelhasznaloJelszoLabel.TabIndex = 9;
@@ -238,6 +242,24 @@
             this.felhasznalonevLabel.TabIndex = 6;
             this.felhasznalonevLabel.Text = "Felhasználó Név:";
             // 
+            // ujFelhasznaloNevTextBox
+            // 
+            this.ujFelhasznaloNevTextBox.Location = new System.Drawing.Point(246, 51);
+            this.ujFelhasznaloNevTextBox.Name = "ujFelhasznaloNevTextBox";
+            this.ujFelhasznaloNevTextBox.Size = new System.Drawing.Size(224, 47);
+            this.ujFelhasznaloNevTextBox.TabIndex = 20;
+            // 
+            // ujFelhasznaloNevLabel
+            // 
+            this.ujFelhasznaloNevLabel.AutoSize = true;
+            this.ujFelhasznaloNevLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.ujFelhasznaloNevLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ujFelhasznaloNevLabel.Location = new System.Drawing.Point(16, 57);
+            this.ujFelhasznaloNevLabel.Name = "ujFelhasznaloNevLabel";
+            this.ujFelhasznaloNevLabel.Size = new System.Drawing.Size(215, 37);
+            this.ujFelhasznaloNevLabel.TabIndex = 19;
+            this.ujFelhasznaloNevLabel.Text = "Felhasznaló Név:";
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
@@ -282,6 +304,8 @@
         private System.Windows.Forms.Label vezetekNevUjLabel;
         private System.Windows.Forms.TextBox ujFelhasznaloKeresztNevTextBox;
         private System.Windows.Forms.Label utonevUjLabel;
+        private System.Windows.Forms.TextBox ujFelhasznaloNevTextBox;
+        private System.Windows.Forms.Label ujFelhasznaloNevLabel;
     }
 }
 
