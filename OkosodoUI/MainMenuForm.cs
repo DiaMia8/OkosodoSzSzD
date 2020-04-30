@@ -14,6 +14,8 @@ namespace OkosodoUI
 {
     public partial class MainMenuForm : Form
     {
+        public static int helyesBelepesId;
+
         public MainMenuForm()
         {
             InitializeComponent();
@@ -70,6 +72,48 @@ namespace OkosodoUI
                 return false;
             }
             if (ujFelhasznaloJelszoTextBox.Text.Length == 0)
+            {
+                return false;
+            }
+
+            return output;
+        }
+
+        private void belepesButton_Click(object sender, EventArgs e)
+        {
+            if (ValidateLogin())
+            {
+            int belepettId = GlobalConfig.Connection.LoginAdmin(nevTextBox.Text, jelszoTextBox.Text);
+                if (belepettId == 0)
+                {
+                    MessageBox.Show("Hibás felhasználó név vagy jelszó, kérlek próbáld újra!", "Figyelmeztetés!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                    
+                    jelszoTextBox.Text = " ";
+                }
+                else
+                {
+                    belepettId = helyesBelepesId;
+                    //AdminMenuForm form = new AdminMenuForm();
+                    //form.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hibás felhasználó név vagy jelszó, kérlek próbáld újra!", "Figyelmeztetés!", MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+                nevTextBox.Text = " ";
+                jelszoTextBox.Text = " ";
+            }
+        }
+
+        private bool ValidateLogin()
+        {
+            bool output = true;
+
+            if (nevTextBox.Text.Length == 0)
+            {
+                return false;
+            }
+            if (jelszoTextBox.Text.Length == 0)
             {
                 return false;
             }

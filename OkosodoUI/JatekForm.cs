@@ -12,21 +12,24 @@ using System.Windows.Forms;
 
 namespace OkosodoUI
 {
-    public partial class DiakMenuForm : Form
+    public partial class JatekForm : Form
     {
 
         private static TanuloModel bejelentkezett = GlobalConfig.Connection.GetOneTanuloById(3);
 
-        public DiakMenuForm()
+        public JatekForm()
         {
             InitializeComponent();
-
-            Udvozlet();
         }
 
-        private void Udvozlet()
+        private void kep()
         {
-            diakUdvozloNevLabel.Text = $"{bejelentkezett.Becenev.ToString()} !";
+            feladatPictureBox.ImageLocation = @"Resources\profil.jpg";
+        }
+
+        private void helpButton_Click(object sender, EventArgs e)
+        {
+            kep();
         }
     }
 }

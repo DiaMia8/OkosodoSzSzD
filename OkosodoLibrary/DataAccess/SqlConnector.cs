@@ -41,7 +41,7 @@ namespace OkosodoLibrary.DataAccess
         }
 
         /// <summary>
-        /// /Elment egy új tanulót
+        /// /Elment egy új tanulót és elmenti a kapcsoló táblába a tanuló és az admin ID-ját
         /// </summary>
         /// <param name="model">Tanulo információk</param>
         /// <returns>Tanulo adatokat az ID-vel együtt</returns>
@@ -92,6 +92,20 @@ namespace OkosodoLibrary.DataAccess
             return output;
         }
 
+        public TanuloModel GetOneTanuloById(int Id)
+        {
+            TanuloModel output;
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
+                var par = new DynamicParameters();
+                par.Add("@id", Id);
+                output = connection.Query<TanuloModel>("dbo.spDiakGetById", par, commandType: CommandType.StoredProcedure).Single();
+
+
+            }
+            return output;
+        }
+
         public AdminModel GetOne_Admin(int Id)
         {
             AdminModel output;
@@ -100,9 +114,42 @@ namespace OkosodoLibrary.DataAccess
                 var par = new DynamicParameters();
                 par.Add("@id", Id);
                 output = connection.Query<AdminModel>("spAdminGetById", par, commandType: CommandType.StoredProcedure).Single();
-                // elvesznek adatok
+                
                 
             }
+            return output;
+        }
+
+        public List<TanuloModel> GetTanuloByAdminId(int adminId)
+        {
+            List<TanuloModel> output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
+                var par = new DynamicParameters();
+                par.Add("@Id", adminId);
+                output = connection.Query<TanuloModel>("spDiakGetByAdminId", par, commandType: CommandType.StoredProcedure).ToList();
+            }
+
+            return output;
+        }
+
+        public int LoginAdmin(string felhasznaloNev, string jelszo)
+        {
+            int output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
+                var par = new DynamicParameters();
+                par.Add("Felhasznalo_Nev", felhasznaloNev);
+                par.Add("Jelszo", jelszo);
+                par.Add("@Id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                connection.Execute("dbo.spAdminLogin", par, commandType: CommandType.StoredProcedure);
+
+                output = par.Get<int>("@Id");
+            }
+
             return output;
         }
     }

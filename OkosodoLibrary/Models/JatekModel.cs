@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OkosodoLibrary.Models
 {
+     // lehet nem fog kelleni
     public class JatekModel
     {
         /// <summary>

@@ -14,7 +14,7 @@ namespace OkosodoLibrary.Models
         public int Id { get; set; }
         /// <summary>
         /// tanuló vezetékneve
-        /// </summary>
+        /// </summary>C:\Users\diana\Desktop\Okosodo\OkosodoLibrary\Models\TanuloModel.cs
         public string VezetekNev { get; set; }
 
         /// <summary>

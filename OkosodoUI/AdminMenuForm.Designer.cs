@@ -50,6 +50,7 @@
             this.ujDiakSzuloNevLabel = new System.Windows.Forms.Label();
             this.ujDiakVezetekNevLabel = new System.Windows.Forms.Label();
             this.vagyLabel = new System.Windows.Forms.Label();
+            this.adminIdLabel = new System.Windows.Forms.Label();
             this.ujDiakgroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -282,12 +283,23 @@
             this.vagyLabel.TabIndex = 14;
             this.vagyLabel.Text = "vagy";
             // 
+            // adminIdLabel
+            // 
+            this.adminIdLabel.AutoSize = true;
+            this.adminIdLabel.Location = new System.Drawing.Point(928, 41);
+            this.adminIdLabel.Name = "adminIdLabel";
+            this.adminIdLabel.Size = new System.Drawing.Size(0, 17);
+            this.adminIdLabel.TabIndex = 15;
+            this.adminIdLabel.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.adminIdLabel.Visible = false;
+            // 
             // AdminMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1104, 663);
+            this.ClientSize = new System.Drawing.Size(1104, 721);
+            this.Controls.Add(this.adminIdLabel);
             this.Controls.Add(this.vagyLabel);
             this.Controls.Add(this.ujDiakgroupBox);
             this.Controls.Add(this.diakBeleptetesButton);
@@ -330,5 +342,6 @@
         private System.Windows.Forms.Label ujDiakSzuletettLabel;
         private System.Windows.Forms.TextBox ujDiakKeresztNevTextBox;
         private System.Windows.Forms.Label ukDiakKeresztNevlabel;
+        private System.Windows.Forms.Label adminIdLabel;
     }
 }

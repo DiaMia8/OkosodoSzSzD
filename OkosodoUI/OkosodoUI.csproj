@@ -58,6 +58,12 @@
     <Compile Include="DiakMenuForm.Designer.cs">
       <DependentUpon>DiakMenuForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="JatekForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JatekForm.Designer.cs">
+      <DependentUpon>JatekForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DiakMenuForm.resx">
       <DependentUpon>DiakMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JatekForm.resx">
+      <DependentUpon>JatekForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
@@ -106,6 +115,11 @@
       <Project>{f93132c4-264c-4557-b4ea-cec739759652}</Project>
       <Name>OkosodoLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\profil.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

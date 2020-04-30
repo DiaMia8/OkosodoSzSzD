@@ -8,7 +8,7 @@ namespace OkosodoLibrary.Models
 {
     public class AbcModel : IFeladatModel
     {
-        public int SorSzam { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Nev { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int MaxPont { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string KepUrl { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

@@ -15,22 +15,25 @@ namespace OkosodoUI
 {
     public partial class AdminMenuForm : Form
     {
-        // TODO - elvesznek adatok
-        private AdminModel bejelentkezett = GlobalConfig.Connection.GetOne_Admin(1);
+        public static int belepettAdminId;
 
-        private List<TanuloModel> tanulok = GlobalConfig.Connection.GetDiak_All();
+        private static AdminModel bejelentkezett = GlobalConfig.Connection.GetOne_Admin(belepettAdminId);
+        
+        private List<TanuloModel> tanulok = GlobalConfig.Connection.GetTanuloByAdminId(bejelentkezett.Id);
 
+        
         public AdminMenuForm()
         {
-            InitializeComponent();
             
+            InitializeComponent();
+           
             DiakListaFeltoltes();
             Udvozlet();
         }
 
         private void Udvozlet()
         {
-            udvozloNevLabel.Text = bejelentkezett.KeresztNev.ToString();
+            udvozloNevLabel.Text = $"{bejelentkezett.KeresztNev.ToString()} !";
         }
 
         private void DiakListaFeltoltes()
@@ -115,5 +118,7 @@ namespace OkosodoUI
 
             return output;
         }
+
+
     }
 }

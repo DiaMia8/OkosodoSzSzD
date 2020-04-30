@@ -20,8 +20,10 @@ namespace OkosodoUI
             //Adatbázis kapcsolat inicializálása
             OkosodoLibrary.GlobalConfig.InitializeConnections(true);
 
-            Application.Run(new AdminMenuForm());
-            //Application.Run(new MainMenuForm());
+            //Application.Run(new AdminMenuForm());
+            Application.Run(new MainMenuForm());
+            //Application.Run(new DiakMenuForm());
+            //Application.Run(new JatekForm());
         }
     }
 }

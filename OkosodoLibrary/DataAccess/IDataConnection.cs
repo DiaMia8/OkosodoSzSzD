@@ -21,9 +21,35 @@ namespace OkosodoLibrary.DataAccess
         /// <param name="model"></param>
         /// <returns></returns>
         AdminModel CreateAdmin(AdminModel model);
-
+        /// <summary>
+        /// /az összes tanuló lekérdezése
+        /// </summary>
+        /// <returns></returns>
         List<TanuloModel> GetDiak_All();
-
+        /// <summary>
+        /// Egy admin lekérdezése ID alapján
+        /// </summary>
+        /// <param name="Id">Admin i-ja</param>
+        /// <returns>Adminmodel egy példány</returns>
         AdminModel GetOne_Admin(int Id);
+        /// <summary>
+        /// Egy adminhoz tartozó diákok lekérdezése admin Id alapján
+        /// </summary>
+        /// <param name="adminId">Admin ID-ja</param>
+        /// <returns>tanuló lista</returns>
+        List<TanuloModel> GetTanuloByAdminId(int adminId);
+        /// <summary>
+        /// Egy tanuló lekézdezése ID alapján
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns>Tanulo egy példánya</returns>
+        TanuloModel GetOneTanuloById(int Id);
+        /// <summary>
+        /// Admin belépés titkosított jelszóátalakítással
+        /// </summary>
+        /// <param name="felhasznaloNev"></param>
+        /// <param name="jelszo"></param>
+        /// <returns>az admin id-ja</returns>
+        int LoginAdmin(string felhasznaloNev, string jelszo);
     }
 }

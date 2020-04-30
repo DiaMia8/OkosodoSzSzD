@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             this.mainMenuLabel = new System.Windows.Forms.Label();
             this.ujFelghasznalogroupBox = new System.Windows.Forms.GroupBox();
+            this.ujFelhasznaloNevTextBox = new System.Windows.Forms.TextBox();
+            this.ujFelhasznaloNevLabel = new System.Windows.Forms.Label();
             this.ujFelhasznaloVezetekNevTextBox = new System.Windows.Forms.TextBox();
             this.vezetekNevUjLabel = new System.Windows.Forms.Label();
             this.ujFelhasznaloKeresztNevTextBox = new System.Windows.Forms.TextBox();
@@ -46,8 +48,6 @@
             this.jelszoLabel = new System.Windows.Forms.Label();
             this.nevTextBox = new System.Windows.Forms.TextBox();
             this.felhasznalonevLabel = new System.Windows.Forms.Label();
-            this.ujFelhasznaloNevTextBox = new System.Windows.Forms.TextBox();
-            this.ujFelhasznaloNevLabel = new System.Windows.Forms.Label();
             this.ujFelghasznalogroupBox.SuspendLayout();
             this.belepesGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +84,24 @@
             this.ujFelghasznalogroupBox.TabIndex = 6;
             this.ujFelghasznalogroupBox.TabStop = false;
             this.ujFelghasznalogroupBox.Text = "Regisztráció új felhasználóknak";
+            // 
+            // ujFelhasznaloNevTextBox
+            // 
+            this.ujFelhasznaloNevTextBox.Location = new System.Drawing.Point(246, 51);
+            this.ujFelhasznaloNevTextBox.Name = "ujFelhasznaloNevTextBox";
+            this.ujFelhasznaloNevTextBox.Size = new System.Drawing.Size(224, 47);
+            this.ujFelhasznaloNevTextBox.TabIndex = 20;
+            // 
+            // ujFelhasznaloNevLabel
+            // 
+            this.ujFelhasznaloNevLabel.AutoSize = true;
+            this.ujFelhasznaloNevLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.ujFelhasznaloNevLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ujFelhasznaloNevLabel.Location = new System.Drawing.Point(16, 57);
+            this.ujFelhasznaloNevLabel.Name = "ujFelhasznaloNevLabel";
+            this.ujFelhasznaloNevLabel.Size = new System.Drawing.Size(215, 37);
+            this.ujFelhasznaloNevLabel.TabIndex = 19;
+            this.ujFelhasznaloNevLabel.Text = "Felhasznaló Név:";
             // 
             // ujFelhasznaloVezetekNevTextBox
             // 
@@ -204,6 +222,7 @@
             this.belepesButton.Text = "OK";
             this.belepesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.belepesButton.UseVisualStyleBackColor = true;
+            this.belepesButton.Click += new System.EventHandler(this.belepesButton_Click);
             // 
             // jelszoTextBox
             // 
@@ -241,24 +260,6 @@
             this.felhasznalonevLabel.Size = new System.Drawing.Size(224, 38);
             this.felhasznalonevLabel.TabIndex = 6;
             this.felhasznalonevLabel.Text = "Felhasználó Név:";
-            // 
-            // ujFelhasznaloNevTextBox
-            // 
-            this.ujFelhasznaloNevTextBox.Location = new System.Drawing.Point(246, 51);
-            this.ujFelhasznaloNevTextBox.Name = "ujFelhasznaloNevTextBox";
-            this.ujFelhasznaloNevTextBox.Size = new System.Drawing.Size(224, 47);
-            this.ujFelhasznaloNevTextBox.TabIndex = 20;
-            // 
-            // ujFelhasznaloNevLabel
-            // 
-            this.ujFelhasznaloNevLabel.AutoSize = true;
-            this.ujFelhasznaloNevLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.ujFelhasznaloNevLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.ujFelhasznaloNevLabel.Location = new System.Drawing.Point(16, 57);
-            this.ujFelhasznaloNevLabel.Name = "ujFelhasznaloNevLabel";
-            this.ujFelhasznaloNevLabel.Size = new System.Drawing.Size(215, 37);
-            this.ujFelhasznaloNevLabel.TabIndex = 19;
-            this.ujFelhasznaloNevLabel.Text = "Felhasznaló Név:";
             // 
             // MainMenuForm
             // 

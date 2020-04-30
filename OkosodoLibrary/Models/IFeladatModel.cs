@@ -11,7 +11,7 @@ namespace OkosodoLibrary.Models
         /// <summary>
         /// minden feladatnak lesz sorszáma, lehet kiegészül egy típus kóddal
         /// </summary>
-        int SorSzam { get; set; }
+        int Id { get; set; }
 
         /// <summary>
         /// feladat neve pl, matekmacis stb...
