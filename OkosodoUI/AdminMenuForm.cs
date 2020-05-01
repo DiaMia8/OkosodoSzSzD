@@ -15,24 +15,28 @@ namespace OkosodoUI
 {
     public partial class AdminMenuForm : Form
     {
-        public static int belepettAdminId;
 
-        private static AdminModel bejelentkezett = GlobalConfig.Connection.GetOne_Admin(belepettAdminId);
-        
-        private List<TanuloModel> tanulok = GlobalConfig.Connection.GetTanuloByAdminId(bejelentkezett.Id);
+
+        private AdminModel bejelentkezett;
+
+        private List<TanuloModel> tanulok;
 
         
-        public AdminMenuForm()
+        public AdminMenuForm(int adminId)
         {
-            
-            InitializeComponent();
-           
-            DiakListaFeltoltes();
-            Udvozlet();
-        }
+            bejelentkezett = GlobalConfig.Connection.GetOne_Admin(adminId);
+            tanulok = GlobalConfig.Connection.GetTanuloByAdminId(bejelentkezett.Id);
 
+            InitializeComponent();
+            
+            Udvozlet();
+            DiakListaFeltoltes();
+            
+        }
+       
         private void Udvozlet()
         {
+            
             udvozloNevLabel.Text = $"{bejelentkezett.KeresztNev.ToString()} !";
         }
 
@@ -44,7 +48,6 @@ namespace OkosodoUI
             diakListBox.DataSource = tanulok;
             diakListBox.DisplayMember = "Becenev";
 
-        
 
         }
 
@@ -109,7 +112,11 @@ namespace OkosodoUI
             {
                 return false;
             }
-            
+
+            if (ValidEmail(ujDiakSzuloEmailTextBox.Text) == false)
+            {
+                return false;
+            }
 
             if (ujDiakSzuletesiDatumdateTimePicker.Text.Length == 0)
             {
@@ -119,6 +126,34 @@ namespace OkosodoUI
             return output;
         }
 
+        private bool ValidEmail(string value)
+        {
+            bool output = false;
 
+            if (value.Contains("@") && value.Length - value.LastIndexOf('.') < 5 && value.LastIndexOf('@') < value.LastIndexOf('.'))
+            {
+                output = true;
+            }
+
+            return output;
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            MainMenuForm frm = new MainMenuForm();
+            frm.Show();
+            this.Close();
+        }
+
+        private void diakBeleptetesButton_Click(object sender, EventArgs e)
+        {
+            TanuloModel kivalasztott = (TanuloModel)diakListBox.SelectedItem;
+
+            int kivalasztottId = kivalasztott.Id;
+
+            DiakMenuForm frm = new DiakMenuForm(kivalasztottId);
+            frm.Show();
+            this.Hide();
+        }
     }
 }

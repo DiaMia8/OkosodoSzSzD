@@ -18,11 +18,8 @@ namespace OkosodoLibrary.Models
         /// </summary>
         string Nev { get; set; }
 
-        /// <summary>
-        /// maximális pontszám, alapértelmezett 3 pont lesz
-        /// </summary>
-        int MaxPont { get; set; }
 
+        char Tipus { get; set; }
         /// <summary>
         /// képek elérési útja adatbázisból
         /// </summary>
@@ -32,5 +29,10 @@ namespace OkosodoLibrary.Models
         /// a kép alapján egy billentyű lenyomással lehet a következő feladatra lépni, itt található a helyes betű vagy szám
         /// </summary>
         string Megoldas { get; set; }
+
+        /// <summary>
+        /// maximális pontszám, alapértelmezett 3 pont lesz
+        /// </summary>
+        int MaxPont { get; set; }
     }
 }

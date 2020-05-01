@@ -51,5 +51,10 @@ namespace OkosodoLibrary.DataAccess
         /// <param name="jelszo"></param>
         /// <returns>az admin id-ja</returns>
         int LoginAdmin(string felhasznaloNev, string jelszo);
+        /// <summary>
+        /// Random játékhoz lekérdezi az összes feladatot típustól függetlenül
+        /// </summary>
+        /// <returns>Összes feladat listája</returns>
+        List<RandomModel> FeladatGetAll();
     }
 }

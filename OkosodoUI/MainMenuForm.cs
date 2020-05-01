@@ -14,7 +14,7 @@ namespace OkosodoUI
 {
     public partial class MainMenuForm : Form
     {
-        public static int helyesBelepesId;
+        
 
         public MainMenuForm()
         {
@@ -67,7 +67,11 @@ namespace OkosodoUI
             {
                 return false;
             }
-            if (ujFelhasznaloEmailTextBox.Text.Length == 0)
+            if (ujFelhasznaloEmailTextBox.Text.Length == 0 )
+            {
+                return false;
+            }
+            if (ValidEmail(ujFelhasznaloEmailTextBox.Text) == false)
             {
                 return false;
             }
@@ -79,22 +83,38 @@ namespace OkosodoUI
             return output;
         }
 
+        private bool ValidEmail(string value)
+        { 
+            bool output = false;
+
+            if (value.Contains("@") && value.Length - value.LastIndexOf('.') < 5 && value.LastIndexOf('@') < value.LastIndexOf('.'))
+            {
+                output = true;
+            }
+
+            return output;
+        }
+
         private void belepesButton_Click(object sender, EventArgs e)
         {
             if (ValidateLogin())
             {
             int belepettId = GlobalConfig.Connection.LoginAdmin(nevTextBox.Text, jelszoTextBox.Text);
+                
+
                 if (belepettId == 0)
                 {
                     MessageBox.Show("Hibás felhasználó név vagy jelszó, kérlek próbáld újra!", "Figyelmeztetés!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                     
-                    jelszoTextBox.Text = " ";
+                    jelszoTextBox.Text = "";
                 }
                 else
                 {
-                    belepettId = helyesBelepesId;
-                    //AdminMenuForm form = new AdminMenuForm();
-                    //form.Show();
+                    AdminMenuForm f = new AdminMenuForm(belepettId);
+                    f.Show();
+
+                    this.Hide();
+                    
                 }
             }
             else
@@ -120,5 +140,8 @@ namespace OkosodoUI
 
             return output;
         }
+
+       
     }
 }
+

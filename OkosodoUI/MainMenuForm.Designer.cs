@@ -90,7 +90,7 @@
             this.ujFelhasznaloNevTextBox.Location = new System.Drawing.Point(246, 51);
             this.ujFelhasznaloNevTextBox.Name = "ujFelhasznaloNevTextBox";
             this.ujFelhasznaloNevTextBox.Size = new System.Drawing.Size(224, 47);
-            this.ujFelhasznaloNevTextBox.TabIndex = 20;
+            this.ujFelhasznaloNevTextBox.TabIndex = 3;
             // 
             // ujFelhasznaloNevLabel
             // 
@@ -108,7 +108,7 @@
             this.ujFelhasznaloVezetekNevTextBox.Location = new System.Drawing.Point(246, 124);
             this.ujFelhasznaloVezetekNevTextBox.Name = "ujFelhasznaloVezetekNevTextBox";
             this.ujFelhasznaloVezetekNevTextBox.Size = new System.Drawing.Size(224, 47);
-            this.ujFelhasznaloVezetekNevTextBox.TabIndex = 18;
+            this.ujFelhasznaloVezetekNevTextBox.TabIndex = 4;
             // 
             // vezetekNevUjLabel
             // 
@@ -126,7 +126,7 @@
             this.ujFelhasznaloKeresztNevTextBox.Location = new System.Drawing.Point(246, 191);
             this.ujFelhasznaloKeresztNevTextBox.Name = "ujFelhasznaloKeresztNevTextBox";
             this.ujFelhasznaloKeresztNevTextBox.Size = new System.Drawing.Size(224, 47);
-            this.ujFelhasznaloKeresztNevTextBox.TabIndex = 16;
+            this.ujFelhasznaloKeresztNevTextBox.TabIndex = 5;
             // 
             // utonevUjLabel
             // 
@@ -160,7 +160,7 @@
             this.ujFelhasznaloEmailTextBox.Location = new System.Drawing.Point(246, 257);
             this.ujFelhasznaloEmailTextBox.Name = "ujFelhasznaloEmailTextBox";
             this.ujFelhasznaloEmailTextBox.Size = new System.Drawing.Size(224, 47);
-            this.ujFelhasznaloEmailTextBox.TabIndex = 12;
+            this.ujFelhasznaloEmailTextBox.TabIndex = 6;
             // 
             // ujFelhasznaloEmailLabel
             // 
@@ -178,7 +178,7 @@
             this.ujFelhasznaloJelszoTextBox.Location = new System.Drawing.Point(246, 326);
             this.ujFelhasznaloJelszoTextBox.Name = "ujFelhasznaloJelszoTextBox";
             this.ujFelhasznaloJelszoTextBox.Size = new System.Drawing.Size(224, 47);
-            this.ujFelhasznaloJelszoTextBox.TabIndex = 10;
+            this.ujFelhasznaloJelszoTextBox.TabIndex = 7;
             this.ujFelhasznaloJelszoTextBox.UseSystemPasswordChar = true;
             // 
             // ujFelhasznaloJelszoLabel
@@ -229,7 +229,7 @@
             this.jelszoTextBox.Location = new System.Drawing.Point(245, 102);
             this.jelszoTextBox.Name = "jelszoTextBox";
             this.jelszoTextBox.Size = new System.Drawing.Size(224, 47);
-            this.jelszoTextBox.TabIndex = 9;
+            this.jelszoTextBox.TabIndex = 2;
             this.jelszoTextBox.UseSystemPasswordChar = true;
             // 
             // jelszoLabel
@@ -248,7 +248,7 @@
             this.nevTextBox.Location = new System.Drawing.Point(245, 31);
             this.nevTextBox.Name = "nevTextBox";
             this.nevTextBox.Size = new System.Drawing.Size(224, 47);
-            this.nevTextBox.TabIndex = 7;
+            this.nevTextBox.TabIndex = 1;
             // 
             // felhasznalonevLabel
             // 

@@ -15,16 +15,27 @@ namespace OkosodoUI
     public partial class JatekForm : Form
     {
 
-        private static TanuloModel bejelentkezett = GlobalConfig.Connection.GetOneTanuloById(3);
+        private TanuloModel bejelentkezett;
 
-        public JatekForm()
+        private char feladatTipus;
+
+        private static List<RandomModel> feladatok; 
+
+        public JatekForm(int id, char tipus)
         {
+            bejelentkezett = GlobalConfig.Connection.GetOneTanuloById(id);
+            feladatTipus = tipus;
+            if (tipus == 'R')
+            {
+                feladatok = GlobalConfig.Connection.FeladatGetAll();
+            }
             InitializeComponent();
         }
 
         private void kep()
         {
-            feladatPictureBox.ImageLocation = @"Resources\profil.jpg";
+            feladatPictureBox.ImageLocation = feladatok.First().KepUrl;
+            
         }
 
         private void helpButton_Click(object sender, EventArgs e)

@@ -10,8 +10,9 @@ namespace OkosodoLibrary.Models
     {
         public int Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Nev { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int MaxPont { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public char Tipus { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string KepUrl { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Megoldas { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int MaxPont { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }

@@ -51,6 +51,7 @@
             this.ujDiakVezetekNevLabel = new System.Windows.Forms.Label();
             this.vagyLabel = new System.Windows.Forms.Label();
             this.adminIdLabel = new System.Windows.Forms.Label();
+            this.exitButton = new System.Windows.Forms.Button();
             this.ujDiakgroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,6 +121,7 @@
             this.diakBeleptetesButton.Text = "Indítás";
             this.diakBeleptetesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.diakBeleptetesButton.UseVisualStyleBackColor = true;
+            this.diakBeleptetesButton.Click += new System.EventHandler(this.diakBeleptetesButton_Click);
             // 
             // ujDiakgroupBox
             // 
@@ -150,7 +152,7 @@
             this.ujDiakKeresztNevTextBox.Location = new System.Drawing.Point(189, 106);
             this.ujDiakKeresztNevTextBox.Name = "ujDiakKeresztNevTextBox";
             this.ujDiakKeresztNevTextBox.Size = new System.Drawing.Size(270, 47);
-            this.ujDiakKeresztNevTextBox.TabIndex = 18;
+            this.ujDiakKeresztNevTextBox.TabIndex = 2;
             // 
             // ukDiakKeresztNevlabel
             // 
@@ -170,7 +172,7 @@
             this.ujDiakSzuletesiDatumdateTimePicker.Location = new System.Drawing.Point(189, 340);
             this.ujDiakSzuletesiDatumdateTimePicker.Name = "ujDiakSzuletesiDatumdateTimePicker";
             this.ujDiakSzuletesiDatumdateTimePicker.Size = new System.Drawing.Size(270, 34);
-            this.ujDiakSzuletesiDatumdateTimePicker.TabIndex = 16;
+            this.ujDiakSzuletesiDatumdateTimePicker.TabIndex = 6;
             this.ujDiakSzuletesiDatumdateTimePicker.Value = new System.DateTime(2020, 3, 26, 10, 42, 44, 0);
             // 
             // ujDiakSzuletettLabel
@@ -205,14 +207,14 @@
             this.ujDiakSzuloEmailTextBox.Location = new System.Drawing.Point(189, 279);
             this.ujDiakSzuloEmailTextBox.Name = "ujDiakSzuloEmailTextBox";
             this.ujDiakSzuloEmailTextBox.Size = new System.Drawing.Size(270, 47);
-            this.ujDiakSzuloEmailTextBox.TabIndex = 14;
+            this.ujDiakSzuloEmailTextBox.TabIndex = 5;
             // 
             // ujDiakBecenevTextBox
             // 
             this.ujDiakBecenevTextBox.Location = new System.Drawing.Point(189, 159);
             this.ujDiakBecenevTextBox.Name = "ujDiakBecenevTextBox";
             this.ujDiakBecenevTextBox.Size = new System.Drawing.Size(270, 47);
-            this.ujDiakBecenevTextBox.TabIndex = 12;
+            this.ujDiakBecenevTextBox.TabIndex = 3;
             // 
             // ujDiakSzuloEmailLabel
             // 
@@ -241,14 +243,14 @@
             this.ujDiakSzuloNeveTextBox.Location = new System.Drawing.Point(189, 220);
             this.ujDiakSzuloNeveTextBox.Name = "ujDiakSzuloNeveTextBox";
             this.ujDiakSzuloNeveTextBox.Size = new System.Drawing.Size(270, 47);
-            this.ujDiakSzuloNeveTextBox.TabIndex = 10;
+            this.ujDiakSzuloNeveTextBox.TabIndex = 4;
             // 
             // ujDiakVezetekNevTextBox
             // 
             this.ujDiakVezetekNevTextBox.Location = new System.Drawing.Point(189, 51);
             this.ujDiakVezetekNevTextBox.Name = "ujDiakVezetekNevTextBox";
             this.ujDiakVezetekNevTextBox.Size = new System.Drawing.Size(270, 47);
-            this.ujDiakVezetekNevTextBox.TabIndex = 8;
+            this.ujDiakVezetekNevTextBox.TabIndex = 1;
             // 
             // ujDiakSzuloNevLabel
             // 
@@ -293,12 +295,27 @@
             this.adminIdLabel.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.adminIdLabel.Visible = false;
             // 
+            // exitButton
+            // 
+            this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.exitButton.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.exitButton.Location = new System.Drawing.Point(35, 576);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(282, 64);
+            this.exitButton.TabIndex = 16;
+            this.exitButton.Text = "Kilépés";
+            this.exitButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // AdminMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1104, 721);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.adminIdLabel);
             this.Controls.Add(this.vagyLabel);
             this.Controls.Add(this.ujDiakgroupBox);
@@ -343,5 +360,6 @@
         private System.Windows.Forms.TextBox ujDiakKeresztNevTextBox;
         private System.Windows.Forms.Label ukDiakKeresztNevlabel;
         private System.Windows.Forms.Label adminIdLabel;
+        private System.Windows.Forms.Button exitButton;
     }
 }

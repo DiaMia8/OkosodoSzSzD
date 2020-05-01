@@ -58,7 +58,6 @@ namespace OkosodoLibrary.DataAccess
                 par.Add("@Szuletett", model.SzuletesiDatum);
                 par.Add(@"Szulo_neve", model.SzuloNeve);
                 par.Add("@Szulo_email", model.SzuloEmail);             
-                par.Add("@Pont", model.Pont);
                 par.Add("@Id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
                 
                 connection.Execute("dbo.spTanulo_Insert", par, commandType: CommandType.StoredProcedure);
@@ -148,6 +147,18 @@ namespace OkosodoLibrary.DataAccess
                 connection.Execute("dbo.spAdminLogin", par, commandType: CommandType.StoredProcedure);
 
                 output = par.Get<int>("@Id");
+            }
+
+            return output;
+        }
+
+        List<RandomModel> IDataConnection.FeladatGetAll()
+        {
+            List<RandomModel> output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
+                output = connection.Query<RandomModel>("dbo.spFeladatGetAll").ToList();
             }
 
             return output;

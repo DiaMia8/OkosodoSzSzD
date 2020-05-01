@@ -50,7 +50,7 @@
     <Compile Include="GlobalConfig.cs" />
     <Compile Include="DataAccess\IDataConnection.cs" />
     <Compile Include="Models\IFeladatModel.cs" />
-    <Compile Include="Models\JatekModel.cs" />
+    <Compile Include="Models\RandomModel.cs" />
     <Compile Include="Models\MatematikaiModel.cs" />
     <Compile Include="Models\MegoldottFeladatokModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

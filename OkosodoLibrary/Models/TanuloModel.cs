@@ -42,10 +42,6 @@ namespace OkosodoLibrary.Models
         /// </summary>
         public  DateTime SzuletesiDatum { get; set; }
         
-        /// <summary>
-        /// összes elért pontja, statisztikához
-        /// </summary>
-        public int Pont { get; set; }
 
         // nem működik
         //public string TeljesNev
@@ -69,7 +65,7 @@ namespace OkosodoLibrary.Models
             SzuloNeve = szuloneve;
             SzuloEmail = szuloemail;
             SzuletesiDatum = szuletett;
-            Pont = pont;
+            
         }
     }
 }

@@ -117,6 +117,7 @@
             this.matekButton.TabIndex = 16;
             this.matekButton.Text = "Matematika";
             this.matekButton.UseVisualStyleBackColor = true;
+            this.matekButton.Click += new System.EventHandler(this.matekButton_Click);
             // 
             // betuButton
             // 
@@ -129,6 +130,7 @@
             this.betuButton.TabIndex = 18;
             this.betuButton.Text = "Betűk";
             this.betuButton.UseVisualStyleBackColor = true;
+            this.betuButton.Click += new System.EventHandler(this.abcButton_Click);
             // 
             // rabdomFeladatButton
             // 
@@ -141,6 +143,7 @@
             this.rabdomFeladatButton.TabIndex = 19;
             this.rabdomFeladatButton.Text = "Random";
             this.rabdomFeladatButton.UseVisualStyleBackColor = true;
+            this.rabdomFeladatButton.Click += new System.EventHandler(this.randomFeladatButton_Click);
             // 
             // DiakMenuForm
             // 
