@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OkosodoLibrary.Models
 {
-    class MegoldottFeladatokModel
+    public class MegoldottFeladatokModel
     {
         public int Id { get; set; }
 

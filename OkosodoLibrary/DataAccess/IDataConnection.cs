@@ -56,5 +56,11 @@ namespace OkosodoLibrary.DataAccess
         /// </summary>
         /// <returns>Összes feladat listája</returns>
         List<RandomModel> FeladatGetAll();
+
+        List<MatematikaiModel> GetAllMatematikaiFeladat();
+
+        List<AbcModel> getAllAbcFeladat();
+
+        MegoldottFeladatokModel CreateMegoldottFeladatokModel(MegoldottFeladatokModel model);
     }
 }

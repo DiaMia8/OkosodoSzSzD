@@ -39,6 +39,30 @@ namespace OkosodoLibrary.DataAccess
             }
            
         }
+        /// <summary>
+        /// Elmenti a megoldott feladatokat játék végén
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns>Megoldottfeladatmodel id-val</returns>
+        public MegoldottFeladatokModel CreateMegoldottFeladatokModel(MegoldottFeladatokModel model)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
+                var par = new DynamicParameters();
+                par.Add("@DiakId", model.DiakId);
+                par.Add("@@FeladatId", model.FeladatId);
+                par.Add("@ElertPon", model.ElertPont);
+                par.Add("@Megoldott", model.Megoldott);
+                
+                par.Add("@Id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                connection.Execute("dbo.spMegoldottFeladatokInsert", par, commandType: CommandType.StoredProcedure);
+
+                model.Id = par.Get<int>("@ID");
+
+                return model;
+            }
+        }
 
         /// <summary>
         /// /Elment egy új tanulót és elmenti a kapcsoló táblába a tanuló és az admin ID-ját
@@ -76,9 +100,46 @@ namespace OkosodoLibrary.DataAccess
 
             }
         }
+        /// <summary>
+        /// Lekérdezi az összes ABC-s feladatot
+        /// </summary>
+        /// <returns></returns>
+        public List<AbcModel> getAllAbcFeladat()
+        {
+            List<AbcModel> output;
 
-        
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
 
+                output = connection.Query<AbcModel>("dbo.spABCFeladatGetAll").ToList();
+
+            }
+            return output;
+        }
+
+        /// <summary>
+        /// Lekérdezi az összes matematikai feladatot
+        /// </summary>
+        /// <returns></returns>
+        public List<MatematikaiModel> GetAllMatematikaiFeladat()
+        {
+
+            List<MatematikaiModel> output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            { 
+                
+                output = connection.Query<MatematikaiModel>("dbo.spMatematikaiFeladatGetAll").ToList();
+
+            }
+            return output;
+
+        }
+
+        /// <summary>
+        /// Összes diák lekérdezése
+        /// </summary>
+        /// <returns>Tanulók listája</returns>
         public List<TanuloModel> GetDiak_All()
         {
             List<TanuloModel> output;
@@ -91,6 +152,12 @@ namespace OkosodoLibrary.DataAccess
             return output;
         }
 
+       
+        /// <summary>
+        /// Lekérdez egy tanulót az id-ja alapján
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns>egy bizonyos Id-jű tanuló</returns>
         public TanuloModel GetOneTanuloById(int Id)
         {
             TanuloModel output;
@@ -104,7 +171,11 @@ namespace OkosodoLibrary.DataAccess
             }
             return output;
         }
-
+        /// <summary>
+        /// Lekérdez egy Admint az Id-ja alapján
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns>Egy bizonyos Id-jű admin</returns>
         public AdminModel GetOne_Admin(int Id)
         {
             AdminModel output;
@@ -119,6 +190,11 @@ namespace OkosodoLibrary.DataAccess
             return output;
         }
 
+        /// <summary>
+        /// Lekérdez egy tanulót az adminisztrátora Id-ja alapján
+        /// </summary>
+        /// <param name="adminId"></param>
+        /// <returns>Egy tanuló adatai az Adminja alapján</returns>
         public List<TanuloModel> GetTanuloByAdminId(int adminId)
         {
             List<TanuloModel> output;
@@ -133,6 +209,12 @@ namespace OkosodoLibrary.DataAccess
             return output;
         }
 
+        /// <summary>
+        /// Admin ellenőrzése felhasználónév és jelszó alapján
+        /// </summary>
+        /// <param name="felhasznaloNev"></param>
+        /// <param name="jelszo"></param>
+        /// <returns>bejelentkezett admin ID-ját</returns>
         public int LoginAdmin(string felhasznaloNev, string jelszo)
         {
             int output;
@@ -152,6 +234,10 @@ namespace OkosodoLibrary.DataAccess
             return output;
         }
 
+        /// <summary>
+        /// Lekérdezi az összes feladatot és beteszi egy listába
+        /// </summary>
+        /// <returns>összes feladat egy listában</returns>
         List<RandomModel> IDataConnection.FeladatGetAll()
         {
             List<RandomModel> output;
