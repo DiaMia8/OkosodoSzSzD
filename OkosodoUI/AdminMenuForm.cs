@@ -151,7 +151,7 @@ namespace OkosodoUI
 
             int kivalasztottId = kivalasztott.Id;
 
-            DiakMenuForm frm = new DiakMenuForm(kivalasztottId);
+            DiakMenuForm frm = new DiakMenuForm(kivalasztottId, bejelentkezett.Id);
             frm.Show();
             this.Hide();
         }

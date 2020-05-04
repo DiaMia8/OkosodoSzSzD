@@ -51,10 +51,10 @@ namespace OkosodoLibrary.DataAccess
                 var par = new DynamicParameters();
                 par.Add("@DiakId", model.DiakId);
                 par.Add("@@FeladatId", model.FeladatId);
-                par.Add("@ElertPon", model.ElertPont);
+                par.Add("@ElertPont", model.ElertPont);
                 par.Add("@Megoldott", model.Megoldott);
                 
-                par.Add("@Id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+                par.Add("@ID", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
                 connection.Execute("dbo.spMegoldottFeladatokInsert", par, commandType: CommandType.StoredProcedure);
 
@@ -104,7 +104,7 @@ namespace OkosodoLibrary.DataAccess
         /// Lekérdezi az összes ABC-s feladatot
         /// </summary>
         /// <returns></returns>
-        public List<AbcModel> getAllAbcFeladat()
+        public List<AbcModel> GetAllAbcFeladat()
         {
             List<AbcModel> output;
 

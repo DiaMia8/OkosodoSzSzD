@@ -266,7 +266,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(966, 765);
+            this.ClientSize = new System.Drawing.Size(1088, 765);
             this.Controls.Add(this.belepesGroupBox);
             this.Controls.Add(this.ujFelghasznalogroupBox);
             this.Controls.Add(this.mainMenuLabel);

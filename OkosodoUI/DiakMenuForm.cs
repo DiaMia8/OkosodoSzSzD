@@ -17,10 +17,12 @@ namespace OkosodoUI
 
         private TanuloModel bejelentkezett;
 
-        public DiakMenuForm(int id)
+        public static int _adminId;
+
+        public DiakMenuForm(int id, int adminId)
         {
             bejelentkezett = GlobalConfig.Connection.GetOneTanuloById(id);
-
+            _adminId = adminId;
             InitializeComponent();
 
             Udvozlet();
@@ -33,12 +35,19 @@ namespace OkosodoUI
 
         private void matekButton_Click(object sender, EventArgs e)
         {
-
+            char tipus = 'M';
+            JatekForm frm = new JatekForm(bejelentkezett.Id, tipus, _adminId);
+            frm.Show();
+            this.Hide();
         }
 
         private void abcButton_Click(object sender, EventArgs e)
         {
             //megnyitja a jatékformot
+            char tipus = 'A';
+            JatekForm frm = new JatekForm(bejelentkezett.Id, tipus, _adminId);
+            frm.Show();
+            this.Hide();
             //átküldi a diák id-ját és a feladat típusát
         }
 
@@ -46,10 +55,17 @@ namespace OkosodoUI
         {
             //megnyitja a játékformot
             char tipus = 'R';
-            JatekForm frm = new JatekForm(bejelentkezett.Id, tipus);
+            JatekForm frm = new JatekForm(bejelentkezett.Id, tipus, _adminId);
             frm.Show();
             this.Hide();
             //átküldi a diák id-ját a mentéshez és egy olyan feladat típust ami nem létezik, de kiszűrjük vagy nem használjuk
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            AdminMenuForm frm = new AdminMenuForm(_adminId);
+            frm.Show();
+            this.Hide();
         }
     }
 }

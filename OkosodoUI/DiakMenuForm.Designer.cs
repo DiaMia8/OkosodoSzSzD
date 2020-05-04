@@ -38,6 +38,7 @@
             this.matekButton = new System.Windows.Forms.Button();
             this.betuButton = new System.Windows.Forms.Button();
             this.rabdomFeladatButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // diakUdvozloNevLabel
@@ -145,12 +146,26 @@
             this.rabdomFeladatButton.UseVisualStyleBackColor = true;
             this.rabdomFeladatButton.Click += new System.EventHandler(this.randomFeladatButton_Click);
             // 
+            // exitButton
+            // 
+            this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.exitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
+            this.exitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
+            this.exitButton.Location = new System.Drawing.Point(856, 580);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(164, 131);
+            this.exitButton.TabIndex = 20;
+            this.exitButton.Text = "Kilépés";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // DiakMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(893, 599);
+            this.ClientSize = new System.Drawing.Size(1088, 765);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.rabdomFeladatButton);
             this.Controls.Add(this.betuButton);
             this.Controls.Add(this.matekButton);
@@ -179,5 +194,6 @@
         private System.Windows.Forms.Button matekButton;
         private System.Windows.Forms.Button betuButton;
         private System.Windows.Forms.Button rabdomFeladatButton;
+        private System.Windows.Forms.Button exitButton;
     }
 }

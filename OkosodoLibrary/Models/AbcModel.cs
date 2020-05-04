@@ -8,11 +8,11 @@ namespace OkosodoLibrary.Models
 {
     public class AbcModel : IFeladatModel
     {
-        public int Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Nev { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public char Tipus { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string KepUrl { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Megoldas { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int MaxPont { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Id { get; set; }
+        public string Nev { get; set; }
+        public char Tipus { get; set; }
+        public string KepUrl { get; set; }
+        public string Megoldas { get; set; }
+        public int MaxPont { get; set; }
     }
 }

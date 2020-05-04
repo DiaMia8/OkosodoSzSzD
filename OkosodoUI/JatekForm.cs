@@ -27,7 +27,13 @@ namespace OkosodoUI
         private static List<AbcModel> _abcFeladatok;
 
         private static List<IFeladatModel> _belsoLista = new List<IFeladatModel>();
-       
+
+        // leválogatáshoz használt szám, hány feladat legyen kiválogatva, plusz ellenőrzi, hogy van-e elég elem az adatbázisban
+        public static int _osszesFeladatSzam = 4;
+
+        // int a kiválasztott típusú lista countja
+        public static int _listaCount;
+        
         //ez an index növekszik gombnyomáskor ami megváltoztatja a feladatot
         private static int _kivalogatottListaIndexe = 0;
 
@@ -36,51 +42,73 @@ namespace OkosodoUI
 
         //számolja, hogy hány feladat van hétra, gomb if-jében
         private static int _elvegzendoFeladatokSzama;
-
+        // visszaszámláló, hogy ne fussunk ki az adatokból, gombnyomásokkor vizsgáljuk
         private IFeladatModel _aktualisFeladat;
 
-        
+        // megoldott feladatok listába mentése
 
-        private static int egyFeladatId;
+        private List<MegoldottFeladatokModel> _osszesMegoldott = new List<MegoldottFeladatokModel>();
 
-        // itt állítjuk be hány feladatot szeretnénk futtatni
+        public static int _adminId;
+
+        // itt állítjuk be hány feladatot szeretnénk futtatni és ezt csökkentve kap új indexet a feladat
         private int _feladatokSzama;
 
-        public JatekForm(int id, char tipus)
+        public JatekForm(int id, char tipus, int adminId)
         {
             _bejelentkezett = GlobalConfig.Connection.GetOneTanuloById(id);
             _feladatTipus = tipus;
+            _adminId = adminId;
             if (tipus == 'R')
             {
                 _randomFeladatok = GlobalConfig.Connection.FeladatGetAll();
+                _listaCount = _randomFeladatok.Count;
             }
             if (tipus == 'M')
             {
                 _matekFeladatok = GlobalConfig.Connection.GetAllMatematikaiFeladat();
+                _listaCount = _matekFeladatok.Count;
             }
             if (tipus == 'A')
             {
-                _abcFeladatok = GlobalConfig.Connection.getAllAbcFeladat();
+                _abcFeladatok = GlobalConfig.Connection.GetAllAbcFeladat();
+                _listaCount = _abcFeladatok.Count;
             }
+
             InitializeComponent();
-            //belső lista az aktuálisan választott feladat típust tartalmazza
-            belsoListaFeltoltes(tipus);
-            //random szám kialakításákoz használjuk feladatfeltöltés metódusban
-            _feladatokSzama = _belsoLista.Count;
-            //feltölti a játék feladatait
-            feladatFeltolt();
-            //első feladat inicializálása 0 indextől
-            jatekErtekbeallitasKezdo(_kivalogatottListaIndexe);
+
+            if (_listaCount <= _osszesFeladatSzam)
+            {
+                // TODO - valamiért megjelenik üresen - kijavítani
+                MessageBox.Show("Adatbázis hiba!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                
+                Hide();
+                DiakMenuForm frm = new DiakMenuForm(_bejelentkezett.Id, _adminId);
+                frm.Show();
+               
+            }
+            else
+            {
+
+                //belső lista az aktuálisan választott feladat típust tartalmazza
+                belsoListaFeltoltes(tipus);
+                //random szám kialakításákoz használjuk feladatfeltöltés metódusban
+                _feladatokSzama = _belsoLista.Count;
+                //feltölti a játék feladatait
+                feladatFeltolt();
+                //első feladat inicializálása 0 indextől
+                jatekErtekbeallitasKezdo(_kivalogatottListaIndexe); 
+            }
 
         }
         // kép url-re figyelni a sting ez legyen : .\Resources\Images\valami.jpg
 
+        
         /// <summary>
         /// feltölt egy típusfüggetlen listát a játékhoz
         /// </summary>
         /// <param name="tipus">form paramétereként kapott karakter</param>
         private void belsoListaFeltoltes(char tipus)
-
         {
             if (tipus == 'R')
             {
@@ -110,9 +138,48 @@ namespace OkosodoUI
 
         private void helpButton_Click(object sender, EventArgs e)
         {
-            //belsoListaFeltoltes('M');
-            //megoldasLabel.Text = "";
-            //feladatPictureBox.ImageLocation = $@".{matekFeladatok.First().KepUrl}";
+            // megmutatja a helyes megoldást, vár, majd növeli a játékot, elmenti, hogy nem sikerült megoldani
+            megoldasLabel.Text = _aktualisFeladat.Megoldas;
+            megoldasLabel.Update();
+            Thread.Sleep(2000);
+            megoldasLabel.Text = "";
+            if (_elvegzendoFeladatokSzama > 0)
+            {
+                elvegezedoFeladatokIndexCsokkentes();
+                kivalogatottListaIndexNoveles();
+                jatekErtekbeallitasIndexNovelessel(_kivalogatottListaIndexe);
+                // helytelen megoldással hozzáadás a megoldott feladatok listájához
+                MegoldottFeladatokModel model = new MegoldottFeladatokModel(
+                    _bejelentkezett.Id,
+                    _aktualisFeladat.Id,
+                    1,
+                    false
+                    );
+
+                _osszesMegoldott.Add(model);
+            }
+            else
+            {
+                //kilépőkép és becsukás
+                feladatPictureBox.ImageLocation = "";
+                foreach (var item in _osszesMegoldott)
+                {
+                    GlobalConfig.Connection.CreateMegoldottFeladatokModel(item);
+                }
+
+                elkoszonoLabel.Visible = true;
+                elkoszonoLabel.Text = $"Ügyes voltál! A helyesen megoldott feladataid: 4/{_osszesMegoldott.Count(x=>x.Megoldott == true).ToString()} !";
+                elkoszonoLabel.Update();
+                //TODO - gombok eltüntetése 
+                helpButton.Hide();
+                valaszButton.Hide();
+                valaszTextBox.Hide();
+                Thread.Sleep(5000);
+                DiakMenuForm frm = new DiakMenuForm(_bejelentkezett.Id, _adminId);
+                frm.Show();
+                this.Close();
+            }
+
         }
         /// <summary>
         /// /első megjelenítendő kép adatai mindig 0 a kiválogatott listából válogat
@@ -144,18 +211,85 @@ namespace OkosodoUI
         /// <param name="e"></param>
         private void valaszButton_Click(object sender, EventArgs e)
         {
-            if (valaszTextBox.Text == _aktualisFeladat.Megoldas.ToLower() || valaszTextBox.Text == _aktualisFeladat.Megoldas || int.Parse(valaszTextBox.Text) == int.Parse(_aktualisFeladat.Megoldas))
-            {
-                //TODO - ide jon a mentés
-                MessageBox.Show("jó válasz");
-            }
-            else
-            {
-                //ide is mentés jön
-                megoldasLabel.Text = _aktualisFeladat.Megoldas;
-            }
+            bool szamBool = int.TryParse(valaszTextBox.Text, out int result);
+            bool megoldasBool = int.TryParse(_aktualisFeladat.Megoldas, out int r);
 
+            if (szamBool == true && megoldasBool == true)
+            {
+
+                if (int.Parse(valaszTextBox.Text) == int.Parse(_aktualisFeladat.Megoldas))
+                {
+                    MegoldottFeladatokModel model = new MegoldottFeladatokModel(
+                   _bejelentkezett.Id,
+                   _aktualisFeladat.Id,
+                   _aktualisFeladat.MaxPont,
+                   true
+                   );
+
+                    _osszesMegoldott.Add(model);
+                }
+                else
+                {
+                    
+                    megoldasLabel.Text = _aktualisFeladat.Megoldas;
+                    Thread.Sleep(2000);
+                    MegoldottFeladatokModel model = new MegoldottFeladatokModel(
+                   _bejelentkezett.Id,
+                   _aktualisFeladat.Id,
+                   1,
+                   false
+                   );
+
+                    _osszesMegoldott.Add(model);
+                }
+            }
+            
+            if (szamBool == false && megoldasBool == false)
+            {
+                if (valaszTextBox.Text == _aktualisFeladat.Megoldas.ToLower() || valaszTextBox.Text == _aktualisFeladat.Megoldas)
+                {
+
+                    MegoldottFeladatokModel model = new MegoldottFeladatokModel(
+                   _bejelentkezett.Id,
+                   _aktualisFeladat.Id,
+                   _aktualisFeladat.MaxPont,
+                   true
+                   );
+
+                    _osszesMegoldott.Add(model);
+                }
+                else
+                {
+                    
+                    megoldasLabel.Text = _aktualisFeladat.Megoldas;
+                    Thread.Sleep(2000);
+                    MegoldottFeladatokModel model = new MegoldottFeladatokModel(
+                   _bejelentkezett.Id,
+                   _aktualisFeladat.Id,
+                   1,
+                   false
+                   );
+
+                    _osszesMegoldott.Add(model);
+                } 
+            }
+            if (szamBool == true && megoldasBool ==false || szamBool== false && megoldasBool == true)
+            {
+                
+                megoldasLabel.Text = _aktualisFeladat.Megoldas;
+                megoldasLabel.Update();
+                Thread.Sleep(2000);
+                MegoldottFeladatokModel model = new MegoldottFeladatokModel(
+                   _bejelentkezett.Id,
+                   _aktualisFeladat.Id,
+                   1,
+                   false
+                   );
+
+                _osszesMegoldott.Add(model);
+            }
             megoldasLabel.Text = "";
+            valaszTextBox.Clear();
 
             if (_elvegzendoFeladatokSzama > 0)
             {
@@ -166,10 +300,25 @@ namespace OkosodoUI
             }
             else
             {
-                //kilépőkép és becsukás
-                MessageBox.Show("Vége");
+                feladatPictureBox.ImageLocation = "";
+                foreach (var item in _osszesMegoldott)
+                {
+                    GlobalConfig.Connection.CreateMegoldottFeladatokModel(item);
+                }
+
+                elkoszonoLabel.Visible = true;
+                elkoszonoLabel.Text = $"Ügyes voltál! A helyesen megoldott feladataid: 4/{_osszesMegoldott.Count(x => x.Megoldott == true).ToString()} !";
+                elkoszonoLabel.Update();
                 //TODO - gombok eltüntetése 
-                //TODO - időzítés
+                valaszLabel.Hide();
+                helpButton.Hide();
+                valaszButton.Hide();
+                valaszTextBox.Hide();
+                Thread.Sleep(5000);
+
+                DiakMenuForm frm = new DiakMenuForm(_bejelentkezett.Id, _adminId);
+                frm.Show();
+                this.Hide();
             }
             
         }
@@ -183,7 +332,7 @@ namespace OkosodoUI
             int szamlalo = 0;
             int randomSzamlalo = _feladatokSzama - 1;
             //itt van meghatározva, hogy hány feladat lesz összesen
-            while (szamlalo <= 4)
+            while (szamlalo <= _osszesFeladatSzam)
             {   // levesz egy random elemet, csökkenti a randomszamot, növeli a szamlalót
                 var egyEgyed = _belsoLista.ElementAt(r.Next(randomSzamlalo));
                 _belsoLista.Remove(egyEgyed);

@@ -314,7 +314,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1104, 721);
+            this.ClientSize = new System.Drawing.Size(1088, 765);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.adminIdLabel);
             this.Controls.Add(this.vagyLabel);

@@ -59,7 +59,7 @@ namespace OkosodoLibrary.DataAccess
 
         List<MatematikaiModel> GetAllMatematikaiFeladat();
 
-        List<AbcModel> getAllAbcFeladat();
+        List<AbcModel> GetAllAbcFeladat();
 
         MegoldottFeladatokModel CreateMegoldottFeladatokModel(MegoldottFeladatokModel model);
     }

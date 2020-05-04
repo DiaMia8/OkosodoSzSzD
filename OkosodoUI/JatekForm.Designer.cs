@@ -33,9 +33,10 @@
             this.feladatPictureBox = new System.Windows.Forms.PictureBox();
             this.helpButton = new System.Windows.Forms.Button();
             this.megoldasLabel = new System.Windows.Forms.Label();
-            this.ValaszLabel = new System.Windows.Forms.Label();
+            this.valaszLabel = new System.Windows.Forms.Label();
             this.valaszTextBox = new System.Windows.Forms.TextBox();
             this.valaszButton = new System.Windows.Forms.Button();
+            this.elkoszonoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.feladatPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +69,7 @@
             this.helpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.helpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
             this.helpButton.Font = new System.Drawing.Font("Segoe UI Light", 28.2F);
-            this.helpButton.Location = new System.Drawing.Point(890, 576);
+            this.helpButton.Location = new System.Drawing.Point(890, 567);
             this.helpButton.Name = "helpButton";
             this.helpButton.Size = new System.Drawing.Size(164, 131);
             this.helpButton.TabIndex = 17;
@@ -78,26 +79,26 @@
             // 
             // megoldasLabel
             // 
-            this.megoldasLabel.Font = new System.Drawing.Font("Segoe UI Light", 28.2F);
+            this.megoldasLabel.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.megoldasLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.megoldasLabel.Location = new System.Drawing.Point(890, 455);
+            this.megoldasLabel.Location = new System.Drawing.Point(890, 431);
             this.megoldasLabel.Name = "megoldasLabel";
-            this.megoldasLabel.Size = new System.Drawing.Size(164, 56);
+            this.megoldasLabel.Size = new System.Drawing.Size(164, 115);
             this.megoldasLabel.TabIndex = 18;
             this.megoldasLabel.Text = "?";
             this.megoldasLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ValaszLabel
+            // valaszLabel
             // 
-            this.ValaszLabel.AutoSize = true;
-            this.ValaszLabel.BackColor = System.Drawing.Color.White;
-            this.ValaszLabel.Font = new System.Drawing.Font("Segoe UI Light", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ValaszLabel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.ValaszLabel.Location = new System.Drawing.Point(887, 95);
-            this.ValaszLabel.Name = "ValaszLabel";
-            this.ValaszLabel.Size = new System.Drawing.Size(167, 65);
-            this.ValaszLabel.TabIndex = 20;
-            this.ValaszLabel.Text = "Válasz:";
+            this.valaszLabel.AutoSize = true;
+            this.valaszLabel.BackColor = System.Drawing.Color.White;
+            this.valaszLabel.Font = new System.Drawing.Font("Segoe UI Light", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.valaszLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.valaszLabel.Location = new System.Drawing.Point(887, 95);
+            this.valaszLabel.Name = "valaszLabel";
+            this.valaszLabel.Size = new System.Drawing.Size(167, 65);
+            this.valaszLabel.TabIndex = 20;
+            this.valaszLabel.Text = "Válasz:";
             // 
             // valaszTextBox
             // 
@@ -108,7 +109,6 @@
             this.valaszTextBox.Name = "valaszTextBox";
             this.valaszTextBox.Size = new System.Drawing.Size(139, 62);
             this.valaszTextBox.TabIndex = 21;
-            this.valaszTextBox.Text = "ide";
             // 
             // valaszButton
             // 
@@ -124,15 +124,28 @@
             this.valaszButton.UseVisualStyleBackColor = true;
             this.valaszButton.Click += new System.EventHandler(this.valaszButton_Click);
             // 
+            // elkoszonoLabel
+            // 
+            this.elkoszonoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.elkoszonoLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.elkoszonoLabel.Location = new System.Drawing.Point(32, 722);
+            this.elkoszonoLabel.Name = "elkoszonoLabel";
+            this.elkoszonoLabel.Size = new System.Drawing.Size(1055, 76);
+            this.elkoszonoLabel.TabIndex = 23;
+            this.elkoszonoLabel.Text = "?";
+            this.elkoszonoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.elkoszonoLabel.Visible = false;
+            // 
             // JatekForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1130, 770);
+            this.ClientSize = new System.Drawing.Size(1130, 826);
+            this.Controls.Add(this.elkoszonoLabel);
             this.Controls.Add(this.valaszButton);
             this.Controls.Add(this.valaszTextBox);
-            this.Controls.Add(this.ValaszLabel);
+            this.Controls.Add(this.valaszLabel);
             this.Controls.Add(this.megoldasLabel);
             this.Controls.Add(this.helpButton);
             this.Controls.Add(this.feladatPictureBox);
@@ -153,8 +166,9 @@
         private System.Windows.Forms.PictureBox feladatPictureBox;
         private System.Windows.Forms.Button helpButton;
         private System.Windows.Forms.Label megoldasLabel;
-        private System.Windows.Forms.Label ValaszLabel;
+        private System.Windows.Forms.Label valaszLabel;
         private System.Windows.Forms.TextBox valaszTextBox;
         private System.Windows.Forms.Button valaszButton;
+        private System.Windows.Forms.Label elkoszonoLabel;
     }
 }

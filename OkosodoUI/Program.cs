@@ -21,9 +21,9 @@ namespace OkosodoUI
             OkosodoLibrary.GlobalConfig.InitializeConnections(true);
 
             //Application.Run(new AdminMenuForm());
-            //Application.Run(new MainMenuForm());
-            //Application.Run(new DiakMenuForm());
-            Application.Run(new JatekForm(1, 'R'));
+            Application.Run(new MainMenuForm());
+            //Application.Run(new DiakMenuForm(1));
+            //Application.Run(new JatekForm(1, 'R'));
         }
     }
 }
