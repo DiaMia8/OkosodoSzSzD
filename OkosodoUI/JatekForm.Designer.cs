@@ -109,8 +109,9 @@
             // 
             // pictureBoxLogo4
             // 
-            this.pictureBoxLogo4.Image = global::OkosodoUI.Properties.Resources.PBLogo4;
-            this.pictureBoxLogo4.Location = new System.Drawing.Point(642, 12);
+            this.pictureBoxLogo4.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo4;
+            this.pictureBoxLogo4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo4.Location = new System.Drawing.Point(672, 12);
             this.pictureBoxLogo4.Name = "pictureBoxLogo4";
             this.pictureBoxLogo4.Size = new System.Drawing.Size(100, 77);
             this.pictureBoxLogo4.TabIndex = 28;
@@ -118,8 +119,9 @@
             // 
             // pictureBoxLogo3
             // 
-            this.pictureBoxLogo3.Image = global::OkosodoUI.Properties.Resources.PBLogo3;
-            this.pictureBoxLogo3.Location = new System.Drawing.Point(536, 12);
+            this.pictureBoxLogo3.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo3;
+            this.pictureBoxLogo3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo3.Location = new System.Drawing.Point(566, 12);
             this.pictureBoxLogo3.Name = "pictureBoxLogo3";
             this.pictureBoxLogo3.Size = new System.Drawing.Size(100, 77);
             this.pictureBoxLogo3.TabIndex = 27;
@@ -127,8 +129,9 @@
             // 
             // pictureBoxLogo2
             // 
-            this.pictureBoxLogo2.Image = global::OkosodoUI.Properties.Resources.PBLogo2;
-            this.pictureBoxLogo2.Location = new System.Drawing.Point(430, 12);
+            this.pictureBoxLogo2.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo2;
+            this.pictureBoxLogo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo2.Location = new System.Drawing.Point(460, 12);
             this.pictureBoxLogo2.Name = "pictureBoxLogo2";
             this.pictureBoxLogo2.Size = new System.Drawing.Size(100, 77);
             this.pictureBoxLogo2.TabIndex = 26;
@@ -136,8 +139,9 @@
             // 
             // pictureBoxLogo1
             // 
-            this.pictureBoxLogo1.Image = global::OkosodoUI.Properties.Resources.pbLogo1;
-            this.pictureBoxLogo1.Location = new System.Drawing.Point(324, 12);
+            this.pictureBoxLogo1.BackgroundImage = global::OkosodoUI.Properties.Resources.pbLogo1;
+            this.pictureBoxLogo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo1.Location = new System.Drawing.Point(354, 12);
             this.pictureBoxLogo1.Name = "pictureBoxLogo1";
             this.pictureBoxLogo1.Size = new System.Drawing.Size(100, 77);
             this.pictureBoxLogo1.TabIndex = 25;
@@ -145,8 +149,9 @@
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Image = global::OkosodoUI.Properties.Resources.PBlogo;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(218, 12);
+            this.pictureBoxLogo.BackgroundImage = global::OkosodoUI.Properties.Resources.PBlogo;
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(248, 12);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(100, 77);
             this.pictureBoxLogo.TabIndex = 24;
@@ -154,11 +159,12 @@
             // 
             // valaszButton
             // 
+            this.valaszButton.BackgroundImage = global::OkosodoUI.Properties.Resources.ok;
+            this.valaszButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.valaszButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.valaszButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.valaszButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
             this.valaszButton.Font = new System.Drawing.Font("Segoe UI Light", 28.2F);
-            this.valaszButton.Image = global::OkosodoUI.Properties.Resources.ok;
             this.valaszButton.Location = new System.Drawing.Point(890, 269);
             this.valaszButton.Name = "valaszButton";
             this.valaszButton.Size = new System.Drawing.Size(164, 131);
@@ -168,11 +174,12 @@
             // 
             // helpButton
             // 
+            this.helpButton.BackgroundImage = global::OkosodoUI.Properties.Resources.helpHaver;
+            this.helpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.helpButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.helpButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.helpButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
             this.helpButton.Font = new System.Drawing.Font("Segoe UI Light", 28.2F);
-            this.helpButton.Image = global::OkosodoUI.Properties.Resources.helpHaver;
             this.helpButton.Location = new System.Drawing.Point(890, 567);
             this.helpButton.Name = "helpButton";
             this.helpButton.Size = new System.Drawing.Size(164, 131);
@@ -196,7 +203,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1130, 826);
+            this.ClientSize = new System.Drawing.Size(1141, 826);
             this.Controls.Add(this.pictureBoxLogo4);
             this.Controls.Add(this.pictureBoxLogo3);
             this.Controls.Add(this.pictureBoxLogo2);

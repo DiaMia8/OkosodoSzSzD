@@ -57,6 +57,8 @@
             this.pictureBoxLogo2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.groupBoxStatisztika = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.ujDiakgroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo3)).BeginInit();
@@ -118,7 +120,7 @@
             this.diakListBox.ItemHeight = 28;
             this.diakListBox.Location = new System.Drawing.Point(35, 193);
             this.diakListBox.Name = "diakListBox";
-            this.diakListBox.Size = new System.Drawing.Size(282, 256);
+            this.diakListBox.Size = new System.Drawing.Size(322, 256);
             this.diakListBox.TabIndex = 11;
             // 
             // diakBeleptetesButton
@@ -128,7 +130,7 @@
             this.diakBeleptetesButton.ForeColor = System.Drawing.Color.RoyalBlue;
             this.diakBeleptetesButton.Location = new System.Drawing.Point(35, 466);
             this.diakBeleptetesButton.Name = "diakBeleptetesButton";
-            this.diakBeleptetesButton.Size = new System.Drawing.Size(128, 64);
+            this.diakBeleptetesButton.Size = new System.Drawing.Size(182, 64);
             this.diakBeleptetesButton.TabIndex = 12;
             this.diakBeleptetesButton.Text = "Indítás";
             this.diakBeleptetesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -291,7 +293,7 @@
             this.vagyLabel.AutoSize = true;
             this.vagyLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.vagyLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.vagyLabel.Location = new System.Drawing.Point(372, 283);
+            this.vagyLabel.Location = new System.Drawing.Point(389, 282);
             this.vagyLabel.Name = "vagyLabel";
             this.vagyLabel.Size = new System.Drawing.Size(74, 38);
             this.vagyLabel.TabIndex = 14;
@@ -312,7 +314,7 @@
             this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exitButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.exitButton.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.exitButton.Location = new System.Drawing.Point(723, 667);
+            this.exitButton.Location = new System.Drawing.Point(635, 689);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(282, 64);
             this.exitButton.TabIndex = 16;
@@ -323,55 +325,86 @@
             // 
             // pictureBoxLogo4
             // 
-            this.pictureBoxLogo4.Image = global::OkosodoUI.Properties.Resources.PBLogo4;
-            this.pictureBoxLogo4.Location = new System.Drawing.Point(642, 10);
+            this.pictureBoxLogo4.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo4;
+            this.pictureBoxLogo4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo4.Location = new System.Drawing.Point(681, 12);
             this.pictureBoxLogo4.Name = "pictureBoxLogo4";
             this.pictureBoxLogo4.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo4.TabIndex = 21;
+            this.pictureBoxLogo4.TabIndex = 38;
             this.pictureBoxLogo4.TabStop = false;
             // 
             // pictureBoxLogo3
             // 
-            this.pictureBoxLogo3.Image = global::OkosodoUI.Properties.Resources.PBLogo3;
-            this.pictureBoxLogo3.Location = new System.Drawing.Point(536, 10);
+            this.pictureBoxLogo3.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo3;
+            this.pictureBoxLogo3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo3.Location = new System.Drawing.Point(575, 12);
             this.pictureBoxLogo3.Name = "pictureBoxLogo3";
             this.pictureBoxLogo3.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo3.TabIndex = 20;
+            this.pictureBoxLogo3.TabIndex = 37;
             this.pictureBoxLogo3.TabStop = false;
             // 
             // pictureBoxLogo2
             // 
-            this.pictureBoxLogo2.Image = global::OkosodoUI.Properties.Resources.PBLogo2;
-            this.pictureBoxLogo2.Location = new System.Drawing.Point(430, 10);
+            this.pictureBoxLogo2.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo2;
+            this.pictureBoxLogo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo2.Location = new System.Drawing.Point(469, 12);
             this.pictureBoxLogo2.Name = "pictureBoxLogo2";
             this.pictureBoxLogo2.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo2.TabIndex = 19;
+            this.pictureBoxLogo2.TabIndex = 36;
             this.pictureBoxLogo2.TabStop = false;
             // 
             // pictureBoxLogo1
             // 
-            this.pictureBoxLogo1.Image = global::OkosodoUI.Properties.Resources.pbLogo1;
-            this.pictureBoxLogo1.Location = new System.Drawing.Point(324, 10);
+            this.pictureBoxLogo1.BackgroundImage = global::OkosodoUI.Properties.Resources.pbLogo1;
+            this.pictureBoxLogo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo1.Location = new System.Drawing.Point(363, 12);
             this.pictureBoxLogo1.Name = "pictureBoxLogo1";
             this.pictureBoxLogo1.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo1.TabIndex = 18;
+            this.pictureBoxLogo1.TabIndex = 35;
             this.pictureBoxLogo1.TabStop = false;
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Image = global::OkosodoUI.Properties.Resources.PBlogo;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(218, 10);
+            this.pictureBoxLogo.BackgroundImage = global::OkosodoUI.Properties.Resources.PBlogo;
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(257, 12);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo.TabIndex = 17;
+            this.pictureBoxLogo.TabIndex = 34;
             this.pictureBoxLogo.TabStop = false;
+            // 
+            // groupBoxStatisztika
+            // 
+            this.groupBoxStatisztika.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.groupBoxStatisztika.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.groupBoxStatisztika.Location = new System.Drawing.Point(35, 542);
+            this.groupBoxStatisztika.Name = "groupBoxStatisztika";
+            this.groupBoxStatisztika.Size = new System.Drawing.Size(398, 263);
+            this.groupBoxStatisztika.TabIndex = 39;
+            this.groupBoxStatisztika.TabStop = false;
+            this.groupBoxStatisztika.Text = "Statisztika";
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.button1.Location = new System.Drawing.Point(277, 466);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(182, 64);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "Statisztika";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // AdminMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1088, 765);
+            this.ClientSize = new System.Drawing.Size(1168, 843);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.groupBoxStatisztika);
             this.Controls.Add(this.pictureBoxLogo4);
             this.Controls.Add(this.pictureBoxLogo3);
             this.Controls.Add(this.pictureBoxLogo2);
@@ -390,6 +423,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "AdminMenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Okosodó";
             this.ujDiakgroupBox.ResumeLayout(false);
             this.ujDiakgroupBox.PerformLayout();
@@ -433,5 +467,7 @@
         private System.Windows.Forms.PictureBox pictureBoxLogo2;
         private System.Windows.Forms.PictureBox pictureBoxLogo1;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.GroupBox groupBoxStatisztika;
+        private System.Windows.Forms.Button button1;
     }
 }

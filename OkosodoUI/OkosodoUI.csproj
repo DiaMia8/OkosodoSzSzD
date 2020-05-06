@@ -121,22 +121,22 @@
     <Content Include="Resources\bitmapAgyHaver2.png" />
     <Content Include="Resources\exitAH.png" />
     <Content Include="Resources\helpHaver.png" />
-    <Content Include="Resources\Images\abcC.jpg">
+    <Content Include="Resources\Images\alma1kukac.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\abcK.jpg">
+    <Content Include="Resources\Images\alma3.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\abcN.jpg">
+    <Content Include="Resources\Images\almaA.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\matek1.jpg">
+    <Content Include="Resources\Images\almaPlusz3.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\matek2.jpg">
+    <Content Include="Resources\Images\bekaB.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\matek3.jpg">
+    <Content Include="Resources\Images\cicaC.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\numButton.png" />
@@ -148,5 +148,6 @@
     <Content Include="Resources\PBLogo4.png" />
     <Content Include="Resources\randomButton.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

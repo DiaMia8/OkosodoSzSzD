@@ -36,15 +36,16 @@
             this.introLink = new System.Windows.Forms.LinkLabel();
             this.mitJatszolLabel = new System.Windows.Forms.Label();
             this.pictureBoxAgyHaver = new System.Windows.Forms.PictureBox();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.rabdomFeladatButton = new System.Windows.Forms.Button();
+            this.betuButton = new System.Windows.Forms.Button();
+            this.matekButton = new System.Windows.Forms.Button();
             this.pictureBoxLogo4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo3 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.exitButton = new System.Windows.Forms.Button();
-            this.rabdomFeladatButton = new System.Windows.Forms.Button();
-            this.betuButton = new System.Windows.Forms.Button();
-            this.matekButton = new System.Windows.Forms.Button();
+            this.groupBoxPontok = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAgyHaver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo3)).BeginInit();
@@ -121,64 +122,21 @@
             // 
             // pictureBoxAgyHaver
             // 
-            this.pictureBoxAgyHaver.Image = global::OkosodoUI.Properties.Resources.bitmapAgyHaver2;
-            this.pictureBoxAgyHaver.Location = new System.Drawing.Point(765, 8);
+            this.pictureBoxAgyHaver.BackgroundImage = global::OkosodoUI.Properties.Resources.bitmapAgyHaver2;
+            this.pictureBoxAgyHaver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxAgyHaver.Location = new System.Drawing.Point(789, 12);
             this.pictureBoxAgyHaver.Name = "pictureBoxAgyHaver";
             this.pictureBoxAgyHaver.Size = new System.Drawing.Size(250, 250);
             this.pictureBoxAgyHaver.TabIndex = 26;
             this.pictureBoxAgyHaver.TabStop = false;
             // 
-            // pictureBoxLogo4
-            // 
-            this.pictureBoxLogo4.Image = global::OkosodoUI.Properties.Resources.PBLogo4;
-            this.pictureBoxLogo4.Location = new System.Drawing.Point(632, 8);
-            this.pictureBoxLogo4.Name = "pictureBoxLogo4";
-            this.pictureBoxLogo4.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo4.TabIndex = 25;
-            this.pictureBoxLogo4.TabStop = false;
-            // 
-            // pictureBoxLogo3
-            // 
-            this.pictureBoxLogo3.Image = global::OkosodoUI.Properties.Resources.PBLogo3;
-            this.pictureBoxLogo3.Location = new System.Drawing.Point(526, 8);
-            this.pictureBoxLogo3.Name = "pictureBoxLogo3";
-            this.pictureBoxLogo3.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo3.TabIndex = 24;
-            this.pictureBoxLogo3.TabStop = false;
-            // 
-            // pictureBoxLogo2
-            // 
-            this.pictureBoxLogo2.Image = global::OkosodoUI.Properties.Resources.PBLogo2;
-            this.pictureBoxLogo2.Location = new System.Drawing.Point(420, 8);
-            this.pictureBoxLogo2.Name = "pictureBoxLogo2";
-            this.pictureBoxLogo2.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo2.TabIndex = 23;
-            this.pictureBoxLogo2.TabStop = false;
-            // 
-            // pictureBoxLogo1
-            // 
-            this.pictureBoxLogo1.Image = global::OkosodoUI.Properties.Resources.pbLogo1;
-            this.pictureBoxLogo1.Location = new System.Drawing.Point(314, 8);
-            this.pictureBoxLogo1.Name = "pictureBoxLogo1";
-            this.pictureBoxLogo1.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo1.TabIndex = 22;
-            this.pictureBoxLogo1.TabStop = false;
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = global::OkosodoUI.Properties.Resources.PBlogo;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(208, 8);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo.TabIndex = 21;
-            this.pictureBoxLogo.TabStop = false;
-            // 
             // exitButton
             // 
+            this.exitButton.BackgroundImage = global::OkosodoUI.Properties.Resources.exitAH;
+            this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.exitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.exitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.exitButton.Image = global::OkosodoUI.Properties.Resources.exitAH;
             this.exitButton.Location = new System.Drawing.Point(779, 544);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(236, 196);
@@ -188,10 +146,11 @@
             // 
             // rabdomFeladatButton
             // 
+            this.rabdomFeladatButton.BackgroundImage = global::OkosodoUI.Properties.Resources.randomButton;
+            this.rabdomFeladatButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.rabdomFeladatButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.rabdomFeladatButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.rabdomFeladatButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.rabdomFeladatButton.Image = global::OkosodoUI.Properties.Resources.randomButton;
             this.rabdomFeladatButton.Location = new System.Drawing.Point(779, 296);
             this.rabdomFeladatButton.Name = "rabdomFeladatButton";
             this.rabdomFeladatButton.Size = new System.Drawing.Size(236, 196);
@@ -201,10 +160,11 @@
             // 
             // betuButton
             // 
+            this.betuButton.BackgroundImage = global::OkosodoUI.Properties.Resources.abcButton;
+            this.betuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.betuButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.betuButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.betuButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.betuButton.Image = global::OkosodoUI.Properties.Resources.abcButton;
             this.betuButton.Location = new System.Drawing.Point(432, 296);
             this.betuButton.Name = "betuButton";
             this.betuButton.Size = new System.Drawing.Size(236, 196);
@@ -214,10 +174,11 @@
             // 
             // matekButton
             // 
+            this.matekButton.BackgroundImage = global::OkosodoUI.Properties.Resources.numButton;
+            this.matekButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.matekButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
             this.matekButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.matekButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.matekButton.Image = global::OkosodoUI.Properties.Resources.numButton;
             this.matekButton.Location = new System.Drawing.Point(72, 296);
             this.matekButton.Name = "matekButton";
             this.matekButton.Size = new System.Drawing.Size(236, 196);
@@ -225,18 +186,80 @@
             this.matekButton.UseVisualStyleBackColor = true;
             this.matekButton.Click += new System.EventHandler(this.matekButton_Click);
             // 
+            // pictureBoxLogo4
+            // 
+            this.pictureBoxLogo4.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo4;
+            this.pictureBoxLogo4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo4.Location = new System.Drawing.Point(653, 12);
+            this.pictureBoxLogo4.Name = "pictureBoxLogo4";
+            this.pictureBoxLogo4.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo4.TabIndex = 33;
+            this.pictureBoxLogo4.TabStop = false;
+            // 
+            // pictureBoxLogo3
+            // 
+            this.pictureBoxLogo3.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo3;
+            this.pictureBoxLogo3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo3.Location = new System.Drawing.Point(547, 12);
+            this.pictureBoxLogo3.Name = "pictureBoxLogo3";
+            this.pictureBoxLogo3.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo3.TabIndex = 32;
+            this.pictureBoxLogo3.TabStop = false;
+            // 
+            // pictureBoxLogo2
+            // 
+            this.pictureBoxLogo2.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo2;
+            this.pictureBoxLogo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo2.Location = new System.Drawing.Point(441, 12);
+            this.pictureBoxLogo2.Name = "pictureBoxLogo2";
+            this.pictureBoxLogo2.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo2.TabIndex = 31;
+            this.pictureBoxLogo2.TabStop = false;
+            // 
+            // pictureBoxLogo1
+            // 
+            this.pictureBoxLogo1.BackgroundImage = global::OkosodoUI.Properties.Resources.pbLogo1;
+            this.pictureBoxLogo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo1.Location = new System.Drawing.Point(335, 12);
+            this.pictureBoxLogo1.Name = "pictureBoxLogo1";
+            this.pictureBoxLogo1.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo1.TabIndex = 30;
+            this.pictureBoxLogo1.TabStop = false;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackgroundImage = global::OkosodoUI.Properties.Resources.PBlogo;
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(229, 12);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo.TabIndex = 29;
+            this.pictureBoxLogo.TabStop = false;
+            // 
+            // groupBoxPontok
+            // 
+            this.groupBoxPontok.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.groupBoxPontok.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.groupBoxPontok.Location = new System.Drawing.Point(72, 544);
+            this.groupBoxPontok.Name = "groupBoxPontok";
+            this.groupBoxPontok.Size = new System.Drawing.Size(596, 196);
+            this.groupBoxPontok.TabIndex = 34;
+            this.groupBoxPontok.TabStop = false;
+            this.groupBoxPontok.Text = "Pontok";
+            // 
             // DiakMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1088, 765);
-            this.Controls.Add(this.pictureBoxAgyHaver);
+            this.Controls.Add(this.groupBoxPontok);
             this.Controls.Add(this.pictureBoxLogo4);
             this.Controls.Add(this.pictureBoxLogo3);
             this.Controls.Add(this.pictureBoxLogo2);
             this.Controls.Add(this.pictureBoxLogo1);
             this.Controls.Add(this.pictureBoxLogo);
+            this.Controls.Add(this.pictureBoxAgyHaver);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.rabdomFeladatButton);
             this.Controls.Add(this.betuButton);
@@ -250,6 +273,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "DiakMenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Okosodó";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAgyHaver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo4)).EndInit();
@@ -273,11 +297,12 @@
         private System.Windows.Forms.Button betuButton;
         private System.Windows.Forms.Button rabdomFeladatButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.PictureBox pictureBoxAgyHaver;
         private System.Windows.Forms.PictureBox pictureBoxLogo4;
         private System.Windows.Forms.PictureBox pictureBoxLogo3;
         private System.Windows.Forms.PictureBox pictureBoxLogo2;
         private System.Windows.Forms.PictureBox pictureBoxLogo1;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
-        private System.Windows.Forms.PictureBox pictureBoxAgyHaver;
+        private System.Windows.Forms.GroupBox groupBoxPontok;
     }
 }

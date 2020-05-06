@@ -161,14 +161,15 @@ namespace OkosodoUI
             else
             {
                 //kilépőkép és becsukás
-                feladatPictureBox.ImageLocation = "";
+                
                 foreach (var item in _osszesMegoldott)
                 {
                     GlobalConfig.Connection.CreateMegoldottFeladatokModel(item);
                 }
-
+                feladatPictureBox.ImageLocation = @".\Resources\bitmapAgyHaver2.png";
+                feladatPictureBox.Refresh();
                 elkoszonoLabel.Visible = true;
-                elkoszonoLabel.Text = $"Ügyes voltál! A helyesen megoldott feladataid: 4/{_osszesMegoldott.Count(x=>x.Megoldott == true).ToString()} !";
+                elkoszonoLabel.Text = $"Ügyes voltál! A helyesen megoldott feladataid: 5/{_osszesMegoldott.Count(x=>x.Megoldott == true).ToString()} !";
                 elkoszonoLabel.Update();
                 //TODO - gombok eltüntetése 
                 helpButton.Hide();
@@ -188,7 +189,7 @@ namespace OkosodoUI
         private void jatekErtekbeallitasKezdo(int index)
         {
             _aktualisFeladat = _kivalogatottLista.ElementAt(index);
-            feladatPictureBox.ImageLocation = $@".{_aktualisFeladat.KepUrl}";
+            feladatPictureBox.ImageLocation = $@"{_aktualisFeladat.KepUrl}";
         }
 
         /// <summary>
@@ -200,7 +201,7 @@ namespace OkosodoUI
             
             _aktualisFeladat = _kivalogatottLista.ElementAt(index);
 
-            feladatPictureBox.ImageLocation = $@".{_aktualisFeladat.KepUrl}";
+            feladatPictureBox.ImageLocation = $@"{_aktualisFeladat.KepUrl}";
 
         }
 
@@ -300,14 +301,16 @@ namespace OkosodoUI
             }
             else
             {
-                feladatPictureBox.ImageLocation = "";
                 foreach (var item in _osszesMegoldott)
                 {
                     GlobalConfig.Connection.CreateMegoldottFeladatokModel(item);
                 }
-
+                valaszTextBox.Clear();
+                
+                feladatPictureBox.ImageLocation = @".\Resources\bitmapAgyHaver2.png";
+                feladatPictureBox.Refresh();
                 elkoszonoLabel.Visible = true;
-                elkoszonoLabel.Text = $"Ügyes voltál! A helyesen megoldott feladataid: 4/{_osszesMegoldott.Count(x => x.Megoldott == true).ToString()} !";
+                elkoszonoLabel.Text = $"Ügyes voltál! A helyesen megoldott feladataid: 5/{_osszesMegoldott.Count(x => x.Megoldott == true).ToString()} !";
                 elkoszonoLabel.Update();
                 //TODO - gombok eltüntetése 
                 valaszLabel.Hide();

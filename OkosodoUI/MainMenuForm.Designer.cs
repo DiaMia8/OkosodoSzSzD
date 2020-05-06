@@ -273,47 +273,52 @@
             // 
             // pictureBoxLogo4
             // 
-            this.pictureBoxLogo4.Image = global::OkosodoUI.Properties.Resources.PBLogo4;
-            this.pictureBoxLogo4.Location = new System.Drawing.Point(674, 12);
+            this.pictureBoxLogo4.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo4;
+            this.pictureBoxLogo4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo4.Location = new System.Drawing.Point(693, 18);
             this.pictureBoxLogo4.Name = "pictureBoxLogo4";
             this.pictureBoxLogo4.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo4.TabIndex = 12;
+            this.pictureBoxLogo4.TabIndex = 33;
             this.pictureBoxLogo4.TabStop = false;
             // 
             // pictureBoxLogo3
             // 
-            this.pictureBoxLogo3.Image = global::OkosodoUI.Properties.Resources.PBLogo3;
-            this.pictureBoxLogo3.Location = new System.Drawing.Point(568, 12);
+            this.pictureBoxLogo3.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo3;
+            this.pictureBoxLogo3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo3.Location = new System.Drawing.Point(587, 18);
             this.pictureBoxLogo3.Name = "pictureBoxLogo3";
             this.pictureBoxLogo3.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo3.TabIndex = 11;
+            this.pictureBoxLogo3.TabIndex = 32;
             this.pictureBoxLogo3.TabStop = false;
             // 
             // pictureBoxLogo2
             // 
-            this.pictureBoxLogo2.Image = global::OkosodoUI.Properties.Resources.PBLogo2;
-            this.pictureBoxLogo2.Location = new System.Drawing.Point(462, 12);
+            this.pictureBoxLogo2.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo2;
+            this.pictureBoxLogo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo2.Location = new System.Drawing.Point(481, 18);
             this.pictureBoxLogo2.Name = "pictureBoxLogo2";
             this.pictureBoxLogo2.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo2.TabIndex = 10;
+            this.pictureBoxLogo2.TabIndex = 31;
             this.pictureBoxLogo2.TabStop = false;
             // 
             // pictureBoxLogo1
             // 
-            this.pictureBoxLogo1.Image = global::OkosodoUI.Properties.Resources.pbLogo1;
-            this.pictureBoxLogo1.Location = new System.Drawing.Point(356, 12);
+            this.pictureBoxLogo1.BackgroundImage = global::OkosodoUI.Properties.Resources.pbLogo1;
+            this.pictureBoxLogo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo1.Location = new System.Drawing.Point(375, 18);
             this.pictureBoxLogo1.Name = "pictureBoxLogo1";
             this.pictureBoxLogo1.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo1.TabIndex = 9;
+            this.pictureBoxLogo1.TabIndex = 30;
             this.pictureBoxLogo1.TabStop = false;
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Image = global::OkosodoUI.Properties.Resources.PBlogo;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(250, 12);
+            this.pictureBoxLogo.BackgroundImage = global::OkosodoUI.Properties.Resources.PBlogo;
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(269, 18);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo.TabIndex = 8;
+            this.pictureBoxLogo.TabIndex = 29;
             this.pictureBoxLogo.TabStop = false;
             // 
             // MainMenuForm
@@ -336,6 +341,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "MainMenuForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Okosodó";
             this.ujFelghasznalogroupBox.ResumeLayout(false);
             this.ujFelghasznalogroupBox.PerformLayout();
@@ -372,11 +378,11 @@
         private System.Windows.Forms.Label utonevUjLabel;
         private System.Windows.Forms.TextBox ujFelhasznaloNevTextBox;
         private System.Windows.Forms.Label ujFelhasznaloNevLabel;
-        private System.Windows.Forms.PictureBox pictureBoxLogo;
-        private System.Windows.Forms.PictureBox pictureBoxLogo1;
-        private System.Windows.Forms.PictureBox pictureBoxLogo2;
-        private System.Windows.Forms.PictureBox pictureBoxLogo3;
         private System.Windows.Forms.PictureBox pictureBoxLogo4;
+        private System.Windows.Forms.PictureBox pictureBoxLogo3;
+        private System.Windows.Forms.PictureBox pictureBoxLogo2;
+        private System.Windows.Forms.PictureBox pictureBoxLogo1;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }
 
