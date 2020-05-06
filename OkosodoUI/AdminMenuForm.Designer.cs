@@ -52,14 +52,24 @@
             this.vagyLabel = new System.Windows.Forms.Label();
             this.adminIdLabel = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
+            this.pictureBoxLogo4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogo3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogo2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogo1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.ujDiakgroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenuLabel
             // 
             this.mainMenuLabel.AutoSize = true;
             this.mainMenuLabel.Font = new System.Drawing.Font("Segoe UI Light", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.mainMenuLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.mainMenuLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.mainMenuLabel.Location = new System.Drawing.Point(24, 22);
             this.mainMenuLabel.Name = "mainMenuLabel";
             this.mainMenuLabel.Size = new System.Drawing.Size(213, 65);
@@ -70,7 +80,7 @@
             // 
             this.udvLabel.AutoSize = true;
             this.udvLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.udvLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.udvLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.udvLabel.Location = new System.Drawing.Point(28, 98);
             this.udvLabel.Name = "udvLabel";
             this.udvLabel.Size = new System.Drawing.Size(153, 38);
@@ -81,7 +91,7 @@
             // 
             this.udvozloNevLabel.AutoSize = true;
             this.udvozloNevLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.udvozloNevLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.udvozloNevLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.udvozloNevLabel.Location = new System.Drawing.Point(187, 98);
             this.udvozloNevLabel.Name = "udvozloNevLabel";
             this.udvozloNevLabel.Size = new System.Drawing.Size(99, 38);
@@ -92,7 +102,7 @@
             // 
             this.diakokLabel.AutoSize = true;
             this.diakokLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.diakokLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.diakokLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.diakokLabel.Location = new System.Drawing.Point(38, 152);
             this.diakokLabel.Name = "diakokLabel";
             this.diakokLabel.Size = new System.Drawing.Size(108, 38);
@@ -102,19 +112,21 @@
             // diakListBox
             // 
             this.diakListBox.BackColor = System.Drawing.Color.White;
+            this.diakListBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.diakListBox.ForeColor = System.Drawing.Color.RoyalBlue;
             this.diakListBox.FormattingEnabled = true;
-            this.diakListBox.ItemHeight = 16;
+            this.diakListBox.ItemHeight = 28;
             this.diakListBox.Location = new System.Drawing.Point(35, 193);
             this.diakListBox.Name = "diakListBox";
-            this.diakListBox.Size = new System.Drawing.Size(282, 260);
+            this.diakListBox.Size = new System.Drawing.Size(282, 256);
             this.diakListBox.TabIndex = 11;
             // 
             // diakBeleptetesButton
             // 
             this.diakBeleptetesButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.diakBeleptetesButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.diakBeleptetesButton.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.diakBeleptetesButton.Location = new System.Drawing.Point(109, 474);
+            this.diakBeleptetesButton.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.diakBeleptetesButton.Location = new System.Drawing.Point(35, 466);
             this.diakBeleptetesButton.Name = "diakBeleptetesButton";
             this.diakBeleptetesButton.Size = new System.Drawing.Size(128, 64);
             this.diakBeleptetesButton.TabIndex = 12;
@@ -139,7 +151,7 @@
             this.ujDiakgroupBox.Controls.Add(this.ujDiakSzuloNevLabel);
             this.ujDiakgroupBox.Controls.Add(this.ujDiakVezetekNevLabel);
             this.ujDiakgroupBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ujDiakgroupBox.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ujDiakgroupBox.ForeColor = System.Drawing.Color.RoyalBlue;
             this.ujDiakgroupBox.Location = new System.Drawing.Point(503, 152);
             this.ujDiakgroupBox.Name = "ujDiakgroupBox";
             this.ujDiakgroupBox.Size = new System.Drawing.Size(502, 473);
@@ -158,7 +170,7 @@
             // 
             this.ukDiakKeresztNevlabel.AutoSize = true;
             this.ukDiakKeresztNevlabel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.ukDiakKeresztNevlabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ukDiakKeresztNevlabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.ukDiakKeresztNevlabel.Location = new System.Drawing.Point(16, 112);
             this.ukDiakKeresztNevlabel.Name = "ukDiakKeresztNevlabel";
             this.ukDiakKeresztNevlabel.Size = new System.Drawing.Size(162, 37);
@@ -179,7 +191,7 @@
             // 
             this.ujDiakSzuletettLabel.AutoSize = true;
             this.ujDiakSzuletettLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ujDiakSzuletettLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ujDiakSzuletettLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.ujDiakSzuletettLabel.Location = new System.Drawing.Point(16, 340);
             this.ujDiakSzuletettLabel.Name = "ujDiakSzuletettLabel";
             this.ujDiakSzuletettLabel.Size = new System.Drawing.Size(130, 38);
@@ -220,7 +232,7 @@
             // 
             this.ujDiakSzuloEmailLabel.AutoSize = true;
             this.ujDiakSzuloEmailLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ujDiakSzuloEmailLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ujDiakSzuloEmailLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.ujDiakSzuloEmailLabel.Location = new System.Drawing.Point(16, 285);
             this.ujDiakSzuloEmailLabel.Name = "ujDiakSzuloEmailLabel";
             this.ujDiakSzuloEmailLabel.Size = new System.Drawing.Size(164, 38);
@@ -231,7 +243,7 @@
             // 
             this.ujDiakBecenevLabel.AutoSize = true;
             this.ujDiakBecenevLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.ujDiakBecenevLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ujDiakBecenevLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.ujDiakBecenevLabel.Location = new System.Drawing.Point(16, 165);
             this.ujDiakBecenevLabel.Name = "ujDiakBecenevLabel";
             this.ujDiakBecenevLabel.Size = new System.Drawing.Size(120, 37);
@@ -256,7 +268,7 @@
             // 
             this.ujDiakSzuloNevLabel.AutoSize = true;
             this.ujDiakSzuloNevLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ujDiakSzuloNevLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ujDiakSzuloNevLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.ujDiakSzuloNevLabel.Location = new System.Drawing.Point(16, 226);
             this.ujDiakSzuloNevLabel.Name = "ujDiakSzuloNevLabel";
             this.ujDiakSzuloNevLabel.Size = new System.Drawing.Size(156, 38);
@@ -267,7 +279,7 @@
             // 
             this.ujDiakVezetekNevLabel.AutoSize = true;
             this.ujDiakVezetekNevLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.ujDiakVezetekNevLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ujDiakVezetekNevLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.ujDiakVezetekNevLabel.Location = new System.Drawing.Point(16, 57);
             this.ujDiakVezetekNevLabel.Name = "ujDiakVezetekNevLabel";
             this.ujDiakVezetekNevLabel.Size = new System.Drawing.Size(168, 37);
@@ -278,7 +290,7 @@
             // 
             this.vagyLabel.AutoSize = true;
             this.vagyLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.vagyLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.vagyLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.vagyLabel.Location = new System.Drawing.Point(372, 283);
             this.vagyLabel.Name = "vagyLabel";
             this.vagyLabel.Size = new System.Drawing.Size(74, 38);
@@ -299,8 +311,8 @@
             // 
             this.exitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exitButton.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.exitButton.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.exitButton.Location = new System.Drawing.Point(35, 576);
+            this.exitButton.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.exitButton.Location = new System.Drawing.Point(723, 667);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(282, 64);
             this.exitButton.TabIndex = 16;
@@ -309,12 +321,62 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // pictureBoxLogo4
+            // 
+            this.pictureBoxLogo4.Image = global::OkosodoUI.Properties.Resources.PBLogo4;
+            this.pictureBoxLogo4.Location = new System.Drawing.Point(642, 10);
+            this.pictureBoxLogo4.Name = "pictureBoxLogo4";
+            this.pictureBoxLogo4.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo4.TabIndex = 21;
+            this.pictureBoxLogo4.TabStop = false;
+            // 
+            // pictureBoxLogo3
+            // 
+            this.pictureBoxLogo3.Image = global::OkosodoUI.Properties.Resources.PBLogo3;
+            this.pictureBoxLogo3.Location = new System.Drawing.Point(536, 10);
+            this.pictureBoxLogo3.Name = "pictureBoxLogo3";
+            this.pictureBoxLogo3.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo3.TabIndex = 20;
+            this.pictureBoxLogo3.TabStop = false;
+            // 
+            // pictureBoxLogo2
+            // 
+            this.pictureBoxLogo2.Image = global::OkosodoUI.Properties.Resources.PBLogo2;
+            this.pictureBoxLogo2.Location = new System.Drawing.Point(430, 10);
+            this.pictureBoxLogo2.Name = "pictureBoxLogo2";
+            this.pictureBoxLogo2.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo2.TabIndex = 19;
+            this.pictureBoxLogo2.TabStop = false;
+            // 
+            // pictureBoxLogo1
+            // 
+            this.pictureBoxLogo1.Image = global::OkosodoUI.Properties.Resources.pbLogo1;
+            this.pictureBoxLogo1.Location = new System.Drawing.Point(324, 10);
+            this.pictureBoxLogo1.Name = "pictureBoxLogo1";
+            this.pictureBoxLogo1.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo1.TabIndex = 18;
+            this.pictureBoxLogo1.TabStop = false;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = global::OkosodoUI.Properties.Resources.PBlogo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(218, 10);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo.TabIndex = 17;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // AdminMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1088, 765);
+            this.Controls.Add(this.pictureBoxLogo4);
+            this.Controls.Add(this.pictureBoxLogo3);
+            this.Controls.Add(this.pictureBoxLogo2);
+            this.Controls.Add(this.pictureBoxLogo1);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.adminIdLabel);
             this.Controls.Add(this.vagyLabel);
@@ -331,6 +393,11 @@
             this.Text = "Okosodó";
             this.ujDiakgroupBox.ResumeLayout(false);
             this.ujDiakgroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,5 +428,10 @@
         private System.Windows.Forms.Label ukDiakKeresztNevlabel;
         private System.Windows.Forms.Label adminIdLabel;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.PictureBox pictureBoxLogo4;
+        private System.Windows.Forms.PictureBox pictureBoxLogo3;
+        private System.Windows.Forms.PictureBox pictureBoxLogo2;
+        private System.Windows.Forms.PictureBox pictureBoxLogo1;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }

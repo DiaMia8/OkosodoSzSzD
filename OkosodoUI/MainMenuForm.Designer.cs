@@ -48,15 +48,25 @@
             this.jelszoLabel = new System.Windows.Forms.Label();
             this.nevTextBox = new System.Windows.Forms.TextBox();
             this.felhasznalonevLabel = new System.Windows.Forms.Label();
+            this.pictureBoxLogo4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogo3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogo2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogo1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.ujFelghasznalogroupBox.SuspendLayout();
             this.belepesGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenuLabel
             // 
             this.mainMenuLabel.AutoSize = true;
             this.mainMenuLabel.Font = new System.Drawing.Font("Segoe UI Light", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.mainMenuLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.mainMenuLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.mainMenuLabel.Location = new System.Drawing.Point(56, 18);
             this.mainMenuLabel.Name = "mainMenuLabel";
             this.mainMenuLabel.Size = new System.Drawing.Size(213, 65);
@@ -77,7 +87,7 @@
             this.ujFelghasznalogroupBox.Controls.Add(this.ujFelhasznaloJelszoTextBox);
             this.ujFelghasznalogroupBox.Controls.Add(this.ujFelhasznaloJelszoLabel);
             this.ujFelghasznalogroupBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ujFelghasznalogroupBox.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ujFelghasznalogroupBox.ForeColor = System.Drawing.Color.RoyalBlue;
             this.ujFelghasznalogroupBox.Location = new System.Drawing.Point(66, 319);
             this.ujFelghasznalogroupBox.Name = "ujFelghasznalogroupBox";
             this.ujFelghasznalogroupBox.Size = new System.Drawing.Size(715, 391);
@@ -96,7 +106,7 @@
             // 
             this.ujFelhasznaloNevLabel.AutoSize = true;
             this.ujFelhasznaloNevLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.ujFelhasznaloNevLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ujFelhasznaloNevLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.ujFelhasznaloNevLabel.Location = new System.Drawing.Point(16, 57);
             this.ujFelhasznaloNevLabel.Name = "ujFelhasznaloNevLabel";
             this.ujFelhasznaloNevLabel.Size = new System.Drawing.Size(215, 37);
@@ -114,7 +124,7 @@
             // 
             this.vezetekNevUjLabel.AutoSize = true;
             this.vezetekNevUjLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.vezetekNevUjLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.vezetekNevUjLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.vezetekNevUjLabel.Location = new System.Drawing.Point(16, 130);
             this.vezetekNevUjLabel.Name = "vezetekNevUjLabel";
             this.vezetekNevUjLabel.Size = new System.Drawing.Size(156, 37);
@@ -132,7 +142,7 @@
             // 
             this.utonevUjLabel.AutoSize = true;
             this.utonevUjLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.utonevUjLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.utonevUjLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.utonevUjLabel.Location = new System.Drawing.Point(16, 197);
             this.utonevUjLabel.Name = "utonevUjLabel";
             this.utonevUjLabel.Size = new System.Drawing.Size(109, 37);
@@ -166,7 +176,7 @@
             // 
             this.ujFelhasznaloEmailLabel.AutoSize = true;
             this.ujFelhasznaloEmailLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.ujFelhasznaloEmailLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ujFelhasznaloEmailLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.ujFelhasznaloEmailLabel.Location = new System.Drawing.Point(16, 263);
             this.ujFelhasznaloEmailLabel.Name = "ujFelhasznaloEmailLabel";
             this.ujFelhasznaloEmailLabel.Size = new System.Drawing.Size(88, 37);
@@ -185,7 +195,7 @@
             // 
             this.ujFelhasznaloJelszoLabel.AutoSize = true;
             this.ujFelhasznaloJelszoLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ujFelhasznaloJelszoLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.ujFelhasznaloJelszoLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.ujFelhasznaloJelszoLabel.Location = new System.Drawing.Point(16, 332);
             this.ujFelhasznaloJelszoLabel.Name = "ujFelhasznaloJelszoLabel";
             this.ujFelhasznaloJelszoLabel.Size = new System.Drawing.Size(96, 38);
@@ -200,7 +210,7 @@
             this.belepesGroupBox.Controls.Add(this.nevTextBox);
             this.belepesGroupBox.Controls.Add(this.felhasznalonevLabel);
             this.belepesGroupBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.belepesGroupBox.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.belepesGroupBox.ForeColor = System.Drawing.Color.RoyalBlue;
             this.belepesGroupBox.Location = new System.Drawing.Point(67, 101);
             this.belepesGroupBox.Name = "belepesGroupBox";
             this.belepesGroupBox.Size = new System.Drawing.Size(714, 184);
@@ -236,7 +246,7 @@
             // 
             this.jelszoLabel.AutoSize = true;
             this.jelszoLabel.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.jelszoLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.jelszoLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.jelszoLabel.Location = new System.Drawing.Point(64, 108);
             this.jelszoLabel.Name = "jelszoLabel";
             this.jelszoLabel.Size = new System.Drawing.Size(93, 37);
@@ -254,12 +264,57 @@
             // 
             this.felhasznalonevLabel.AutoSize = true;
             this.felhasznalonevLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.felhasznalonevLabel.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.felhasznalonevLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.felhasznalonevLabel.Location = new System.Drawing.Point(15, 40);
             this.felhasznalonevLabel.Name = "felhasznalonevLabel";
             this.felhasznalonevLabel.Size = new System.Drawing.Size(224, 38);
             this.felhasznalonevLabel.TabIndex = 6;
             this.felhasznalonevLabel.Text = "Felhasználó Név:";
+            // 
+            // pictureBoxLogo4
+            // 
+            this.pictureBoxLogo4.Image = global::OkosodoUI.Properties.Resources.PBLogo4;
+            this.pictureBoxLogo4.Location = new System.Drawing.Point(674, 12);
+            this.pictureBoxLogo4.Name = "pictureBoxLogo4";
+            this.pictureBoxLogo4.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo4.TabIndex = 12;
+            this.pictureBoxLogo4.TabStop = false;
+            // 
+            // pictureBoxLogo3
+            // 
+            this.pictureBoxLogo3.Image = global::OkosodoUI.Properties.Resources.PBLogo3;
+            this.pictureBoxLogo3.Location = new System.Drawing.Point(568, 12);
+            this.pictureBoxLogo3.Name = "pictureBoxLogo3";
+            this.pictureBoxLogo3.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo3.TabIndex = 11;
+            this.pictureBoxLogo3.TabStop = false;
+            // 
+            // pictureBoxLogo2
+            // 
+            this.pictureBoxLogo2.Image = global::OkosodoUI.Properties.Resources.PBLogo2;
+            this.pictureBoxLogo2.Location = new System.Drawing.Point(462, 12);
+            this.pictureBoxLogo2.Name = "pictureBoxLogo2";
+            this.pictureBoxLogo2.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo2.TabIndex = 10;
+            this.pictureBoxLogo2.TabStop = false;
+            // 
+            // pictureBoxLogo1
+            // 
+            this.pictureBoxLogo1.Image = global::OkosodoUI.Properties.Resources.pbLogo1;
+            this.pictureBoxLogo1.Location = new System.Drawing.Point(356, 12);
+            this.pictureBoxLogo1.Name = "pictureBoxLogo1";
+            this.pictureBoxLogo1.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo1.TabIndex = 9;
+            this.pictureBoxLogo1.TabStop = false;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Image = global::OkosodoUI.Properties.Resources.PBlogo;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(250, 12);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo.TabIndex = 8;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // MainMenuForm
             // 
@@ -267,11 +322,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1088, 765);
+            this.Controls.Add(this.pictureBoxLogo4);
+            this.Controls.Add(this.pictureBoxLogo3);
+            this.Controls.Add(this.pictureBoxLogo2);
+            this.Controls.Add(this.pictureBoxLogo1);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.belepesGroupBox);
             this.Controls.Add(this.ujFelghasznalogroupBox);
             this.Controls.Add(this.mainMenuLabel);
             this.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ForeColor = System.Drawing.Color.Blue;
+            this.ForeColor = System.Drawing.Color.RoyalBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.MinimumSize = new System.Drawing.Size(800, 600);
@@ -281,6 +341,11 @@
             this.ujFelghasznalogroupBox.PerformLayout();
             this.belepesGroupBox.ResumeLayout(false);
             this.belepesGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,6 +372,11 @@
         private System.Windows.Forms.Label utonevUjLabel;
         private System.Windows.Forms.TextBox ujFelhasznaloNevTextBox;
         private System.Windows.Forms.Label ujFelhasznaloNevLabel;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.PictureBox pictureBoxLogo1;
+        private System.Windows.Forms.PictureBox pictureBoxLogo2;
+        private System.Windows.Forms.PictureBox pictureBoxLogo3;
+        private System.Windows.Forms.PictureBox pictureBoxLogo4;
     }
 }
 
