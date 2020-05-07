@@ -93,7 +93,7 @@
             this.valaszTextBox.Multiline = true;
             this.valaszTextBox.Name = "valaszTextBox";
             this.valaszTextBox.Size = new System.Drawing.Size(139, 62);
-            this.valaszTextBox.TabIndex = 21;
+            this.valaszTextBox.TabIndex = 1;
             // 
             // elkoszonoLabel
             // 

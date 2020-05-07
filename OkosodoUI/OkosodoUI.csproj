@@ -120,6 +120,9 @@
     <Content Include="Resources\abcButton.png" />
     <Content Include="Resources\bitmapAgyHaver2.png" />
     <Content Include="Resources\exitAH.png" />
+    <Content Include="Resources\gratulaAH.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\helpHaver.png" />
     <Content Include="Resources\Images\alma1kukac.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

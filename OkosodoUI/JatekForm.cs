@@ -20,6 +20,8 @@ namespace OkosodoUI
 
         private char _feladatTipus;
 
+        public static int _adminId;
+
         private static List<RandomModel> _randomFeladatok;
 
         private static List<MatematikaiModel> _matekFeladatok;
@@ -42,14 +44,12 @@ namespace OkosodoUI
 
         //számolja, hogy hány feladat van hétra, gomb if-jében
         private static int _elvegzendoFeladatokSzama;
+
         // visszaszámláló, hogy ne fussunk ki az adatokból, gombnyomásokkor vizsgáljuk
         private IFeladatModel _aktualisFeladat;
 
         // megoldott feladatok listába mentése
-
         private List<MegoldottFeladatokModel> _osszesMegoldott = new List<MegoldottFeladatokModel>();
-
-        public static int _adminId;
 
         // itt állítjuk be hány feladatot szeretnénk futtatni és ezt csökkentve kap új indexet a feladat
         private int _feladatokSzama;
@@ -101,7 +101,7 @@ namespace OkosodoUI
             }
 
         }
-        // kép url-re figyelni a sting ez legyen : .\Resources\Images\valami.jpg
+        
 
         
         /// <summary>
@@ -136,12 +136,21 @@ namespace OkosodoUI
             
         }
 
+
+        /// <summary>
+        /// A gomb megnyomásával a helyes válasz feltűnik egy labelen, majd menti a listába, hogy ne, sikerült megoldani a feladatot
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void helpButton_Click(object sender, EventArgs e)
         {
             // megmutatja a helyes megoldást, vár, majd növeli a játékot, elmenti, hogy nem sikerült megoldani
             megoldasLabel.Text = _aktualisFeladat.Megoldas;
+            // frissíti a labelt
             megoldasLabel.Update();
+            //két másodpercet vár, mielőtt tovább lépne a következő feladatra
             Thread.Sleep(2000);
+            
             megoldasLabel.Text = "";
             if (_elvegzendoFeladatokSzama > 0)
             {
@@ -161,17 +170,19 @@ namespace OkosodoUI
             else
             {
                 //kilépőkép és becsukás
-                
+                //menti az adatokat
                 foreach (var item in _osszesMegoldott)
                 {
                     GlobalConfig.Connection.CreateMegoldottFeladatokModel(item);
                 }
-                feladatPictureBox.ImageLocation = @".\Resources\bitmapAgyHaver2.png";
+
                 feladatPictureBox.Refresh();
+                feladatPictureBox.ImageLocation = $@".\Resources\gratulaAH.png";
                 elkoszonoLabel.Visible = true;
                 elkoszonoLabel.Text = $"Ügyes voltál! A helyesen megoldott feladataid: 5/{_osszesMegoldott.Count(x=>x.Megoldott == true).ToString()} !";
                 elkoszonoLabel.Update();
-                //TODO - gombok eltüntetése 
+                
+
                 helpButton.Hide();
                 valaszButton.Hide();
                 valaszTextBox.Hide();
@@ -182,6 +193,8 @@ namespace OkosodoUI
             }
 
         }
+       
+        
         /// <summary>
         /// /első megjelenítendő kép adatai mindig 0 a kiválogatott listából válogat
         /// </summary>
@@ -192,6 +205,7 @@ namespace OkosodoUI
             feladatPictureBox.ImageLocation = $@"{_aktualisFeladat.KepUrl}";
         }
 
+        
         /// <summary>
         /// Gomb nyomásra új feladat objektum 
         /// </summary>
@@ -205,6 +219,7 @@ namespace OkosodoUI
 
         }
 
+       
         /// <summary>
         /// válasz adásakor elindítja a következő feladatot és menti az adatokat
         /// </summary>
@@ -307,12 +322,12 @@ namespace OkosodoUI
                 }
                 valaszTextBox.Clear();
                 
-                feladatPictureBox.ImageLocation = @".\Resources\bitmapAgyHaver2.png";
-                feladatPictureBox.Refresh();
+                feladatPictureBox.ImageLocation = $@".\Resources\gratulaAH.png";
+                
                 elkoszonoLabel.Visible = true;
                 elkoszonoLabel.Text = $"Ügyes voltál! A helyesen megoldott feladataid: 5/{_osszesMegoldott.Count(x => x.Megoldott == true).ToString()} !";
                 elkoszonoLabel.Update();
-                //TODO - gombok eltüntetése 
+                
                 valaszLabel.Hide();
                 helpButton.Hide();
                 valaszButton.Hide();
@@ -326,6 +341,7 @@ namespace OkosodoUI
             
         }
 
+        
         /// <summary>
         /// lehetséges feladatokbó leválaszt annyit amennyit kell
         /// </summary>
@@ -351,6 +367,7 @@ namespace OkosodoUI
             _elvegzendoFeladatokSzama = _kivalogatottLista.Count-1;
         }
 
+        
         /// <summary>
         /// gombnyomáskor meghívva növeli a statikus mező indexét
         /// </summary>
@@ -358,7 +375,9 @@ namespace OkosodoUI
         {
             _kivalogatottListaIndexe += 1;
         }
-       /// <summary>
+       
+        
+        /// <summary>
        /// csökkenti az elvégezendő feladatok számát
        /// </summary>
         private void elvegezedoFeladatokIndexCsokkentes()

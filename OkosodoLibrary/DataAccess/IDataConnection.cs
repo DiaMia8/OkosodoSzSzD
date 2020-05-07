@@ -15,35 +15,47 @@ namespace OkosodoLibrary.DataAccess
         /// <param name="model"></param>
         /// <returns></returns>
         TanuloModel CreateTanulo(TanuloModel model, int adminId);
+        
+        
         /// <summary>
         /// Bekér egy modelt és visszaad egy admin típusú adatot
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
         AdminModel CreateAdmin(AdminModel model);
+        
+        
         /// <summary>
         /// /az összes tanuló lekérdezése
         /// </summary>
         /// <returns></returns>
         List<TanuloModel> GetDiak_All();
+        
+        
         /// <summary>
         /// Egy admin lekérdezése ID alapján
         /// </summary>
         /// <param name="Id">Admin i-ja</param>
         /// <returns>Adminmodel egy példány</returns>
         AdminModel GetOne_Admin(int Id);
+        
+        
         /// <summary>
         /// Egy adminhoz tartozó diákok lekérdezése admin Id alapján
         /// </summary>
         /// <param name="adminId">Admin ID-ja</param>
         /// <returns>tanuló lista</returns>
         List<TanuloModel> GetTanuloByAdminId(int adminId);
+        
+        
         /// <summary>
         /// Egy tanuló lekézdezése ID alapján
         /// </summary>
         /// <param name="Id"></param>
         /// <returns>Tanulo egy példánya</returns>
         TanuloModel GetOneTanuloById(int Id);
+       
+        
         /// <summary>
         /// Admin belépés titkosított jelszóátalakítással
         /// </summary>
@@ -51,16 +63,34 @@ namespace OkosodoLibrary.DataAccess
         /// <param name="jelszo"></param>
         /// <returns>az admin id-ja</returns>
         int LoginAdmin(string felhasznaloNev, string jelszo);
+        
+        
         /// <summary>
         /// Random játékhoz lekérdezi az összes feladatot típustól függetlenül
         /// </summary>
         /// <returns>Összes feladat listája</returns>
         List<RandomModel> FeladatGetAll();
 
+
+        /// <summary>
+        /// Matematiakai játékhoz lekérdezi az összes feladatot
+        /// </summary>
+        /// <returns>matematikai feladatok lista</returns>
         List<MatematikaiModel> GetAllMatematikaiFeladat();
 
+
+        /// <summary>
+        /// Abc gyakorló feladatok lekérdezése
+        /// </summary>
+        /// <returns>ABC lista</returns>
         List<AbcModel> GetAllAbcFeladat();
 
+
+        /// <summary>
+        /// Megoldott feladatokat elmenti az adatbázisba
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns>MegoldottFeladatok model</returns>
         MegoldottFeladatokModel CreateMegoldottFeladatokModel(MegoldottFeladatokModel model);
     }
 }

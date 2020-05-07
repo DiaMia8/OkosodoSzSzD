@@ -43,15 +43,6 @@ namespace OkosodoLibrary.Models
         public  DateTime SzuletesiDatum { get; set; }
         
 
-        // nem működik
-        //public string TeljesNev
-        //{
-        //    get
-        //    {
-        //        return $"{VezetekNev} {KeresztNev}";
-        //    }
-        //}
-
         public TanuloModel()
         {
 

@@ -11,8 +11,12 @@ namespace OkosodoLibrary.DataAccess
 {
     public class SqlConnector : IDataConnection
     {
-
+        /// <summary>
+        /// Az adatbázis neve
+        /// </summary>
         private const string db = "Okosodo";
+       
+        
         /// <summary>
         /// Elment egy adminisztrátort
         /// </summary>
@@ -39,6 +43,8 @@ namespace OkosodoLibrary.DataAccess
             }
            
         }
+       
+        
         /// <summary>
         /// Elmenti a megoldott feladatokat játék végén
         /// </summary>
@@ -63,6 +69,7 @@ namespace OkosodoLibrary.DataAccess
                 return model;
             }
         }
+
 
         /// <summary>
         /// /Elment egy új tanulót és elmenti a kapcsoló táblába a tanuló és az admin ID-ját
@@ -100,6 +107,8 @@ namespace OkosodoLibrary.DataAccess
 
             }
         }
+       
+        
         /// <summary>
         /// Lekérdezi az összes ABC-s feladatot
         /// </summary>
@@ -116,6 +125,7 @@ namespace OkosodoLibrary.DataAccess
             }
             return output;
         }
+
 
         /// <summary>
         /// Lekérdezi az összes matematikai feladatot
@@ -135,6 +145,7 @@ namespace OkosodoLibrary.DataAccess
             return output;
 
         }
+
 
         /// <summary>
         /// Összes diák lekérdezése
@@ -171,6 +182,8 @@ namespace OkosodoLibrary.DataAccess
             }
             return output;
         }
+       
+        
         /// <summary>
         /// Lekérdez egy Admint az Id-ja alapján
         /// </summary>
@@ -190,6 +203,7 @@ namespace OkosodoLibrary.DataAccess
             return output;
         }
 
+
         /// <summary>
         /// Lekérdez egy tanulót az adminisztrátora Id-ja alapján
         /// </summary>
@@ -208,6 +222,7 @@ namespace OkosodoLibrary.DataAccess
 
             return output;
         }
+
 
         /// <summary>
         /// Admin ellenőrzése felhasználónév és jelszó alapján
@@ -233,6 +248,7 @@ namespace OkosodoLibrary.DataAccess
 
             return output;
         }
+
 
         /// <summary>
         /// Lekérdezi az összes feladatot és beteszi egy listába

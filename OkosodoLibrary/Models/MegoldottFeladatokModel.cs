@@ -23,6 +23,7 @@ namespace OkosodoLibrary.Models
 
         }
 
+        //adatbázisba mentéshez használt konstruktor
         public MegoldottFeladatokModel(int diakId, int feladatId, int elertpont, bool megoldott)
         {
             DiakId = diakId;

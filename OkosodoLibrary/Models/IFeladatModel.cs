@@ -18,8 +18,11 @@ namespace OkosodoLibrary.Models
         /// </summary>
         string Nev { get; set; }
 
-
+        /// <summary>
+        /// feladat típusa lehet A M R
+        /// </summary>
         char Tipus { get; set; }
+        
         /// <summary>
         /// képek elérési útja adatbázisból
         /// </summary>
