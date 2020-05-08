@@ -53,6 +53,7 @@
     <Compile Include="Models\RandomModel.cs" />
     <Compile Include="Models\MatematikaiModel.cs" />
     <Compile Include="Models\MegoldottFeladatokModel.cs" />
+    <Compile Include="Models\StatisztikaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataAccess\SqlConnector.cs" />
     <Compile Include="Models\TanuloModel.cs" />

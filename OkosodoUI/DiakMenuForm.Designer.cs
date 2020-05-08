@@ -46,12 +46,16 @@
             this.pictureBoxLogo1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.groupBoxPontok = new System.Windows.Forms.GroupBox();
+            this.pictureBoxPont = new System.Windows.Forms.PictureBox();
+            this.textBoxErem = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAgyHaver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.groupBoxPontok.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPont)).BeginInit();
             this.SuspendLayout();
             // 
             // diakUdvozloNevLabel
@@ -238,6 +242,8 @@
             // 
             // groupBoxPontok
             // 
+            this.groupBoxPontok.Controls.Add(this.textBoxErem);
+            this.groupBoxPontok.Controls.Add(this.pictureBoxPont);
             this.groupBoxPontok.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.groupBoxPontok.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBoxPontok.Location = new System.Drawing.Point(72, 544);
@@ -245,7 +251,30 @@
             this.groupBoxPontok.Size = new System.Drawing.Size(596, 196);
             this.groupBoxPontok.TabIndex = 34;
             this.groupBoxPontok.TabStop = false;
-            this.groupBoxPontok.Text = "Pontok";
+            this.groupBoxPontok.Text = "Eddig szerzett érmeid:";
+            // 
+            // pictureBoxPont
+            // 
+            this.pictureBoxPont.Location = new System.Drawing.Point(360, 46);
+            this.pictureBoxPont.Name = "pictureBoxPont";
+            this.pictureBoxPont.Size = new System.Drawing.Size(126, 123);
+            this.pictureBoxPont.TabIndex = 0;
+            this.pictureBoxPont.TabStop = false;
+            // 
+            // textBoxErem
+            // 
+            this.textBoxErem.BackColor = System.Drawing.Color.White;
+            this.textBoxErem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxErem.Font = new System.Drawing.Font("Segoe UI Semibold", 48F, System.Drawing.FontStyle.Bold);
+            this.textBoxErem.ForeColor = System.Drawing.Color.Red;
+            this.textBoxErem.Location = new System.Drawing.Point(90, 46);
+            this.textBoxErem.Multiline = true;
+            this.textBoxErem.Name = "textBoxErem";
+            this.textBoxErem.ReadOnly = true;
+            this.textBoxErem.Size = new System.Drawing.Size(217, 123);
+            this.textBoxErem.TabIndex = 2;
+            this.textBoxErem.Text = "1234";
+            this.textBoxErem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // DiakMenuForm
             // 
@@ -281,6 +310,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            this.groupBoxPontok.ResumeLayout(false);
+            this.groupBoxPontok.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPont)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,5 +336,7 @@
         private System.Windows.Forms.PictureBox pictureBoxLogo1;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.GroupBox groupBoxPontok;
+        private System.Windows.Forms.TextBox textBoxErem;
+        private System.Windows.Forms.PictureBox pictureBoxPont;
     }
 }

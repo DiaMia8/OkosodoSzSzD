@@ -48,6 +48,7 @@ namespace OkosodoLibrary.Models
 
         }
 
+        //adatbázisba mentéshez használt konstruktor
         public TanuloModel(string vezeteknev, string keresztnev, string becenev, string szuloneve, string szuloemail, DateTime szuletett, int pont)
         {
             VezetekNev = vezeteknev;

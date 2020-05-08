@@ -26,6 +26,7 @@ namespace OkosodoUI
             InitializeComponent();
 
             Udvozlet();
+            eremAktualizalas();
         }
 
         private void Udvozlet()
@@ -66,6 +67,20 @@ namespace OkosodoUI
             AdminMenuForm frm = new AdminMenuForm(_adminId);
             frm.Show();
             this.Hide();
+        }
+
+        private void eremAktualizalas()
+        {
+            StatisztikaModel statisztika = new StatisztikaModel(
+                     GlobalConfig.Connection.GetDiakBeceNev(bejelentkezett.Id),
+                     GlobalConfig.Connection.GetOsszesMegoldott(bejelentkezett.Id),
+                     GlobalConfig.Connection.GetOsszesMegoldottMatematikai(bejelentkezett.Id),
+                     GlobalConfig.Connection.GetOsszesHelyesMatematikai(bejelentkezett.Id),
+                     GlobalConfig.Connection.GetOsszesMegoldottAbc(bejelentkezett.Id),
+                     GlobalConfig.Connection.GetHelyesAbc(bejelentkezett.Id),
+                     GlobalConfig.Connection.GetOsszPontSzam(bejelentkezett.Id));
+
+            textBoxErem.Text = statisztika.OsszPontSzam.ToString();
         }
     }
 }

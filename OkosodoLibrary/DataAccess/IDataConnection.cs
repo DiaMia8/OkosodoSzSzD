@@ -92,5 +92,69 @@ namespace OkosodoLibrary.DataAccess
         /// <param name="model"></param>
         /// <returns>MegoldottFeladatok model</returns>
         MegoldottFeladatokModel CreateMegoldottFeladatokModel(MegoldottFeladatokModel model);
+
+
+        /// <summary>
+        /// Lekérdezi statisztikához a diák becenevét
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns>string</returns>
+        string GetDiakBeceNev(int ID);
+
+
+        /// <summary>
+        /// Lekérdezi statisztikához az összesen megoldott feladatok számát
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        int GetOsszesMegoldott(int ID);
+
+
+        /// <summary>
+        /// Lekérdezi statisztikához az összes megoldott matematikai feladat számát
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        int GetOsszesMegoldottMatematikai(int ID);
+
+
+        /// <summary>
+        /// Lekérdezi statisztikához az összes helyesen megoldott matematikai feladat számát
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        int GetOsszesHelyesMatematikai(int ID);
+
+
+        /// <summary>
+        /// Lekérdezi statisztikához az összes megoldott abc feladat számát
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        int GetOsszesMegoldottAbc(int ID);
+
+
+        /// <summary>
+        /// Lekérdezi statisztikához az összes helyesen megoldott abc feladat számát
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        int GetHelyesAbc(int ID);
+
+
+        /// <summary>
+        /// Lekérdezi statisztikához az összes pontot amit a tanuló eddig elért
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        int GetOsszPontSzam(int ID);
+
+
+        /// <summary>
+        /// Megvizsgálja, hogy van-e a diáknak megoldott feladata
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
+        bool VanMegoldottFeladat(int ID);
     }
 }

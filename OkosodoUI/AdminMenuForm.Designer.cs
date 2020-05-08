@@ -59,12 +59,23 @@
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.groupBoxStatisztika = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.osszesFeladatlabel = new System.Windows.Forms.Label();
+            this.osszPontlabel = new System.Windows.Forms.Label();
+            this.matekJolabel = new System.Windows.Forms.Label();
+            this.abcJoLabel = new System.Windows.Forms.Label();
+            this.textBoxOsszMegoldott = new System.Windows.Forms.TextBox();
+            this.textBoxHelyesMatek = new System.Windows.Forms.TextBox();
+            this.textBoxHelyesAbc = new System.Windows.Forms.TextBox();
+            this.textBoxOsszpont = new System.Windows.Forms.TextBox();
             this.ujDiakgroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
+            this.groupBoxStatisztika.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMenuLabel
@@ -375,11 +386,12 @@
             // 
             // groupBoxStatisztika
             // 
+            this.groupBoxStatisztika.Controls.Add(this.tableLayoutPanel1);
             this.groupBoxStatisztika.Font = new System.Drawing.Font("Segoe UI", 18F);
             this.groupBoxStatisztika.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBoxStatisztika.Location = new System.Drawing.Point(35, 542);
             this.groupBoxStatisztika.Name = "groupBoxStatisztika";
-            this.groupBoxStatisztika.Size = new System.Drawing.Size(398, 263);
+            this.groupBoxStatisztika.Size = new System.Drawing.Size(445, 289);
             this.groupBoxStatisztika.TabIndex = 39;
             this.groupBoxStatisztika.TabStop = false;
             this.groupBoxStatisztika.Text = "Statisztika";
@@ -396,6 +408,118 @@
             this.button1.Text = "Statisztika";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.abcJoLabel, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.matekJolabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.osszPontlabel, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.osszesFeladatlabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxOsszMegoldott, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxHelyesMatek, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxHelyesAbc, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.textBoxOsszpont, 1, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 46);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(407, 226);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // osszesFeladatlabel
+            // 
+            this.osszesFeladatlabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.osszesFeladatlabel.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.osszesFeladatlabel.Location = new System.Drawing.Point(3, 0);
+            this.osszesFeladatlabel.Name = "osszesFeladatlabel";
+            this.osszesFeladatlabel.Size = new System.Drawing.Size(197, 56);
+            this.osszesFeladatlabel.TabIndex = 41;
+            this.osszesFeladatlabel.Text = "Összes megoldott feladat:";
+            this.osszesFeladatlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // osszPontlabel
+            // 
+            this.osszPontlabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.osszPontlabel.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.osszPontlabel.Location = new System.Drawing.Point(3, 168);
+            this.osszPontlabel.Name = "osszPontlabel";
+            this.osszPontlabel.Size = new System.Drawing.Size(197, 58);
+            this.osszPontlabel.TabIndex = 42;
+            this.osszPontlabel.Text = "Összpont szám:";
+            this.osszPontlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matekJolabel
+            // 
+            this.matekJolabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matekJolabel.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.matekJolabel.Location = new System.Drawing.Point(3, 56);
+            this.matekJolabel.Name = "matekJolabel";
+            this.matekJolabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.matekJolabel.Size = new System.Drawing.Size(197, 56);
+            this.matekJolabel.TabIndex = 43;
+            this.matekJolabel.Text = "Helyesen megoldott matematikai feladatok:";
+            this.matekJolabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // abcJoLabel
+            // 
+            this.abcJoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.abcJoLabel.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.abcJoLabel.Location = new System.Drawing.Point(3, 112);
+            this.abcJoLabel.Name = "abcJoLabel";
+            this.abcJoLabel.Size = new System.Drawing.Size(197, 56);
+            this.abcJoLabel.TabIndex = 44;
+            this.abcJoLabel.Text = "Helyesen megoldott ABC feladatok:";
+            this.abcJoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxOsszMegoldott
+            // 
+            this.textBoxOsszMegoldott.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxOsszMegoldott.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.textBoxOsszMegoldott.Location = new System.Drawing.Point(206, 3);
+            this.textBoxOsszMegoldott.Name = "textBoxOsszMegoldott";
+            this.textBoxOsszMegoldott.ReadOnly = true;
+            this.textBoxOsszMegoldott.Size = new System.Drawing.Size(198, 47);
+            this.textBoxOsszMegoldott.TabIndex = 45;
+            // 
+            // textBoxHelyesMatek
+            // 
+            this.textBoxHelyesMatek.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxHelyesMatek.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.textBoxHelyesMatek.Location = new System.Drawing.Point(206, 59);
+            this.textBoxHelyesMatek.Name = "textBoxHelyesMatek";
+            this.textBoxHelyesMatek.ReadOnly = true;
+            this.textBoxHelyesMatek.Size = new System.Drawing.Size(198, 47);
+            this.textBoxHelyesMatek.TabIndex = 46;
+            // 
+            // textBoxHelyesAbc
+            // 
+            this.textBoxHelyesAbc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxHelyesAbc.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.textBoxHelyesAbc.Location = new System.Drawing.Point(206, 115);
+            this.textBoxHelyesAbc.Name = "textBoxHelyesAbc";
+            this.textBoxHelyesAbc.ReadOnly = true;
+            this.textBoxHelyesAbc.Size = new System.Drawing.Size(198, 47);
+            this.textBoxHelyesAbc.TabIndex = 47;
+            // 
+            // textBoxOsszpont
+            // 
+            this.textBoxOsszpont.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxOsszpont.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.textBoxOsszpont.Location = new System.Drawing.Point(206, 171);
+            this.textBoxOsszpont.Name = "textBoxOsszpont";
+            this.textBoxOsszpont.ReadOnly = true;
+            this.textBoxOsszpont.Size = new System.Drawing.Size(198, 47);
+            this.textBoxOsszpont.TabIndex = 48;
             // 
             // AdminMenuForm
             // 
@@ -432,6 +556,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
+            this.groupBoxStatisztika.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -469,5 +596,14 @@
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.GroupBox groupBoxStatisztika;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label abcJoLabel;
+        private System.Windows.Forms.Label matekJolabel;
+        private System.Windows.Forms.Label osszPontlabel;
+        private System.Windows.Forms.Label osszesFeladatlabel;
+        private System.Windows.Forms.TextBox textBoxOsszMegoldott;
+        private System.Windows.Forms.TextBox textBoxHelyesMatek;
+        private System.Windows.Forms.TextBox textBoxHelyesAbc;
+        private System.Windows.Forms.TextBox textBoxOsszpont;
     }
 }

@@ -31,7 +31,8 @@ namespace OkosodoUI
             
             Udvozlet();
             DiakListaFeltoltes();
-            
+
+            ujDiakSzuletesiDatumdateTimePicker.MinDate = DateTime.Now;
         }
        
         private void Udvozlet()
@@ -154,6 +155,42 @@ namespace OkosodoUI
             DiakMenuForm frm = new DiakMenuForm(kivalasztottId, bejelentkezett.Id);
             frm.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TanuloModel kivalasztott = (TanuloModel)diakListBox.SelectedItem;
+
+            int kivalasztottId = kivalasztott.Id;
+
+            bool nincsMegoldottFeladata = GlobalConfig.Connection.VanMegoldottFeladat(kivalasztottId);
+
+
+            if (nincsMegoldottFeladata == true)
+            {
+                StatisztikaModel statisztika = new StatisztikaModel(
+                      GlobalConfig.Connection.GetDiakBeceNev(kivalasztottId),
+                      GlobalConfig.Connection.GetOsszesMegoldott(kivalasztottId),
+                      GlobalConfig.Connection.GetOsszesMegoldottMatematikai(kivalasztottId),
+                      GlobalConfig.Connection.GetOsszesHelyesMatematikai(kivalasztottId),
+                      GlobalConfig.Connection.GetOsszesMegoldottAbc(kivalasztottId),
+                      GlobalConfig.Connection.GetHelyesAbc(kivalasztottId),
+                      GlobalConfig.Connection.GetOsszPontSzam(kivalasztottId));
+
+                textBoxOsszMegoldott.Text = statisztika.OsszesMegoldott.ToString();
+                textBoxHelyesMatek.Text = $"{statisztika.OsszesMegoldottMatematikai} / {statisztika.OsszesHelyesMatematikai}";
+                textBoxHelyesAbc.Text = $"{statisztika.OsszesMegoldottAbc} / {statisztika.OsszesHelyesAbc}";
+                textBoxOsszpont.Text = statisztika.OsszPontSzam.ToString(); 
+            }
+            else
+            {
+                MessageBox.Show("Még nem oldott meg feladatot a kiválsztott diák!", "Információ", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+
+                textBoxOsszMegoldott.Text = "";
+                textBoxHelyesMatek.Text = "";
+                textBoxHelyesAbc.Text = "";
+                textBoxOsszpont.Text = "";
+            }
         }
     }
 }

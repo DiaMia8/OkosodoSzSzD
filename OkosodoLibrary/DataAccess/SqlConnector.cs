@@ -146,6 +146,21 @@ namespace OkosodoLibrary.DataAccess
 
         }
 
+        public string GetDiakBeceNev(int ID)
+        {
+            string output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
+                var par = new DynamicParameters();
+                par.Add("@id", ID);
+                output = connection.Query<string>("spGetStatBeceNev", par, commandType: CommandType.StoredProcedure).ToString();
+
+            }
+
+            return output;
+        }
+
 
         /// <summary>
         /// Összes diák lekérdezése
@@ -163,7 +178,22 @@ namespace OkosodoLibrary.DataAccess
             return output;
         }
 
-       
+        public int GetHelyesAbc(int ID)
+        {
+            int output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
+                var par = new DynamicParameters();
+                par.Add("@id", ID);
+                output = connection.Query<int>("dbo.spGetHelyesAbcFeladat", par, commandType: CommandType.StoredProcedure).Single();
+
+            }
+
+            return output;
+        }
+
+
         /// <summary>
         /// Lekérdez egy tanulót az id-ja alapján
         /// </summary>
@@ -200,6 +230,81 @@ namespace OkosodoLibrary.DataAccess
                 
                 
             }
+            return output;
+        }
+
+        public int GetOsszesHelyesMatematikai(int ID)
+        {
+            int output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
+                var par = new DynamicParameters();
+                par.Add("@id", ID);
+                output = connection.Query<int>("spGetOsszesHelyesMatemtikaiFeladat", par, commandType: CommandType.StoredProcedure).Single();
+
+            }
+
+            return output;
+        }
+
+        public int GetOsszesMegoldott(int ID)
+        {
+            int output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
+                var par = new DynamicParameters();
+                par.Add("@id", ID);
+                output = connection.Query<int>("spGetOsszesMegoldottFeladat", par, commandType: CommandType.StoredProcedure).Single();
+
+            }
+
+            return output;
+        }
+
+        public int GetOsszesMegoldottAbc(int ID)
+        {
+            int output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
+                var par = new DynamicParameters();
+                par.Add("@id", ID);
+                output = connection.Query<int>("spGetOsszesAbcFeladat", par, commandType: CommandType.StoredProcedure).Single();
+
+            }
+
+            return output;
+        }
+
+        public int GetOsszesMegoldottMatematikai(int ID)
+        {
+            int output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
+                var par = new DynamicParameters();
+                par.Add("@id", ID);
+                output = connection.Query<int>("spGetOsszesMegoldottMatemtikaiFeladat", par, commandType: CommandType.StoredProcedure).Single();
+
+            }
+
+            return output;
+        }
+
+        public int GetOsszPontSzam(int ID)
+        {
+            int output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
+                var par = new DynamicParameters();
+                par.Add("@id", ID);
+                output = connection.Query<int>("spGetOsszPontSzam", par, commandType: CommandType.StoredProcedure).Single();
+
+            }
+
             return output;
         }
 
@@ -244,6 +349,24 @@ namespace OkosodoLibrary.DataAccess
                 connection.Execute("dbo.spAdminLogin", par, commandType: CommandType.StoredProcedure);
 
                 output = par.Get<int>("@Id");
+            }
+
+            return output;
+        }
+
+        public bool VanMegoldottFeladat(int ID)
+        {
+            bool output;
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnString(db)))
+            {
+                var par = new DynamicParameters();
+                par.Add("ID", ID);
+                par.Add("@uj", 0, dbType: DbType.Boolean, direction: ParameterDirection.Output);
+
+                connection.Execute("spUjDiakVizsgalat", par, commandType: CommandType.StoredProcedure);
+
+                output = par.Get<bool>("@uj");
             }
 
             return output;
