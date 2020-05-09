@@ -176,13 +176,11 @@ namespace OkosodoUI
                     GlobalConfig.Connection.CreateMegoldottFeladatokModel(item);
                 }
 
-                feladatPictureBox.Refresh();
-                feladatPictureBox.ImageLocation = $@".\Resources\gratulaAH.png";
                 elkoszonoLabel.Visible = true;
                 elkoszonoLabel.Text = $"Ügyes voltál! A helyesen megoldott feladataid: 5/{_osszesMegoldott.Count(x=>x.Megoldott == true).ToString()} !";
                 elkoszonoLabel.Update();
-                
 
+                megoldasLabel.Hide();
                 helpButton.Hide();
                 valaszButton.Hide();
                 valaszTextBox.Hide();
@@ -321,13 +319,15 @@ namespace OkosodoUI
                     GlobalConfig.Connection.CreateMegoldottFeladatokModel(item);
                 }
                 valaszTextBox.Clear();
-                
-                feladatPictureBox.ImageLocation = $@".\Resources\gratulaAH.png";
+
+                feladatPictureBox.Visible = false;
+                pictureBoxElkoszon.Visible = true;
                 
                 elkoszonoLabel.Visible = true;
                 elkoszonoLabel.Text = $"Ügyes voltál! A helyesen megoldott feladataid: 5/{_osszesMegoldott.Count(x => x.Megoldott == true).ToString()} !";
                 elkoszonoLabel.Update();
-                
+
+                megoldasLabel.Hide();
                 valaszLabel.Hide();
                 helpButton.Hide();
                 valaszButton.Hide();

@@ -34,6 +34,7 @@
             this.valaszLabel = new System.Windows.Forms.Label();
             this.valaszTextBox = new System.Windows.Forms.TextBox();
             this.elkoszonoLabel = new System.Windows.Forms.Label();
+            this.pictureBoxElkoszon = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo3 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo2 = new System.Windows.Forms.PictureBox();
@@ -42,6 +43,7 @@
             this.valaszButton = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
             this.feladatPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxElkoszon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo2)).BeginInit();
@@ -106,6 +108,17 @@
             this.elkoszonoLabel.Text = "?";
             this.elkoszonoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.elkoszonoLabel.Visible = false;
+            // 
+            // pictureBoxElkoszon
+            // 
+            this.pictureBoxElkoszon.BackgroundImage = global::OkosodoUI.Properties.Resources.gratulaAH;
+            this.pictureBoxElkoszon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBoxElkoszon.Location = new System.Drawing.Point(81, 107);
+            this.pictureBoxElkoszon.Name = "pictureBoxElkoszon";
+            this.pictureBoxElkoszon.Size = new System.Drawing.Size(800, 600);
+            this.pictureBoxElkoszon.TabIndex = 29;
+            this.pictureBoxElkoszon.TabStop = false;
+            this.pictureBoxElkoszon.Visible = false;
             // 
             // pictureBoxLogo4
             // 
@@ -204,6 +217,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1141, 826);
+            this.Controls.Add(this.pictureBoxElkoszon);
             this.Controls.Add(this.pictureBoxLogo4);
             this.Controls.Add(this.pictureBoxLogo3);
             this.Controls.Add(this.pictureBoxLogo2);
@@ -221,6 +235,7 @@
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "JatekForm";
             this.Text = "Okosodó";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxElkoszon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo2)).EndInit();
@@ -247,5 +262,6 @@
         private System.Windows.Forms.PictureBox pictureBoxLogo2;
         private System.Windows.Forms.PictureBox pictureBoxLogo1;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
+        private System.Windows.Forms.PictureBox pictureBoxElkoszon;
     }
 }

@@ -35,27 +35,27 @@
             this.introLabel = new System.Windows.Forms.Label();
             this.introLink = new System.Windows.Forms.LinkLabel();
             this.mitJatszolLabel = new System.Windows.Forms.Label();
-            this.pictureBoxAgyHaver = new System.Windows.Forms.PictureBox();
-            this.exitButton = new System.Windows.Forms.Button();
-            this.rabdomFeladatButton = new System.Windows.Forms.Button();
-            this.betuButton = new System.Windows.Forms.Button();
-            this.matekButton = new System.Windows.Forms.Button();
+            this.groupBoxPontok = new System.Windows.Forms.GroupBox();
+            this.textBoxErem = new System.Windows.Forms.TextBox();
+            this.pictureBoxPont = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo3 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.groupBoxPontok = new System.Windows.Forms.GroupBox();
-            this.pictureBoxPont = new System.Windows.Forms.PictureBox();
-            this.textBoxErem = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAgyHaver)).BeginInit();
+            this.pictureBoxAgyHaver = new System.Windows.Forms.PictureBox();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.rabdomFeladatButton = new System.Windows.Forms.Button();
+            this.betuButton = new System.Windows.Forms.Button();
+            this.matekButton = new System.Windows.Forms.Button();
+            this.groupBoxPontok.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            this.groupBoxPontok.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPont)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAgyHaver)).BeginInit();
             this.SuspendLayout();
             // 
             // diakUdvozloNevLabel
@@ -124,6 +124,94 @@
             this.mitJatszolLabel.TabIndex = 15;
             this.mitJatszolLabel.Text = "Mit gyakorolsz ma?";
             // 
+            // groupBoxPontok
+            // 
+            this.groupBoxPontok.Controls.Add(this.textBoxErem);
+            this.groupBoxPontok.Controls.Add(this.pictureBoxPont);
+            this.groupBoxPontok.Font = new System.Drawing.Font("Segoe UI", 18F);
+            this.groupBoxPontok.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.groupBoxPontok.Location = new System.Drawing.Point(72, 544);
+            this.groupBoxPontok.Name = "groupBoxPontok";
+            this.groupBoxPontok.Size = new System.Drawing.Size(596, 196);
+            this.groupBoxPontok.TabIndex = 34;
+            this.groupBoxPontok.TabStop = false;
+            this.groupBoxPontok.Text = "Eddig szerzett érmeid:";
+            // 
+            // textBoxErem
+            // 
+            this.textBoxErem.BackColor = System.Drawing.Color.White;
+            this.textBoxErem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxErem.Font = new System.Drawing.Font("Segoe UI Semibold", 48F, System.Drawing.FontStyle.Bold);
+            this.textBoxErem.ForeColor = System.Drawing.Color.Red;
+            this.textBoxErem.Location = new System.Drawing.Point(125, 46);
+            this.textBoxErem.Multiline = true;
+            this.textBoxErem.Name = "textBoxErem";
+            this.textBoxErem.ReadOnly = true;
+            this.textBoxErem.Size = new System.Drawing.Size(217, 123);
+            this.textBoxErem.TabIndex = 2;
+            this.textBoxErem.Text = "1234";
+            this.textBoxErem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pictureBoxPont
+            // 
+            this.pictureBoxPont.BackgroundImage = global::OkosodoUI.Properties.Resources.erme;
+            this.pictureBoxPont.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxPont.Location = new System.Drawing.Point(360, 46);
+            this.pictureBoxPont.Name = "pictureBoxPont";
+            this.pictureBoxPont.Size = new System.Drawing.Size(126, 123);
+            this.pictureBoxPont.TabIndex = 0;
+            this.pictureBoxPont.TabStop = false;
+            // 
+            // pictureBoxLogo4
+            // 
+            this.pictureBoxLogo4.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo4;
+            this.pictureBoxLogo4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo4.Location = new System.Drawing.Point(653, 12);
+            this.pictureBoxLogo4.Name = "pictureBoxLogo4";
+            this.pictureBoxLogo4.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo4.TabIndex = 33;
+            this.pictureBoxLogo4.TabStop = false;
+            // 
+            // pictureBoxLogo3
+            // 
+            this.pictureBoxLogo3.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo3;
+            this.pictureBoxLogo3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo3.Location = new System.Drawing.Point(547, 12);
+            this.pictureBoxLogo3.Name = "pictureBoxLogo3";
+            this.pictureBoxLogo3.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo3.TabIndex = 32;
+            this.pictureBoxLogo3.TabStop = false;
+            // 
+            // pictureBoxLogo2
+            // 
+            this.pictureBoxLogo2.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo2;
+            this.pictureBoxLogo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo2.Location = new System.Drawing.Point(441, 12);
+            this.pictureBoxLogo2.Name = "pictureBoxLogo2";
+            this.pictureBoxLogo2.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo2.TabIndex = 31;
+            this.pictureBoxLogo2.TabStop = false;
+            // 
+            // pictureBoxLogo1
+            // 
+            this.pictureBoxLogo1.BackgroundImage = global::OkosodoUI.Properties.Resources.pbLogo1;
+            this.pictureBoxLogo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo1.Location = new System.Drawing.Point(335, 12);
+            this.pictureBoxLogo1.Name = "pictureBoxLogo1";
+            this.pictureBoxLogo1.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo1.TabIndex = 30;
+            this.pictureBoxLogo1.TabStop = false;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackgroundImage = global::OkosodoUI.Properties.Resources.PBlogo;
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(229, 12);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(100, 77);
+            this.pictureBoxLogo.TabIndex = 29;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // pictureBoxAgyHaver
             // 
             this.pictureBoxAgyHaver.BackgroundImage = global::OkosodoUI.Properties.Resources.bitmapAgyHaver2;
@@ -190,92 +278,6 @@
             this.matekButton.UseVisualStyleBackColor = true;
             this.matekButton.Click += new System.EventHandler(this.matekButton_Click);
             // 
-            // pictureBoxLogo4
-            // 
-            this.pictureBoxLogo4.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo4;
-            this.pictureBoxLogo4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxLogo4.Location = new System.Drawing.Point(653, 12);
-            this.pictureBoxLogo4.Name = "pictureBoxLogo4";
-            this.pictureBoxLogo4.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo4.TabIndex = 33;
-            this.pictureBoxLogo4.TabStop = false;
-            // 
-            // pictureBoxLogo3
-            // 
-            this.pictureBoxLogo3.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo3;
-            this.pictureBoxLogo3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxLogo3.Location = new System.Drawing.Point(547, 12);
-            this.pictureBoxLogo3.Name = "pictureBoxLogo3";
-            this.pictureBoxLogo3.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo3.TabIndex = 32;
-            this.pictureBoxLogo3.TabStop = false;
-            // 
-            // pictureBoxLogo2
-            // 
-            this.pictureBoxLogo2.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo2;
-            this.pictureBoxLogo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxLogo2.Location = new System.Drawing.Point(441, 12);
-            this.pictureBoxLogo2.Name = "pictureBoxLogo2";
-            this.pictureBoxLogo2.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo2.TabIndex = 31;
-            this.pictureBoxLogo2.TabStop = false;
-            // 
-            // pictureBoxLogo1
-            // 
-            this.pictureBoxLogo1.BackgroundImage = global::OkosodoUI.Properties.Resources.pbLogo1;
-            this.pictureBoxLogo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxLogo1.Location = new System.Drawing.Point(335, 12);
-            this.pictureBoxLogo1.Name = "pictureBoxLogo1";
-            this.pictureBoxLogo1.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo1.TabIndex = 30;
-            this.pictureBoxLogo1.TabStop = false;
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.BackgroundImage = global::OkosodoUI.Properties.Resources.PBlogo;
-            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(229, 12);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(100, 77);
-            this.pictureBoxLogo.TabIndex = 29;
-            this.pictureBoxLogo.TabStop = false;
-            // 
-            // groupBoxPontok
-            // 
-            this.groupBoxPontok.Controls.Add(this.textBoxErem);
-            this.groupBoxPontok.Controls.Add(this.pictureBoxPont);
-            this.groupBoxPontok.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.groupBoxPontok.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.groupBoxPontok.Location = new System.Drawing.Point(72, 544);
-            this.groupBoxPontok.Name = "groupBoxPontok";
-            this.groupBoxPontok.Size = new System.Drawing.Size(596, 196);
-            this.groupBoxPontok.TabIndex = 34;
-            this.groupBoxPontok.TabStop = false;
-            this.groupBoxPontok.Text = "Eddig szerzett érmeid:";
-            // 
-            // pictureBoxPont
-            // 
-            this.pictureBoxPont.Location = new System.Drawing.Point(360, 46);
-            this.pictureBoxPont.Name = "pictureBoxPont";
-            this.pictureBoxPont.Size = new System.Drawing.Size(126, 123);
-            this.pictureBoxPont.TabIndex = 0;
-            this.pictureBoxPont.TabStop = false;
-            // 
-            // textBoxErem
-            // 
-            this.textBoxErem.BackColor = System.Drawing.Color.White;
-            this.textBoxErem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxErem.Font = new System.Drawing.Font("Segoe UI Semibold", 48F, System.Drawing.FontStyle.Bold);
-            this.textBoxErem.ForeColor = System.Drawing.Color.Red;
-            this.textBoxErem.Location = new System.Drawing.Point(90, 46);
-            this.textBoxErem.Multiline = true;
-            this.textBoxErem.Name = "textBoxErem";
-            this.textBoxErem.ReadOnly = true;
-            this.textBoxErem.Size = new System.Drawing.Size(217, 123);
-            this.textBoxErem.TabIndex = 2;
-            this.textBoxErem.Text = "1234";
-            this.textBoxErem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // DiakMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -304,15 +306,15 @@
             this.Name = "DiakMenuForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Okosodó";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAgyHaver)).EndInit();
+            this.groupBoxPontok.ResumeLayout(false);
+            this.groupBoxPontok.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPont)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            this.groupBoxPontok.ResumeLayout(false);
-            this.groupBoxPontok.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPont)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAgyHaver)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
