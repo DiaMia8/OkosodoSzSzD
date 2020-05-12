@@ -83,6 +83,26 @@ namespace OkosodoUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap elkoszon {
+            get {
+                object obj = ResourceManager.GetObject("elkoszon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap elkoszonSmall {
+            get {
+                object obj = ResourceManager.GetObject("elkoszonSmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap erme {
             get {
                 object obj = ResourceManager.GetObject("erme", resourceCulture);

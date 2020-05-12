@@ -20,7 +20,7 @@ namespace OkosodoUI
         {
             InitializeComponent();
         }
-
+        // Ellenőrzés után menti az adatbázisba a felhasználót
         private void ujFelhasznaloRegisztralasButton_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
@@ -46,13 +46,13 @@ namespace OkosodoUI
             }
             else
             {
-                MessageBox.Show("Hiányos kitöltés, kérlek ellenőrizd az adatokat!");
+                MessageBox.Show("Hiányos kitöltés, kérlek ellenőrizd az adatokat!", "Figyelmeztetés!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
+        // beviteli mezők ellenőrzése
         private bool ValidateForm()
         {
-            //TODO - Rendes validálást megcsinálni
+            
             bool output = true;
 
             if (ujFelhasznaloNevTextBox.Text.Length == 0)
@@ -82,7 +82,7 @@ namespace OkosodoUI
 
             return output;
         }
-
+        // email ellenőrzés, a validate() metódusban van meghívva
         private bool ValidEmail(string value)
         { 
             bool output = false;
@@ -94,7 +94,7 @@ namespace OkosodoUI
 
             return output;
         }
-
+        // adatbázis által ellenőrzött belépés, helyes adatok esetén meghívja az Admin Formot
         private void belepesButton_Click(object sender, EventArgs e)
         {
             if (ValidateLogin())
@@ -124,7 +124,7 @@ namespace OkosodoUI
                 jelszoTextBox.Text = " ";
             }
         }
-
+        // az adatbázisból ellenőrzés után helyes jelszó esetén visszakapjuk a felhasználó ID-ját, ellenkező esetben ez az érték 0.
         private bool ValidateLogin()
         {
             bool output = true;

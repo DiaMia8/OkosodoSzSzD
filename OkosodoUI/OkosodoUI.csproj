@@ -120,6 +120,10 @@
     <Content Include="Resources\abcButton.png" />
     <Content Include="Resources\bitmapAgyHaver2.png" />
     <None Include="Resources\erme.png" />
+    <Content Include="Resources\elkoszon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\elkoszonSmall.png" />
     <Content Include="Resources\exitAH.png" />
     <Content Include="Resources\gratulaAH.png" />
     <Content Include="Resources\helpHaver.png" />

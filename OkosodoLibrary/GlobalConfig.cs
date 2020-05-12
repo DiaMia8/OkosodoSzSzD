@@ -16,12 +16,10 @@ namespace OkosodoLibrary
         static public IDataConnection Connection { get; private set; }
         
         //Jelenleg csak adatbázisna lehet menteni, de skálázható txt vagy mySql-re is, elestleg string bemeneti paraméterekkel, enumban dolgozva, de jelenleg csak adatbázisban dolzozik
-       
         public static void InitializeConnections(bool database)
         {
             if (database)
             {
-                //TODO - SQL kapcsolat létrehozása
                 SqlConnector sql = new SqlConnector();
                 Connection = sql;
             }

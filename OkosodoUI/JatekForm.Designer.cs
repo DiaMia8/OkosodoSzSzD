@@ -33,17 +33,15 @@
             this.megoldasLabel = new System.Windows.Forms.Label();
             this.valaszLabel = new System.Windows.Forms.Label();
             this.valaszTextBox = new System.Windows.Forms.TextBox();
-            this.elkoszonoLabel = new System.Windows.Forms.Label();
-            this.pictureBoxElkoszon = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo4 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo3 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.elkoszonoLabel = new System.Windows.Forms.Label();
             this.valaszButton = new System.Windows.Forms.Button();
             this.helpButton = new System.Windows.Forms.Button();
             this.feladatPictureBox = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxElkoszon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo2)).BeginInit();
@@ -97,29 +95,6 @@
             this.valaszTextBox.Size = new System.Drawing.Size(139, 62);
             this.valaszTextBox.TabIndex = 1;
             // 
-            // elkoszonoLabel
-            // 
-            this.elkoszonoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.elkoszonoLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.elkoszonoLabel.Location = new System.Drawing.Point(32, 722);
-            this.elkoszonoLabel.Name = "elkoszonoLabel";
-            this.elkoszonoLabel.Size = new System.Drawing.Size(1055, 76);
-            this.elkoszonoLabel.TabIndex = 23;
-            this.elkoszonoLabel.Text = "?";
-            this.elkoszonoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.elkoszonoLabel.Visible = false;
-            // 
-            // pictureBoxElkoszon
-            // 
-            this.pictureBoxElkoszon.BackgroundImage = global::OkosodoUI.Properties.Resources.gratulaAH;
-            this.pictureBoxElkoszon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBoxElkoszon.Location = new System.Drawing.Point(81, 107);
-            this.pictureBoxElkoszon.Name = "pictureBoxElkoszon";
-            this.pictureBoxElkoszon.Size = new System.Drawing.Size(800, 600);
-            this.pictureBoxElkoszon.TabIndex = 29;
-            this.pictureBoxElkoszon.TabStop = false;
-            this.pictureBoxElkoszon.Visible = false;
-            // 
             // pictureBoxLogo4
             // 
             this.pictureBoxLogo4.BackgroundImage = global::OkosodoUI.Properties.Resources.PBLogo4;
@@ -170,6 +145,20 @@
             this.pictureBoxLogo.TabIndex = 24;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // elkoszonoLabel
+            // 
+            this.elkoszonoLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.elkoszonoLabel.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.elkoszonoLabel.Image = global::OkosodoUI.Properties.Resources.elkoszonSmall;
+            this.elkoszonoLabel.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.elkoszonoLabel.Location = new System.Drawing.Point(32, 107);
+            this.elkoszonoLabel.Name = "elkoszonoLabel";
+            this.elkoszonoLabel.Size = new System.Drawing.Size(1055, 627);
+            this.elkoszonoLabel.TabIndex = 23;
+            this.elkoszonoLabel.Text = "?";
+            this.elkoszonoLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.elkoszonoLabel.Visible = false;
+            // 
             // valaszButton
             // 
             this.valaszButton.BackgroundImage = global::OkosodoUI.Properties.Resources.ok;
@@ -217,7 +206,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1141, 826);
-            this.Controls.Add(this.pictureBoxElkoszon);
             this.Controls.Add(this.pictureBoxLogo4);
             this.Controls.Add(this.pictureBoxLogo3);
             this.Controls.Add(this.pictureBoxLogo2);
@@ -234,8 +222,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "JatekForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Okosodó";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxElkoszon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo2)).EndInit();
@@ -262,6 +250,5 @@
         private System.Windows.Forms.PictureBox pictureBoxLogo2;
         private System.Windows.Forms.PictureBox pictureBoxLogo1;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
-        private System.Windows.Forms.PictureBox pictureBoxElkoszon;
     }
 }

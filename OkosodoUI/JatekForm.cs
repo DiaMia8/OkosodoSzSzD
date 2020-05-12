@@ -31,7 +31,7 @@ namespace OkosodoUI
         private static List<IFeladatModel> _belsoLista = new List<IFeladatModel>();
 
         // leválogatáshoz használt szám, hány feladat legyen kiválogatva, plusz ellenőrzi, hogy van-e elég elem az adatbázisban
-        public static int _osszesFeladatSzam = 4;
+        public static int _osszesFeladatSzam = 7;
 
         // int a kiválasztott típusú lista countja
         public static int _listaCount;
@@ -53,6 +53,8 @@ namespace OkosodoUI
 
         // itt állítjuk be hány feladatot szeretnénk futtatni és ezt csökkentve kap új indexet a feladat
         private int _feladatokSzama;
+
+        
 
         public JatekForm(int id, char tipus, int adminId)
         {
@@ -79,7 +81,7 @@ namespace OkosodoUI
 
             if (_listaCount <= _osszesFeladatSzam)
             {
-                // TODO - valamiért megjelenik üresen - kijavítani
+                
                 MessageBox.Show("Adatbázis hiba!", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 
                 Hide();
@@ -177,7 +179,7 @@ namespace OkosodoUI
                 }
 
                 elkoszonoLabel.Visible = true;
-                elkoszonoLabel.Text = $"Ügyes voltál! A helyesen megoldott feladataid: 5/{_osszesMegoldott.Count(x=>x.Megoldott == true).ToString()} !";
+                elkoszonoLabel.Text = $"Ügyes voltál! A helyesen megoldott feladataid: 8/{_osszesMegoldott.Count(x=>x.Megoldott == true).ToString()} !";
                 elkoszonoLabel.Update();
 
                 megoldasLabel.Hide();
@@ -318,13 +320,11 @@ namespace OkosodoUI
                 {
                     GlobalConfig.Connection.CreateMegoldottFeladatokModel(item);
                 }
-                valaszTextBox.Clear();
 
-                feladatPictureBox.Visible = false;
-                pictureBoxElkoszon.Visible = true;
-                
+                valaszTextBox.Clear();
+          
                 elkoszonoLabel.Visible = true;
-                elkoszonoLabel.Text = $"Ügyes voltál! A helyesen megoldott feladataid: 5/{_osszesMegoldott.Count(x => x.Megoldott == true).ToString()} !";
+                elkoszonoLabel.Text = $"Ügyes voltál! A helyesen megoldott feladataid: 8/{_osszesMegoldott.Count(x => x.Megoldott == true).ToString()} !";
                 elkoszonoLabel.Update();
 
                 megoldasLabel.Hide();

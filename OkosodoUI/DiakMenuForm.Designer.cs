@@ -218,7 +218,7 @@
             this.pictureBoxAgyHaver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxAgyHaver.Location = new System.Drawing.Point(789, 12);
             this.pictureBoxAgyHaver.Name = "pictureBoxAgyHaver";
-            this.pictureBoxAgyHaver.Size = new System.Drawing.Size(250, 250);
+            this.pictureBoxAgyHaver.Size = new System.Drawing.Size(287, 250);
             this.pictureBoxAgyHaver.TabIndex = 26;
             this.pictureBoxAgyHaver.TabStop = false;
             // 

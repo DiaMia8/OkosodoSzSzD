@@ -80,7 +80,7 @@ namespace OkosodoUI
             }
             else
             {
-                MessageBox.Show("Hiányos kitöltés vagy hibás kitöltés! Kérlek ellenőrizd a bevitt adatokat!");
+                MessageBox.Show("Hiányos kitöltés vagy hibás kitöltés! Kérlek ellenőrizd a bevitt adatokat!", "Figyelmeztetés!", MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
 
             DiakListaFeltoltes();
@@ -157,7 +157,7 @@ namespace OkosodoUI
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void statisztikaButton_Click(object sender, EventArgs e)
         {
             TanuloModel kivalasztott = (TanuloModel)diakListBox.SelectedItem;
 
