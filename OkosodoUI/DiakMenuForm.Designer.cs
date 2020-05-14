@@ -32,8 +32,6 @@
             this.diakUdvozloNevLabel = new System.Windows.Forms.Label();
             this.sziaLabel = new System.Windows.Forms.Label();
             this.diakMainLabel = new System.Windows.Forms.Label();
-            this.introLabel = new System.Windows.Forms.Label();
-            this.introLink = new System.Windows.Forms.LinkLabel();
             this.mitJatszolLabel = new System.Windows.Forms.Label();
             this.groupBoxPontok = new System.Windows.Forms.GroupBox();
             this.textBoxErem = new System.Windows.Forms.TextBox();
@@ -61,22 +59,22 @@
             // diakUdvozloNevLabel
             // 
             this.diakUdvozloNevLabel.AutoSize = true;
-            this.diakUdvozloNevLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.diakUdvozloNevLabel.Font = new System.Drawing.Font("Segoe UI", 22.2F);
             this.diakUdvozloNevLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.diakUdvozloNevLabel.Location = new System.Drawing.Point(87, 96);
+            this.diakUdvozloNevLabel.Location = new System.Drawing.Point(112, 123);
             this.diakUdvozloNevLabel.Name = "diakUdvozloNevLabel";
-            this.diakUdvozloNevLabel.Size = new System.Drawing.Size(99, 38);
+            this.diakUdvozloNevLabel.Size = new System.Drawing.Size(134, 51);
             this.diakUdvozloNevLabel.TabIndex = 12;
             this.diakUdvozloNevLabel.Text = "<nev>";
             // 
             // sziaLabel
             // 
             this.sziaLabel.AutoSize = true;
-            this.sziaLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sziaLabel.Font = new System.Drawing.Font("Segoe UI", 22.2F);
             this.sziaLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.sziaLabel.Location = new System.Drawing.Point(16, 96);
+            this.sziaLabel.Location = new System.Drawing.Point(20, 123);
             this.sziaLabel.Name = "sziaLabel";
-            this.sziaLabel.Size = new System.Drawing.Size(65, 38);
+            this.sziaLabel.Size = new System.Drawing.Size(86, 51);
             this.sziaLabel.TabIndex = 11;
             this.sziaLabel.Text = "Szia";
             // 
@@ -91,34 +89,12 @@
             this.diakMainLabel.TabIndex = 10;
             this.diakMainLabel.Text = "Okosodó";
             // 
-            // introLabel
-            // 
-            this.introLabel.AutoSize = true;
-            this.introLabel.Font = new System.Drawing.Font("Segoe UI", 14.2F);
-            this.introLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.introLabel.Location = new System.Drawing.Point(12, 156);
-            this.introLabel.Name = "introLabel";
-            this.introLabel.Size = new System.Drawing.Size(519, 32);
-            this.introLabel.TabIndex = 13;
-            this.introLabel.Text = "Ha nem tudod hogy kell játszani kattints ide ->";
-            // 
-            // introLink
-            // 
-            this.introLink.AutoSize = true;
-            this.introLink.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.introLink.Location = new System.Drawing.Point(537, 163);
-            this.introLink.Name = "introLink";
-            this.introLink.Size = new System.Drawing.Size(50, 25);
-            this.introLink.TabIndex = 14;
-            this.introLink.TabStop = true;
-            this.introLink.Text = "Intro";
-            // 
             // mitJatszolLabel
             // 
             this.mitJatszolLabel.AutoSize = true;
             this.mitJatszolLabel.Font = new System.Drawing.Font("Segoe UI", 14.2F);
             this.mitJatszolLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.mitJatszolLabel.Location = new System.Drawing.Point(16, 204);
+            this.mitJatszolLabel.Location = new System.Drawing.Point(12, 201);
             this.mitJatszolLabel.Name = "mitJatszolLabel";
             this.mitJatszolLabel.Size = new System.Drawing.Size(222, 32);
             this.mitJatszolLabel.TabIndex = 15;
@@ -296,8 +272,6 @@
             this.Controls.Add(this.betuButton);
             this.Controls.Add(this.matekButton);
             this.Controls.Add(this.mitJatszolLabel);
-            this.Controls.Add(this.introLink);
-            this.Controls.Add(this.introLabel);
             this.Controls.Add(this.diakUdvozloNevLabel);
             this.Controls.Add(this.sziaLabel);
             this.Controls.Add(this.diakMainLabel);
@@ -324,8 +298,6 @@
         private System.Windows.Forms.Label diakUdvozloNevLabel;
         private System.Windows.Forms.Label sziaLabel;
         private System.Windows.Forms.Label diakMainLabel;
-        private System.Windows.Forms.Label introLabel;
-        private System.Windows.Forms.LinkLabel introLink;
         private System.Windows.Forms.Label mitJatszolLabel;
         private System.Windows.Forms.Button matekButton;
         private System.Windows.Forms.Button betuButton;
