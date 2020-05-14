@@ -32,7 +32,7 @@ namespace OkosodoUI
             Udvozlet();
             DiakListaFeltoltes();
 
-            ujDiakSzuletesiDatumdateTimePicker.MinDate = DateTime.Now;
+            
         }
        
         private void Udvozlet()
@@ -163,10 +163,10 @@ namespace OkosodoUI
 
             int kivalasztottId = kivalasztott.Id;
 
-            bool nincsMegoldottFeladata = GlobalConfig.Connection.VanMegoldottFeladat(kivalasztottId);
+            bool vanMegoldottFeladata = GlobalConfig.Connection.VanMegoldottFeladat(kivalasztottId);
 
 
-            if (nincsMegoldottFeladata == true)
+            if (vanMegoldottFeladata == true && kivalasztottId != 0)
             {
                 StatisztikaModel statisztika = new StatisztikaModel(
                       GlobalConfig.Connection.GetDiakBeceNev(kivalasztottId),

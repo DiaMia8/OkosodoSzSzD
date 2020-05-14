@@ -59,7 +59,7 @@ namespace OkosodoUI
             JatekForm frm = new JatekForm(bejelentkezett.Id, tipus, _adminId);
             frm.Show();
             this.Hide();
-            //átküldi a diák id-ját a mentéshez és egy olyan feladat típust ami nem létezik, de kiszűrjük vagy nem használjuk
+            //átküldi a diák id-ját a mentéshez és a feladat típusát
         }
 
         private void exitButton_Click(object sender, EventArgs e)
@@ -71,16 +71,28 @@ namespace OkosodoUI
 
         private void eremAktualizalas()
         {
-            StatisztikaModel statisztika = new StatisztikaModel(
-                     GlobalConfig.Connection.GetDiakBeceNev(bejelentkezett.Id),
-                     GlobalConfig.Connection.GetOsszesMegoldott(bejelentkezett.Id),
-                     GlobalConfig.Connection.GetOsszesMegoldottMatematikai(bejelentkezett.Id),
-                     GlobalConfig.Connection.GetOsszesHelyesMatematikai(bejelentkezett.Id),
-                     GlobalConfig.Connection.GetOsszesMegoldottAbc(bejelentkezett.Id),
-                     GlobalConfig.Connection.GetHelyesAbc(bejelentkezett.Id),
-                     GlobalConfig.Connection.GetOsszPontSzam(bejelentkezett.Id));
+            // megvizsgálja, hogy van-e a diáknak elvégzett feladata
+            bool vanMegoldottFeladata = GlobalConfig.Connection.VanMegoldottFeladat(bejelentkezett.Id);
 
-            textBoxErem.Text = statisztika.OsszPontSzam.ToString();
+
+            if (vanMegoldottFeladata == true)
+            {
+                StatisztikaModel statisztika = new StatisztikaModel(
+                             GlobalConfig.Connection.GetDiakBeceNev(bejelentkezett.Id),
+                             GlobalConfig.Connection.GetOsszesMegoldott(bejelentkezett.Id),
+                             GlobalConfig.Connection.GetOsszesMegoldottMatematikai(bejelentkezett.Id),
+                             GlobalConfig.Connection.GetOsszesHelyesMatematikai(bejelentkezett.Id),
+                             GlobalConfig.Connection.GetOsszesMegoldottAbc(bejelentkezett.Id),
+                             GlobalConfig.Connection.GetHelyesAbc(bejelentkezett.Id),
+                             GlobalConfig.Connection.GetOsszPontSzam(bejelentkezett.Id));
+
+                textBoxErem.Text = statisztika.OsszPontSzam.ToString(); 
+            }
+            else
+            {
+                // ha nincs 0-ra állítja az értéket
+                textBoxErem.Text = "0";
+            }
         }
     }
 }
