@@ -76,7 +76,7 @@ namespace OkosodoUI
                 ujDiakSzuletesiDatumdateTimePicker.Text = "";
 
                 tanulok.Add(model);
-                //diakListBox.Refresh();
+                
             }
             else
             {
@@ -88,7 +88,7 @@ namespace OkosodoUI
 
         private bool ValidateForm()
         {
-            // TODO - Rendes validálást megcsinálni.
+           
             bool output = true;
             
 

@@ -177,6 +177,11 @@ namespace OkosodoUI
                 {
                     GlobalConfig.Connection.CreateMegoldottFeladatokModel(item);
                 }
+                //értékek törlése
+                _belsoLista.RemoveRange(0,_belsoLista.Count);
+                _kivalogatottLista.RemoveRange(0,_kivalogatottLista.Count);
+                _listaCount = 0;
+                _kivalogatottListaIndexe = 0;
 
                 elkoszonoLabel.Visible = true;
                 elkoszonoLabel.Text = $"Ügyes voltál! A helyesen megoldott feladataid: 8/{_osszesMegoldott.Count(x=>x.Megoldott == true).ToString()} !";
@@ -320,6 +325,12 @@ namespace OkosodoUI
                 {
                     GlobalConfig.Connection.CreateMegoldottFeladatokModel(item);
                 }
+
+                //értékek törlése 
+                _belsoLista.RemoveRange(0, _belsoLista.Count);
+                _kivalogatottLista.RemoveRange(0, _kivalogatottLista.Count);
+                _listaCount = 0;
+                _kivalogatottListaIndexe = 0;
 
                 valaszTextBox.Clear();
           

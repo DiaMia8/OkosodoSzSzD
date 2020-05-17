@@ -186,9 +186,9 @@
             this.ukDiakKeresztNevlabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.ukDiakKeresztNevlabel.Location = new System.Drawing.Point(16, 112);
             this.ukDiakKeresztNevlabel.Name = "ukDiakKeresztNevlabel";
-            this.ukDiakKeresztNevlabel.Size = new System.Drawing.Size(162, 37);
+            this.ukDiakKeresztNevlabel.Size = new System.Drawing.Size(150, 37);
             this.ukDiakKeresztNevlabel.TabIndex = 17;
-            this.ukDiakKeresztNevlabel.Text = "Kereszt Név:";
+            this.ukDiakKeresztNevlabel.Text = "Keresztnév:";
             // 
             // ujDiakSzuletesiDatumdateTimePicker
             // 
@@ -198,7 +198,7 @@
             this.ujDiakSzuletesiDatumdateTimePicker.Name = "ujDiakSzuletesiDatumdateTimePicker";
             this.ujDiakSzuletesiDatumdateTimePicker.Size = new System.Drawing.Size(270, 34);
             this.ujDiakSzuletesiDatumdateTimePicker.TabIndex = 6;
-            this.ujDiakSzuletesiDatumdateTimePicker.Value = new System.DateTime(2020, 3, 26, 10, 42, 44, 0);
+            this.ujDiakSzuletesiDatumdateTimePicker.Value = new System.DateTime(2020, 3, 6, 0, 0, 0, 0);
             // 
             // ujDiakSzuletettLabel
             // 
@@ -295,9 +295,9 @@
             this.ujDiakVezetekNevLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.ujDiakVezetekNevLabel.Location = new System.Drawing.Point(16, 57);
             this.ujDiakVezetekNevLabel.Name = "ujDiakVezetekNevLabel";
-            this.ujDiakVezetekNevLabel.Size = new System.Drawing.Size(168, 37);
+            this.ujDiakVezetekNevLabel.Size = new System.Drawing.Size(156, 37);
             this.ujDiakVezetekNevLabel.TabIndex = 7;
-            this.ujDiakVezetekNevLabel.Text = "Vezeték Név:";
+            this.ujDiakVezetekNevLabel.Text = "Vezetéknév:";
             // 
             // vagyLabel
             // 

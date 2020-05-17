@@ -145,9 +145,9 @@
             this.utonevUjLabel.ForeColor = System.Drawing.Color.RoyalBlue;
             this.utonevUjLabel.Location = new System.Drawing.Point(16, 197);
             this.utonevUjLabel.Name = "utonevUjLabel";
-            this.utonevUjLabel.Size = new System.Drawing.Size(109, 37);
+            this.utonevUjLabel.Size = new System.Drawing.Size(150, 37);
             this.utonevUjLabel.TabIndex = 15;
-            this.utonevUjLabel.Text = "Utónév:";
+            this.utonevUjLabel.Text = "Keresztnév:";
             // 
             // ujFelhasznaloRegisztralasButton
             // 

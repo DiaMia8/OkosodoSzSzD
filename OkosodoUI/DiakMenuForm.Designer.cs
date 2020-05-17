@@ -94,7 +94,7 @@
             this.mitJatszolLabel.AutoSize = true;
             this.mitJatszolLabel.Font = new System.Drawing.Font("Segoe UI", 14.2F);
             this.mitJatszolLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.mitJatszolLabel.Location = new System.Drawing.Point(12, 201);
+            this.mitJatszolLabel.Location = new System.Drawing.Point(23, 201);
             this.mitJatszolLabel.Name = "mitJatszolLabel";
             this.mitJatszolLabel.Size = new System.Drawing.Size(222, 32);
             this.mitJatszolLabel.TabIndex = 15;
